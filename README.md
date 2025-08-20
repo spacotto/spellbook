@@ -11,7 +11,6 @@ This group includes functions that operate on a block of memory, which can be an
 | `memset` | Fills a block of memory with a specified byte value. |
 | `bzero` | Sets a block of memory to all zeros (a specific case of `memset`). |
 | `memcpy` | Copies a specified number of bytes from a source memory area to a destination memory area. |
-| `memccpy` | Copies bytes from one memory area to another until a specified character is found or a limit is reached. |
 | `memmove` | Copies bytes from one memory area to another, handling overlapping source and destination regions safely. |
 | `memchr` | Locates the first occurrence of a specific byte within a given memory block. |
 | `memcmp` | Compares a specified number of bytes from two memory areas. |
@@ -20,18 +19,11 @@ This group includes functions that operate on a block of memory, which can be an
 These functions are specifically designed to work with null-terminated strings (character arrays ending with `\0`). They handle common string operations like copying, concatenating, and searching.
 | Function Name | Description |
 | :------------ | :------------------------------------------------------------------------------------------------ |
-| `strlen` | Calculates the length of a null-terminated string, excluding the null byte. |
 | `strdup` | Duplicates a string by allocating new memory and copying the original string's content. |
-| `strcpy` | Copies the null-terminated string pointed to by `src` into the array pointed to by `dest`. |
-| `strncpy` | Copies a specified number of characters from a source string to a destination string. |
-| `strcat` | Appends the `src` string to the `dest` string. |
-| `strncat` | Appends a specified number of characters from the `src` string to the `dest` string. |
 | `strlcat` | Appends a null-terminated string to another, ensuring the destination buffer is not overrun. |
 | `strchr` | Locates the first occurrence of a character within a string. |
 | `strrchr` | Locates the last occurrence of a character within a string. |
-| `strstr` | Finds the first occurrence of a substring (needle) within another string (haystack). |
 | `strnstr` | Finds the first occurrence of a substring within a specified number of characters of another string. |
-| `strcmp` | Compares two null-terminated strings lexicographically. |
 | `strncmp` | Compares a specified number of characters from two null-terminated strings. |
 
 ### Character and Conversion Functions [Mandatory]
