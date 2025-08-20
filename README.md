@@ -1,4 +1,4 @@
-# Library 42
+# Library 42: Documentation
 Build a comprehensive and reusable C programming library by re-implementing foundational functions, thereby deepening understanding of their mechanics and creating an essential toolkit for future projects.
 
 ## Libc Functions
