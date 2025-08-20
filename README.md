@@ -19,6 +19,7 @@ This group includes functions that operate on a block of memory, which can be an
 These functions are specifically designed to work with null-terminated strings (character arrays ending with `\0`). They handle common string operations like copying, concatenating, and searching.
 | Function Name | Description |
 | :------------ | :------------------------------------------------------------------------------------------------ |
+| `strlen` | Calculates the length of a null-terminated string, excluding the null byte. |
 | `strdup` | Duplicates a string by allocating new memory and copying the original string's content. |
 | `strlcat` | Appends a null-terminated string to another, ensuring the destination buffer is not overrun. |
 | `strchr` | Locates the first occurrence of a character within a string. |
