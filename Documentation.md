@@ -1,10 +1,10 @@
-# Mandatory part
+# Library 42
 Build a comprehensive and reusable C programming library by re-implementing foundational functions, thereby deepening understanding of their mechanics and creating an essential toolkit for future projects.
 
 ## Libc Functions
 Recreate a set of functions from the official C library.
 
-### Memory Manipulation Functions
+### Memory Manipulation Functions [Mandatory]
 This group includes functions that operate on a block of memory, which can be any data type, not just strings. These functions are often used for low-level data handling.
 | Function Name | Description |
 | :------------ | :------------------------------------------------------------------------------------------------ |
@@ -16,7 +16,7 @@ This group includes functions that operate on a block of memory, which can be an
 | `memchr` | Locates the first occurrence of a specific byte within a given memory block. |
 | `memcmp` | Compares a specified number of bytes from two memory areas. |
 
-### String Manipulation Functions
+### String Manipulation Functions [Mandatory]
 These functions are specifically designed to work with null-terminated strings (character arrays ending with `\0`). They handle common string operations like copying, concatenating, and searching.
 | Function Name | Description |
 | :------------ | :------------------------------------------------------------------------------------------------ |
@@ -34,7 +34,7 @@ These functions are specifically designed to work with null-terminated strings (
 | `strcmp` | Compares two null-terminated strings lexicographically. |
 | `strncmp` | Compares a specified number of characters from two null-terminated strings. |
 
-### Character and Conversion Functions
+### Character and Conversion Functions [Mandatory]
 This category includes functions that check the properties of individual characters or convert a string to a numeric value. They are useful for validating input and parsing data.
 | Function Name | Description |
 | :------------ | :------------------------------------------------------------------------------------------------ |
@@ -50,7 +50,7 @@ This category includes functions that check the properties of individual charact
 ## 42 Custom Functions
 Create a customised set of functions.
 
-### Memory Management Functions
+### Memory Management Functions [Mandatory]
 This category includes functions responsible for allocating, deallocating, and initialising memory. These are fundamental for managing resources in C.
 | Function Name | Description |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
@@ -59,7 +59,7 @@ This category includes functions responsible for allocating, deallocating, and i
 | `ft_strnew` | Allocates a new string, initialized with null characters (`\0`) and ending with a null terminator. Returns `NULL` on allocation failure. |
 | `ft_strdel` | Frees a string using `free(3)` and sets its pointer to `NULL`. |
 
-### String Manipulation Functions (Advanced)
+### String Manipulation Functions (Advanced) [Mandatory]
 This group encompasses functions that perform various operations on strings, often involving memory allocation for new strings, character-by-character processing, or complex parsing.
 | Function Name | Description |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
@@ -76,7 +76,7 @@ This group encompasses functions that perform various operations on strings, oft
 | `ft_strsplit` | Allocates and returns an array of "fresh" strings obtained by splitting a string using a specified delimiter character. Returns `NULL` on allocation failure. |
 | `ft_itoa` | Allocates and returns a "fresh" string representation of a given integer, supporting negative numbers. Returns `NULL` on allocation failure. |
 
-### Output Functions
+### Output Functions [Mandatory]
 This group focuses on functions that print characters, strings, or numbers to standard output or a specified file descriptor.
 | Function Name | Description |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
@@ -88,3 +88,14 @@ This group focuses on functions that print characters, strings, or numbers to st
 | `ft_putstr_fd`| Outputs a null-terminated string to a specified file descriptor. |
 | `ft_putendl_fd`| Outputs a null-terminated string to a specified file descriptor, followed by a newline character. |
 | `ft_putnbr_fd`| Outputs an integer to a specified file descriptor. |
+
+### Linked List Functions [Bonus]
+These functions are specifically designed to **manage linked lists**, a fundamental data structure in computer science. They handle the creation, deletion, modification, and iteration of individual list nodes (or "links") and the list as a whole.
+| Function Name | Description |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| `ft_lstnew` | Allocates a new list link and initializes its content, content size, and `next` pointer. Returns `NULL` on allocation failure. |
+| `ft_lstdelone` | Frees a single list link's content and the link itself, then sets the link's pointer to `NULL`. The `next` pointer is not affected. |
+| `ft_lstdel` | Frees a list starting from a given link and all of its successors. The starting link's pointer is set to `NULL`. |
+| `ft_lstadd` | Adds a new link to the beginning of a linked list. |
+| `ft_lstiter` | Iterates through a linked list, applying a specified function to each link. |
+| `ft_lstmap` | Creates a new linked list by applying a function to each link of an existing list. Returns `NULL` if allocation fails. |
