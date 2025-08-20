@@ -1,4 +1,5 @@
 # Mandatory part
+Build a comprehensive and reusable C programming library by re-implementing foundational functions, thereby deepening understanding of their mechanics and creating an essential toolkit for future projects.
 
 ## Libc Functions
 Recreate a set of functions from the official C library.
