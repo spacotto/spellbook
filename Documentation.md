@@ -48,29 +48,43 @@ This category includes functions that check the properties of individual charact
 | `tolower` | Converts an uppercase letter to its lowercase equivalent. |
 
 ## 42 Custom Functions
-Create specific functions 
+Create a customised set of functions.
 
-- ft_memalloc
-- ft_memdel
-- ft_strnew
-- ft_strdel
-- ft_strclr
-- ft_striter
-- ft_striteri
-- ft_strmap
-- ft_strmapi
-- ft_strequ
-- ft_strnequ
-- ft_strsub
-- ft_strjoin
-- ft_strtrim
-- ft_strsplit
-- ft_itoa
-- ft_putchar
-- ft_putstr
-- ft_putendl
-- ft_putnbr
-- ft_putchar_fd
-- ft_putstr_fd
-- ft_putendl_fd
-- ft_putnbr_fd
+### Memory Management Functions
+This category includes functions responsible for allocating, deallocating, and initialising memory. These are fundamental for managing resources in C.
+| Function Name | Description |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| `ft_memalloc` | Allocates a fresh memory area and initializes it to zero. Returns `NULL` on allocation failure. |
+| `ft_memdel` | Frees a memory area using `free(3)` and sets the pointer to `NULL`. |
+| `ft_strnew` | Allocates a new string, initialized with null characters (`\0`) and ending with a null terminator. Returns `NULL` on allocation failure. |
+| `ft_strdel` | Frees a string using `free(3)` and sets its pointer to `NULL`. |
+
+### String Manipulation Functions (Advanced)
+This group encompasses functions that perform various operations on strings, often involving memory allocation for new strings, character-by-character processing, or complex parsing.
+| Function Name | Description |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| `ft_strclr` | Sets every character of a given string to the null character (`\0`). |
+| `ft_striter` | Applies a given function `f` to each character of a string, allowing modification of characters via address. |
+| `ft_striteri` | Applies a given function `f` to each character of a string, passing both the character's address and its index. |
+| `ft_strmap` | Applies a given function `f` to each character of a string to create and return a new "fresh" string with the results. |
+| `ft_strmapi` | Applies a given function `f` to each character of a string, passing its index, to create and return a new "fresh" string. |
+| `ft_strequ` | Performs a lexicographical comparison between two strings; returns `1` if identical, `0` otherwise. |
+| `ft_strnequ` | Performs a lexicographical comparison between two strings up to `n` characters; returns `1` if identical, `0` otherwise. |
+| `ft_strsub` | Allocates and returns a "fresh" substring from a given string, starting at `index` and of `len` size. Returns `NULL` on allocation failure. |
+| `ft_strjoin` | Allocates and returns a "fresh" string resulting from the concatenation of two given strings. Returns `NULL` on allocation failure. |
+| `ft_strtrim` | Allocates and returns a copy of a string with leading and trailing whitespace characters (` `, `\n`, `\t`) removed. Returns `NULL` on allocation failure. |
+| `ft_strsplit` | Allocates and returns an array of "fresh" strings obtained by splitting a string using a specified delimiter character. Returns `NULL` on allocation failure. |
+| `ft_itoa` | Allocates and returns a "fresh" string representation of a given integer, supporting negative numbers. Returns `NULL` on allocation failure. |
+
+### Output Functions
+This group focuses on functions that print characters, strings, or numbers to standard output or a specified file descriptor.
+| Function Name | Description |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| `ft_putchar` | Outputs a single character to the standard output. |
+| `ft_putstr` | Outputs a null-terminated string to the standard output. |
+| `ft_putendl` | Outputs a null-terminated string to the standard output, followed by a newline character. |
+| `ft_putnbr` | Outputs an integer to the standard output. |
+| `ft_putchar_fd`| Outputs a single character to a specified file descriptor. |
+| `ft_putstr_fd`| Outputs a null-terminated string to a specified file descriptor. |
+| `ft_putendl_fd`| Outputs a null-terminated string to a specified file descriptor, followed by a newline character. |
+| `ft_putnbr_fd`| Outputs an integer to a specified file descriptor. |
