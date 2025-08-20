@@ -14,24 +14,25 @@ This group includes functions that operate on a block of memory, which can be an
 | `memmove` | Copies bytes from one memory area to another, handling overlapping source and destination regions safely. |
 | `memchr` | Locates the first occurrence of a specific byte within a given memory block. |
 | `memcmp` | Compares a specified number of bytes from two memory areas. |
+| `calloc` | Allocates memory for an array of a specified number of elements and initializes all bytes to zero. |
 
 ### String Manipulation Functions [Mandatory]
 These functions are specifically designed to work with null-terminated strings (character arrays ending with `\0`). They handle common string operations like copying, concatenating, and searching.
 | Function Name | Description |
 | :------------ | :------------------------------------------------------------------------------------------------ |
 | `strlen` | Calculates the length of a null-terminated string, excluding the null byte. |
-| `strdup` | Duplicates a string by allocating new memory and copying the original string's content. |
+| `strlcpy` | Copies a null-terminated string, ensuring the destination buffer is not overrun. |
 | `strlcat` | Appends a null-terminated string to another, ensuring the destination buffer is not overrun. |
 | `strchr` | Locates the first occurrence of a character within a string. |
 | `strrchr` | Locates the last occurrence of a character within a string. |
 | `strnstr` | Finds the first occurrence of a substring within a specified number of characters of another string. |
 | `strncmp` | Compares a specified number of characters from two null-terminated strings. |
+| `strdup` | Duplicates a string by allocating new memory and copying the original string's content. |
 
 ### Character and Conversion Functions [Mandatory]
 This category includes functions that check the properties of individual characters or convert a string to a numeric value. They are useful for validating input and parsing data.
 | Function Name | Description |
 | :------------ | :------------------------------------------------------------------------------------------------ |
-| `atoi` | Converts a null-terminated string representing an integer to its `int` equivalent. |
 | `isalpha` | Checks if a character is an alphabetic letter (uppercase or lowercase). |
 | `isdigit` | Checks if a character is a decimal digit (0-9). |
 | `isalnum` | Checks if a character is an alphanumeric character (either a letter or a digit). |
@@ -39,6 +40,7 @@ This category includes functions that check the properties of individual charact
 | `isprint` | Checks if a character is a printable character (including space). |
 | `toupper` | Converts a lowercase letter to its uppercase equivalent. |
 | `tolower` | Converts an uppercase letter to its lowercase equivalent. |
+| `atoi` | Converts a null-terminated string representing an integer to its `int` equivalent. |
 
 ## 42 Custom Functions
 Create a customised set of functions.
