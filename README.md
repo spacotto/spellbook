@@ -45,7 +45,7 @@ Use `malloc` to implement the two following functions.
 ## 42 Custom Functions
 Create a customised set of functions.
 
-### String Creation and Manipulation
+### String Creation and Manipulation [Mandatory]
 These functions allocate new memory to create and return modified strings based on input. They don't modify the original strings, which is a common practice to avoid unexpected side effects.
 | Function Name | Description |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
@@ -57,7 +57,7 @@ These functions allocate new memory to create and return modified strings based 
 | `ft_strmapi` | Applies the function f to each character of the string s, passing its index as the first argument and the character itself as the second. A new string is created (using `malloc(3)`) to store the results from the successive applications of `f`. |
 | `ft_striteri` | Applies the function `f` to each character of the string passed as argument, passing its index as the first argument. Each character is passed by address to `f` so it can be modified if necessary. |
 
-### File Descriptor Output
+### File Descriptor Output [Mandatory]
 These functions write various data types to a specified file descriptor, which can be a file, standard output, or standard error. They are a common way to handle I/O in a modular and consistent manner.
 | Function Name | Description |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
@@ -70,4 +70,12 @@ These functions write various data types to a specified file descriptor, which c
 These functions are specifically designed to **manage linked lists**, a fundamental data structure in computer science. They handle the creation, deletion, modification, and iteration of individual list nodes (or "links") and the list as a whole.
 | Function Name | Description |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
-| `name` | description |
+| `ft_lstnew` | Allocates memory (using malloc(3)) and returns a new node. The `content` member variable is initialised with the given parameter `content`. The variable `next` is initialised to NULL. |
+| `ft_lstadd_front` | Adds the node `new` at the beginning of the list. |
+| `ft_lstsize` | Counts the number of nodes in the list. |
+| `ft_lstlast` | Returns the last node of the list. |
+| `ft_lstadd_back` | Adds the node `new` at the end of the list. |
+| `ft_lstdelone` | Takes a node as a parameter and frees its content using the function `del`. Free the node itself, but does NOT free the next node. |
+| `ft_lstclear` | Deletes and frees the given node and all its successors, using the function `del` and `free(3)`. Finally, set the pointer to the list to NULL. |
+| `ft_lstiter` | Iterates through the list `lst` and applies the function `f` to the content of each node. |
+| `ft_lstmap` | Iterates through the list `lst`, applies the function `f` to each node’s content, and creates a new list resulting from the successive applications of the function `f`. The `del` function is used to delete the content of a node if needed. |
