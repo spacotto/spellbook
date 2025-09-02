@@ -17,6 +17,29 @@ These functions are used to check if a character belongs to a certain type (e.g.
 | `tolower` | Converts an uppercase letter to its lowercase equivalent. |
 | `atoi` | Converts a string to an integer. |
 
+### String and Memory Manipulation [Mandatory]
+This category includes functions for handling strings and blocks of memory. They are used for copying, comparing, and searching within data.
+| Function Name | Description |
+| :------------ | :------------------------------------------------------------------------------------------------ |
+| `strlen` | Calculates the length of a string, excluding the null terminator. |
+| `memset` | Fills a block of memory with a specific byte value. |
+| `bzero` | Sets a block of memory to all zeros. (Note: This is similar to `memset` with a value of 0). |
+| `memcpy` | Copies a block of memory from a source to a destination. |
+| `memmove` | Copies a block of memory, handling overlapping source and destination regions safely. |
+| `strlcpy` | Copies a string with a size limit, ensuring the destination is null-terminated. |
+| `strlcat` | Appends a string with a size limit, ensuring the destination is null-terminated. |
+| `strchr` | Locates the first occurrence of a character in a string. |
+| `strrchr` | Locates the last occurrence of a character in a string. |
+| `strncmp` | Compares two strings up to a specified number of characters. |
+| `memchr` | Scans a block of memory for the first occurrence of a specific character. |
+| `memcmp` | Compares two blocks of memory. |
+| `strnstr` | Locates the first occurrence of a substring within a string, searching up to a specified length. |
+
+### `malloc` Functions [Mandatory]
+| Function Name | Description |
+| `calloc` | Allocates a block of memory for an array and initialises all bytes to zero. |
+| `strdup` | Duplicates a string by allocating new memory and copying the contents. |
+
 ## 42 Custom Functions
 Create a customised set of functions.
 
@@ -26,9 +49,4 @@ Create a customised set of functions.
 These functions are specifically designed to **manage linked lists**, a fundamental data structure in computer science. They handle the creation, deletion, modification, and iteration of individual list nodes (or "links") and the list as a whole.
 | Function Name | Description |
 | :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
-| `ft_lstnew` | Allocates a new list link and initializes its content, content size, and `next` pointer. Returns `NULL` on allocation failure. |
-| `ft_lstdelone` | Frees a single list link's content and the link itself, then sets the link's pointer to `NULL`. The `next` pointer is not affected. |
-| `ft_lstdel` | Frees a list starting from a given link and all of its successors. The starting link's pointer is set to `NULL`. |
-| `ft_lstadd` | Adds a new link to the beginning of a linked list. |
-| `ft_lstiter` | Iterates through a linked list, applying a specified function to each link. |
-| `ft_lstmap` | Creates a new linked list by applying a function to each link of an existing list. Returns `NULL` if allocation fails. |
+| `name` | description |
