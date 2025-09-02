@@ -37,6 +37,7 @@ This category includes functions for handling strings and blocks of memory. They
 
 ### `malloc` Functions [Mandatory]
 | Function Name | Description |
+| :------------ | :------------------------------------------------------------------------------------------------ |
 | `calloc` | Allocates a block of memory for an array and initialises all bytes to zero. |
 | `strdup` | Duplicates a string by allocating new memory and copying the contents. |
 
