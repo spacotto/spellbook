@@ -36,6 +36,7 @@ This category includes functions for handling strings and blocks of memory. They
 | `strnstr` | Locates the first occurrence of a substring within a string, searching up to a specified length. |
 
 ### `malloc` Functions [Mandatory]
+Use `malloc` to implement the two following functions.
 | Function Name | Description |
 | :------------ | :------------------------------------------------------------------------------------------------ |
 | `calloc` | Allocates a block of memory for an array and initialises all bytes to zero. |
@@ -44,7 +45,26 @@ This category includes functions for handling strings and blocks of memory. They
 ## 42 Custom Functions
 Create a customised set of functions.
 
-### 
+### String Creation and Manipulation
+These functions allocate new memory to create and return modified strings based on input. They don't modify the original strings, which is a common practice to avoid unexpected side effects.
+| Function Name | Description |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| `ft_substr` | Allocates memory (using `malloc(3)`) and returns a substring from the string `s`. The substring starts at index `start` and has a maximum length of `len`. |
+| `ft_strjoin` | Allocates memory (using `malloc(3)`) and returns a new string, which is the result of concatenating `s1` and `s2`. |
+| `ft_strtrim` | Allocates memory (using `malloc(3)`) and returns a copy of `s1` with characters from `set` removed from the beginning and the end. |
+| `ft_split` | Allocates memory (using `malloc(3)`) and returns an array of strings obtained by splitting `s` using the character `c` as a delimiter. The array must end with a `NULL` pointer. |
+| `ft_itoa` | Allocates memory (using `malloc(3)`) and returns a string representing the integer received as an argument. Negative numbers must be handled. |
+| `ft_strmapi` | Applies the function f to each character of the string s, passing its index as the first argument and the character itself as the second. A new string is created (using `malloc(3)`) to store the results from the successive applications of `f`. |
+| `ft_striteri` | Applies the function `f` to each character of the string passed as argument, passing its index as the first argument. Each character is passed by address to `f` so it can be modified if necessary. |
+
+### File Descriptor Output
+These functions write various data types to a specified file descriptor, which can be a file, standard output, or standard error. They are a common way to handle I/O in a modular and consistent manner.
+| Function Name | Description |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| `ft_putchar_fd` | Outputs the character `c` to the specified file descriptor. |
+| `ft_putstr_fd` | Outputs the string `s` to the specified file descriptor. |
+| `ft_putendl_fd` | Outputs the string `s` to the specified file descriptor followed by a newline. |
+| `ft_putnbr_fd` | Outputs the integer `n` to the specified file descriptor. |
 
 ### Linked List Functions [Bonus]
 These functions are specifically designed to **manage linked lists**, a fundamental data structure in computer science. They handle the creation, deletion, modification, and iteration of individual list nodes (or "links") and the list as a whole.
