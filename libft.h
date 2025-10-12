@@ -1,12 +1,30 @@
-#include <unistd.h>
-#include <stdlib.h>
-#include <string.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/12 17:55:26 by spacotto          #+#    #+#             */
+/*   Updated: 2025/10/12 17:57:42 by spacotto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
+
+/* INCLUDES */
+# include <unistd.h>
+# include <stdlib.h>
+# include <string.h>
+
+/* STRUCTURES */
 
 typedef struct s_list
 {
 void *content;
 struct s_list *next;
-} t_list;
+}		t_list;
 
 /*Libc functions*/
 
