@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/14 16:07:03 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/14 18:42:06 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main()
 	{
 		printf("=== ft_isalpha.c ===\n");
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalpha('A'), ft_isalpha('A'));
-		printf("ORIGINAL: %d | CUSTOM: %d\n\n", isalpha(' '), ft_isalpha(' '));
+		printf("ORIGINAL: %d | CUSTOM: %d\n", isalpha(' '), ft_isalpha(' '));
 	}
 	
 	{
@@ -34,7 +34,7 @@ int	main()
 		printf("\n=== ft_isalnum.c ===\n");
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum('3'), ft_isalnum('3'));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum('c'), ft_isalnum('c'));
-		printf("ORIGINAL: %d | CUSTOM: %d\n\n", isalnum(' '), ft_isalnum(' '));
+		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum(' '), ft_isalnum(' '));
 	}
 
 	{
@@ -59,5 +59,16 @@ int	main()
 		printf("ORIGINAL: %lu | CUSTOM: %zu\n", strlen(s), ft_strlen(s));
 	}
 
+	{
+		char *o = "000000000";
+		char *c = "000000000";
+		printf("\n=== ft_memset.c ===\n");	
+		printf("BEFORE\n\n");
+		printf("ORIGINAL | %s\nCUSTOM	 | %s\n\n", o, c);
+		printf("AFTER\n\n");
+		memset(&o, 1, 3*sizeof(o[0]));
+		ft_memset(&c, 1, 3*sizeof(c[0]));
+		printf("ORIGINAL | %s\nCUSTOM   | %s\n", o, c);
+	}
 	return(0);
 }

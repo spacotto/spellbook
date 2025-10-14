@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 09:34:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/10/14 15:52:06 by spacotto         ###   ########.fr        #
+#    Updated: 2025/10/14 18:17:11 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,11 @@ FLAGS	:= -Wall -Wextra -Werror
 # SOURCES
 SRC_ISC	:= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
 
-SRC_STR	:= ft_strlen.c 
+SRC_STR	:= ft_strlen.c
 
-SRCS	:= $(SRC_ISC) $(SRC_STR)
+SRC_MEM	:= ft_memset.c
+
+SRCS	:= $(SRC_ISC) $(SRC_STR) $(SRC_MEM)
 
 # OBJECTS
 OBJS	:= $(SRCS:.c=.o)

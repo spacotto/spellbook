@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/14 18:10:35 by spacotto         ###   ########.fr       */
+/*   Created: 2025/10/14 16:50:30 by spacotto          #+#    #+#             */
+/*   Updated: 2025/10/14 18:18:20 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-/* INCLUDES */
+void    *ft_memset(void *s, int c, size_t n)
+{
+	unsigned char	*str;
+	size_t		i;
 
-# include <unistd.h>
+	str = s;
+	i = 0;
+	while (i < n)
+	{
+		str[i++] = c;
+	}
+	return (s);
+}
 
-/* MANDATORY PART: LIBC FUNCTIONS */
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-
-size_t	ft_strlen(const char *s);
-
-void	*ft_memset(void *s, int c, size_t n);
-
-#endif
