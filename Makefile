@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 09:34:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/10/14 15:27:04 by spacotto         ###   ########.fr        #
+#    Updated: 2025/10/14 15:52:06 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ $(NAME) : $(OBJS)
 	ar -rsc $(NAME) $(OBJS)
 	ranlib $(NAME)
 
-$(OBJS) : $(SRCS)
+%.o : %.c
 	$(CC) -c $(FLAGS) -I . $< -o $@
 
 clean:

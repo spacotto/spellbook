@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/14 15:15:06 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/14 16:07:03 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,20 +25,20 @@ int	main()
 	}
 	
 	{
-		printf("=== ft_isdigit.c ===\n");
+		printf("\n=== ft_isdigit.c ===\n");
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isdigit('3'), ft_isdigit('3'));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isdigit('C'), ft_isdigit('C'));
 	}
 
 	{
-		printf("=== ft_isalnum.c ===\n");
+		printf("\n=== ft_isalnum.c ===\n");
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum('3'), ft_isalnum('3'));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum('c'), ft_isalnum('c'));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum(' '), ft_isalnum(' '));
+		printf("ORIGINAL: %d | CUSTOM: %d\n\n", isalnum(' '), ft_isalnum(' '));
 	}
 
 	{
-                printf("=== ft_isascii.c ===\n");
+                printf("\n=== ft_isascii.c ===\n");
                 printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(0), ft_isascii(0));
                 printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(127), ft_isascii(127));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(128), ft_isascii(128));
@@ -46,16 +46,16 @@ int	main()
         }
 
 	{
-                printf("=== ft_isprint.c ===\n");
+                printf("\n=== ft_isprint.c ===\n");
+                printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(31), ft_isprint(31));
                 printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(32), ft_isprint(32));
-                printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(33), ft_isprint(33));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(126), ft_isprint(126));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(127), ft_isprint(127));
         }
 
 	{
-		char *s = "";
-		printf("=== ft_strlen.c ===\n");
+		char *s = "Excusatio non petita, accusatio manifesta";
+		printf("\n=== ft_strlen.c ===\n");
 		printf("ORIGINAL: %lu | CUSTOM: %zu\n", strlen(s), ft_strlen(s));
 	}
 
