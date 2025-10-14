@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/14 12:02:49 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/14 15:15:06 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 int	main()
 {
@@ -51,5 +52,12 @@ int	main()
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(126), ft_isprint(126));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(127), ft_isprint(127));
         }
+
+	{
+		char *s = "";
+		printf("=== ft_strlen.c ===\n");
+		printf("ORIGINAL: %lu | CUSTOM: %zu\n", strlen(s), ft_strlen(s));
+	}
+
 	return(0);
 }
