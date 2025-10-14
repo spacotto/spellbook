@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 09:34:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/10/14 10:29:40 by spacotto         ###   ########.fr        #
+#    Updated: 2025/10/14 11:52:02 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ FLAGS	:= -Wall -Wextra -Werror
 INC	:= libft.h
 
 # SOURCES
-SRC_ISC	:= ft_isalpha.c ft_isdigit.c
+SRC_ISC	:= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
 
 SRCS	:= $(SRC_ISC)
 
