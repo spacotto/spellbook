@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/15 12:02:54 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/15 16:41:35 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,31 @@ int	main()
 	{
                 char o[10] = "000000000";
                 char c[10] = "000000000";
+		size_t n = 8;
                 printf("\n=== ft_bzero.c ===\n");
                 printf("BEFORE\n\n");
                 printf("ORIGINAL | %s\nCUSTOM   | %s\n\n", o, c);
                 printf("AFTER\n\n");
-                bzero(o, 3);
-                ft_bzero(c, 3);
-                printf("ORIGINAL | %s\nCUSTOM   | %s\n", &o[3], &c[3]);
+                bzero(o, n);
+                ft_bzero(c, n);
+                printf("ORIGINAL | %s\nCUSTOM   | %s\n", &o[n], &c[n]);
         }
 
+	{	
+                char dest_o[1024];
+                char dest_c[1024];
+                char src[1024] = "Audaces fortuna iuvat";
+                printf("\n=== ft_memcpy.c ===\n");
+                printf("=== BEFORE\n");
+		printf("src:    %p | %s\n", src, &src[0]);
+	        printf("dest_o: %p | %s\n", dest_o, &dest_o[0]);
+		printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);
+                printf("=== AFTER\n");
+		printf("src:    %p | %s\n", src, &src[0]);
+		memcpy(dest_o, src, 7);
+		printf("dest_o: %p | %s\n", dest_o, &dest_o[0]);
+		ft_memcpy(dest_c, src, 7);
+		printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);
+	}
 	return(0);
 }
