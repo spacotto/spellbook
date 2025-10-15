@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:13:41 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/15 18:08:37 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/15 20:37:58 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char		*d;
 	const unsigned char	*s;
-	size_t			i;
 	
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;
-	i = 0;
 	if (d > s)
 	{
 		while (n > 0)

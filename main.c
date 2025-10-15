@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/15 18:12:50 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/15 21:03:14 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,21 +103,22 @@ int	main()
 	}
 
 	{
-		char dest_o[1024] = "banana";
-                char dest_c[1024] = "banana";
-                char src[10] = "0000";
+		char s1[1024] = "Audaces fortuna iuvat";
+		char s2[1024] = "Audaces fortuna iuvat";
                 printf("\n=== ft_memmove.c ===\n");
                 printf("=== BEFORE\n");
-                printf("src:    %p | %s\n", src, &src[9]);
-                printf("dest_o: %p | %s\n", dest_o, &dest_o[0]);
-                printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);
+                printf("s_o: %p | %s\n", s1, &s1[0]);
+                printf("s_c: %p | %s\n", s2, &s2[0]);
+                printf("d_o: %p | %s\n", s1 + 3, &s1[2]);
+                printf("d_c: %p | %s\n", s2 + 3, &s2[2]);
                 printf("=== AFTER\n");
-                printf("src:    %p | %s\n", src, &src[9]);
-                memmove(dest_o, src, 6);
-                printf("dest_o: %p | %s\n", dest_o, &dest_o[0]);
-                ft_memmove(dest_c, src, 6);
-                printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);                
-	}
+                memmove(s1 + 3, s1, 7);
+                printf("s_o: %p | %s\n", s1, &s1[0]);
+		printf("d_o: %p | %s\n", s1 + 3, &s1[2]);
+	        ft_memmove(s2 + 3, s2, 7);
+                printf("s_c: %p | %s\n", s2, &s2[0]);
+                printf("d_c: %p | %s\n", s2 + 3, &s2[2]);
+      	}
 
 	return(0);
 }
