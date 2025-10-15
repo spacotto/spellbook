@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 16:50:30 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/14 18:18:20 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/15 10:08:17 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,12 @@ void    *ft_memset(void *s, int c, size_t n)
 	unsigned char	*str;
 	size_t		i;
 
-	str = s;
+	str = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
-		str[i++] = c;
+		str[i] = c;
+		i++;
 	}
 	return (s);
 }
