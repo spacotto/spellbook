@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/15 16:41:35 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/15 18:12:50 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,5 +101,23 @@ int	main()
 		ft_memcpy(dest_c, src, 7);
 		printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);
 	}
+
+	{
+		char dest_o[1024] = "banana";
+                char dest_c[1024] = "banana";
+                char src[10] = "0000";
+                printf("\n=== ft_memmove.c ===\n");
+                printf("=== BEFORE\n");
+                printf("src:    %p | %s\n", src, &src[9]);
+                printf("dest_o: %p | %s\n", dest_o, &dest_o[0]);
+                printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);
+                printf("=== AFTER\n");
+                printf("src:    %p | %s\n", src, &src[9]);
+                memmove(dest_o, src, 6);
+                printf("dest_o: %p | %s\n", dest_o, &dest_o[0]);
+                ft_memmove(dest_c, src, 6);
+                printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);                
+	}
+
 	return(0);
 }
