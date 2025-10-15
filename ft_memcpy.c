@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 12:10:45 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/15 16:42:54 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/15 17:10:31 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	const unsigned char	*s;
 	size_t				i;
 
-	dest = d;
-	src = s;
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
 	i = 0;
 	while (i < n)
 	{
