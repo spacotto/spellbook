@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/16 15:35:32 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/16 17:15:43 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -229,5 +229,51 @@ int	main()
                 printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 3), d2);
         }
 
+	puts("\n=== ft_strlcat.c ===");
+
+	{
+                char d1[] = "000000000";
+                char d2[] = "000000000";
+                char src[] = "111111";
+                puts("=== SIZE <= DST");
+                puts("=== BEFORE");
+                printf("   SRC: %s\n", src);
+                printf("C  DST: %s\n", d1);
+                printf("42 DST: %s\n", d2);
+                puts("=== AFTER");
+                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
+                printf("C  DST: %zu | %s\n", strlcat(d1, src, 3), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcat(d2, src, 3), d2);
+        }
+
+	{
+                char d1[] = "000000000";
+                char d2[] = "000000000";
+                char src[] = "111111";
+                puts("=== SIZE > DST");
+                puts("=== BEFORE");
+                printf("   SRC: %s\n", src);
+                printf("C  DST: %s\n", d1);
+                printf("42 DST: %s\n", d2);
+                puts("=== AFTER");
+                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
+                printf("C  DST: %zu | %s\n", strlcat(d1, src, 9), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcat(d2, src, 9), d2);
+        }
+
+	{
+		char d1[] = "000000000";
+                char d2[] = "000000000";
+		char src[] = "111111";
+		puts("=== SIZE = SRC + DST");
+                puts("=== BEFORE");
+                printf("   SRC: %s\n", src);
+                printf("C  DST: %s\n", d1);
+                printf("42 DST: %s\n", d2);
+                puts("=== AFTER");
+                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
+                printf("C  DST: %zu | %s\n", strlcat(d1, src, 15), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcat(d2, src, 15), d2);
+	}
 	return(0);
 }
