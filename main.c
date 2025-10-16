@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/16 11:35:40 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:35:32 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <strings.h>
+#include <bsd/string.h>
 
 int	main()
 {
@@ -165,6 +166,68 @@ int	main()
                 printf("42 SRC: %p | %s\n", &a2, a2);
                 printf("42 DST: %p | %s\n", &a2 + 3, a2 + 3);
 	}
+	
+	puts("\n=== ft_strlcpy.c ===");
+
+	{
+		char d1[] = "000000000";
+                char d2[] = "000000000";
+                char src[] = "";
+		puts("=== SRC == NUL");
+		puts("=== BEFORE");
+		printf("   SRC: %s\n", src);
+		printf("C  DST: %s\n", d1);
+	        printf("42 DST: %s\n", d2);	
+		puts("=== AFTER");
+		printf("   SRC: %zu | %s\n", ft_strlen(src), src);
+                printf("C  DST: %zu | %s\n", strlcpy(d1, src, 3), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 3), d2);
+	}
+
+	{
+                char d1[] = "000000000";
+                char d2[] = "000000000";
+                char src[] = "12345";
+		puts("=== SIZE == 0");
+                puts("=== BEFORE");
+                printf("   SRC: %s\n", src);
+                printf("C  DST: %s\n", d1);
+                printf("42 DST: %s\n", d2);
+                puts("=== AFTER");
+                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
+                printf("C  DST: %zu | %s\n", strlcpy(d1, src, 0), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 0), d2);
+        }
+
+	{
+                char d1[] = "000000000";
+                char d2[] = "000000000";
+                char src[] = "12345";
+                puts("=== SRC < SIZE");
+		puts("=== BEFORE");
+                printf("   SRC: %s\n", src);
+                printf("C  DST: %s\n", d1);
+                printf("42 DST: %s\n", d2);
+                puts("=== AFTER");
+                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
+                printf("C  DST: %zu | %s\n", strlcpy(d1, src, 10), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 10), d2);
+        }
+	
+	{
+                char d1[] = "000000000";
+                char d2[] = "000000000";
+                char src[] = "12345";
+		puts("=== SRC > SIZE");
+                puts("=== BEFORE");
+                printf("   SRC: %s\n", src);
+                printf("C  DST: %s\n", d1);
+                printf("42 DST: %s\n", d2);
+                puts("=== AFTER");
+                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
+                printf("C  DST: %zu | %s\n", strlcpy(d1, src, 3), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 3), d2);
+        }
 
 	return(0);
 }
