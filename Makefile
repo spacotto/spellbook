@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 09:34:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/10/16 15:38:55 by spacotto         ###   ########.fr        #
+#    Updated: 2025/10/17 14:56:15 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,9 @@ SRC_STR	:= ft_strlen.c ft_strlcpy.c ft_strlcat.c
 
 SRC_MEM	:= ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c
 
-SRCS	:= $(SRC_ISC) $(SRC_STR) $(SRC_MEM)
+SRC_CONV:= ft_toupper.c ft_tolower.c
+
+SRCS	:= $(SRC_ISC) $(SRC_STR) $(SRC_MEM) $(SRC_CONV)
 
 # OBJECTS
 OBJS	:= $(SRCS:.c=.o)

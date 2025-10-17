@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/17 14:20:47 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/17 15:03:42 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -243,20 +243,21 @@ int	main()
 	puts("\n================================= ft_strlcat.c\n");
 
 	{
-		char d1[1024] = "000000000";
-		char d2[1024] = "000000000";
-		char s[] = "111111";
+		char d1[1024] = "0000000000";
+		char d2[1024] = "0000000000";
+		char s[] = "111111111111";
+		size_t size = 5;
 		puts("=== SIZE < SIZE[DST]");
 		puts("=== note: the fn does NOT handle the reverse.");
-		//size >= (src_len + dst_len)
 		puts("=== BEFORE");
-		printf("   SRC: [%zu] %s\n", ft_strlen(s), s);
-		printf("C  DST: [%zu] %s\n", ft_strlen(d1), d1);
-		printf("42 DST: [%zu] %s\n", ft_strlen(d2), d2);
+		printf("   SRC: [%zu]\n", ft_strlen(s));
+		printf("C  DST: [%zu]\n", ft_strlen(d1));
+		printf("42 DST: [%zu]\n", ft_strlen(d2));
+		printf("  SIZE: [%zu]\n", size);
 		puts("=== AFTER");
-		printf("   SRC: [%zu] %s\n", ft_strlen(s), s);
-		printf("C  DST: [%zu] %s\n", strlcat(d1, s, 21), d1);
-		printf("42 DST: [%zu] %s\n", ft_strlcat(d2, s, 21), d2);
+		printf("   SRC: [%zu]\n", ft_strlen(s));
+		printf("C  DST: [%zu]\n", strlcat(d1, s, size));
+		printf("42 DST: [%zu]\n", ft_strlcat(d2, s, size));
 		printf("=== FINAL CHECK: %s\n\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 
@@ -267,14 +268,33 @@ int	main()
 
 		puts("=== SIZE = 0");
 		puts("=== BEFORE");
-		printf("   SRC: [%zu] %s\n", ft_strlen(s), s);
-		printf("C  DST: [%zu] %s\n", ft_strlen(d1), d1);
-		printf("42 DST: [%zu] %s\n", ft_strlen(d2), d2);
+		printf("   SRC: [%zu]\n", ft_strlen(s));
+		printf("C  DST: [%zu]\n", ft_strlen(d1));
+		printf("42 DST: [%zu]\n", ft_strlen(d2));
 		puts("=== AFTER");
-		printf("   SRC: [%zu] %s\n", ft_strlen(s), s);
-		printf("C  DST: [%zu] %s\n", strlcat(d1, s, 0), d1);
-		printf("42 DST: [%zu] %s\n", ft_strlcat(d2, s, 0), d2);
+		printf("   SRC: [%zu]\n", ft_strlen(s));
+		printf("C  DST: [%zu]\n", strlcat(d1, s, 0));
+		printf("42 DST: [%zu]\n", ft_strlcat(d2, s, 0));
 		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
 	}
+
+	puts("\n================================= ft_toupper.c\n");
+
+	{
+		printf("ORIGINAL: %c | CUSTOM: %c\n", toupper('a'), ft_toupper('a'));
+		printf("ORIGINAL: %c | CUSTOM: %c\n", toupper('z'), ft_toupper('z'));
+		printf("ORIGINAL: %c | CUSTOM: %c\n", toupper('A'), ft_toupper('A'));
+		printf("ORIGINAL: %c | CUSTOM: %c\n", toupper('*'), ft_toupper('*'));
+	}
+	
+	puts("\n================================= ft_tolower.c\n");
+
+	{
+		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('A'), ft_tolower('A'));
+		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('Z'), ft_tolower('Z'));
+		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('a'), ft_tolower('a'));
+		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('*'), ft_tolower('*'));
+	}
+
 	return(0);
 }
