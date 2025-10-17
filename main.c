@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/17 15:03:42 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/17 18:39:58 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -294,6 +294,58 @@ int	main()
 		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('Z'), ft_tolower('Z'));
 		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('a'), ft_tolower('a'));
 		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('*'), ft_tolower('*'));
+	}
+	
+	puts("\n================================= ft_strchr.c\n");
+
+	{
+		char s[] = "qwertcasdfgczxcvb";
+		int c = 'c';
+		printf("TEST STR | %s\n", s);
+		printf("ORIGINAL | %s\n", strchr(s, c));
+		printf("CUSTOM   | %s\n", ft_strchr(s, c));
+		printf("=== FINAL CHECK: %s\n", (strcmp(strchr(s, c), ft_strchr(s, c))) ? "KO!" : "OK!");
+	}
+
+	puts("\n================================= ft_strrchr.c\n");
+
+	{
+		char s[] = "qwertcasdfgczxcvb";
+		int c = 'c';
+		printf("TEST STR | %s\n", s);
+		printf("ORIGINAL | %s\n", strrchr(s, c));
+		printf("CUSTOM   | %s\n", ft_strrchr(s, c));
+		printf("=== FINAL CHECK: %s\n", (strcmp(strrchr(s, c), ft_strchr(s, c))) ? "KO!" : "OK!");
+        }
+
+	puts("\n================================= ft_strncmp.c\n");
+
+	{
+
+	}
+	
+	puts("\n================================= ft_memchr.c\n");
+		
+	{
+	
+	}	
+	
+	puts("\n================================= ft_memcmp.c\n");
+
+	{
+
+	}
+	
+	puts("\n================================= ft_strnstr.c\n");
+
+	{
+	
+	}
+
+	puts("\n================================= ft_atoi.c\n");
+
+	{
+
 	}
 
 	return(0);
