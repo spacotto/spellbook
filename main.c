@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/16 17:15:43 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/17 10:24:34 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,21 @@
 
 int	main()
 {
-	puts("\n=== ft_isalpha.c ===");
+	puts("\n================================= ft_isalpha.c\n");
 	
 	{
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalpha('A'), ft_isalpha('A'));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalpha(' '), ft_isalpha(' '));
 	}
 	
-	puts("\n=== ft_isdigit.c ===");
+	puts("\n================================= ft_isdigit.c\n");
 
 	{
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isdigit('3'), ft_isdigit('3'));
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isdigit('C'), ft_isdigit('C'));
 	}
 
-	puts("\n=== ft_isalnum.c ===");
+	puts("\n================================= ft_isalnum.c\n");
 
 	{
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum('3'), ft_isalnum('3'));
@@ -42,7 +42,7 @@ int	main()
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum(' '), ft_isalnum(' '));
 	}
 
-	puts("\n=== ft_isascii.c ===");
+	puts("\n================================= ft_isascii.c\n");
 
 	{
                 printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(0), ft_isascii(0));
@@ -51,7 +51,7 @@ int	main()
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(-1), ft_isascii(-1));
         }
 
-	puts("\n=== ft_isprint.c ===");
+	puts("\n================================= ft_isprint.c\n");
 
 	{
                 printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(31), ft_isprint(31));
@@ -60,220 +60,234 @@ int	main()
 		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(127), ft_isprint(127));
         }
 
-	puts("\n=== ft_strlen.c ===");
+	puts("\n================================= ft_strlen.c\n");
 
 	{
 		char *s = "Excusatio non petita, accusatio manifesta";
 		printf("ORIGINAL: %lu | CUSTOM: %zu\n", strlen(s), ft_strlen(s));
 	}
 
-	puts("\n=== ft_memset.c ===");
+	puts("\n================================= ft_memset.c\n");
 
 	{
-		char o[10] = "000000000";
-		char c[10] = "000000000";
+		char s1[] = "000000000";
+		char s2[] = "000000000";
 		puts("=== BEFORE");
-		printf("ORIGINAL | %s\nCUSTOM	 | %s\n", o, c);
+		printf("ORIGINAL | %s\nCUSTOM	 | %s\n", s1, s2);
 		puts("=== AFTER");
-		memset(o, 'c', 3);
-		ft_memset(c, 'c', 3);
-		printf("ORIGINAL | %s\nCUSTOM   | %s\n", o, c);
+		memset(s1, 'c', 3);
+		ft_memset(s2, 'c', 3);
+		printf("ORIGINAL | %s\nCUSTOM   | %s\n", s1, s2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
 	}
 
-	puts("\n=== ft_bzero.c ===");
+	puts("\n================================= ft_bzero.c\n");
 
 	{
-                char o[10] = "000000000";
-                char c[10] = "000000000";
+                char s1[10] = "000000000";
+                char s2[10] = "000000000";
 		size_t n = 8;
                 puts("=== BEFORE");
-                printf("ORIGINAL | %s\nCUSTOM   | %s\n\n", o, c);
+                printf("ORIGINAL | %s\nCUSTOM   | %s\n\n", s1, s2);
                 puts("=== AFTER");
-                bzero(o, n);
-                ft_bzero(c, n);
-                printf("ORIGINAL | %s\nCUSTOM   | %s\n", &o[n], &c[n]);
+                bzero(s1, n);
+                ft_bzero(s2, n);
+                printf("ORIGINAL | %s\nCUSTOM   | %s\n", &s1[n], &s2[n]);
+		printf("=== FINAL CHECK: %s\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
         }
 
+	puts("\n================================= ft_memcpy.c\n");
+
 	{	
-                char dest_o[1024];
-                char dest_c[1024];
-                char src[1024] = "Audaces fortuna iuvat";
-                printf("\n=== ft_memcpy.c ===\n");
+                char d1[1024];
+                char d2[1024];
+                char s[] = "Audaces fortuna iuvat";
                 printf("=== BEFORE\n");
-		printf("src:    %p | %s\n", src, &src[0]);
-	        printf("dest_o: %p | %s\n", dest_o, &dest_o[0]);
-		printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);
+		printf("   SRC: %p | %s\n", s, &s[0]);
+	        printf(" C DST: %p | %s\n", d1, &d1[0]);
+		printf("42 DST: %p | %s\n", d2, &d2[0]);
                 printf("=== AFTER\n");
-		printf("src:    %p | %s\n", src, &src[0]);
-		memcpy(dest_o, src, 7);
-		printf("dest_o: %p | %s\n", dest_o, &dest_o[0]);
-		ft_memcpy(dest_c, src, 7);
-		printf("dest_c: %p | %s\n", dest_c, &dest_c[0]);
+		printf("   SRC: %p | %s\n", s, &s[0]);
+		memcpy(d1, s, 7);
+		printf(" C DST: %p | %s\n", d1, &d1[0]);
+		ft_memcpy(d2, s, 7);
+		printf("42 DST: %p | %s\n", d2, &d2[0]);
+		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
 	}
 
-	puts("\n=== ft_memmove.c ===");
+	puts("\n================================= ft_memmove.c\n");
 
 	{
-		char a1[1024] = "000111222333444555666";
-		char a2[1024] = "000111222333444555666";
+		char s1[] = "000111222333444555666";
+		char s2[] = "000111222333444555666";
                 puts("=== SRC = DST");
                 puts("=== BEFORE");
-                printf("C  SRC: %p | %s\n", &a1, a1);
-		printf("C  DST: %p | %s\n", &a1, a1);
-                printf("42 SRC: %p | %s\n", &a2, a2);
-                printf("42 DST: %p | %s\n", &a2, a2);
+                printf("C  SRC: %p | %s\n", &s1, s1);
+		printf("C  DST: %p | %s\n", &s1, s1);
+                printf("42 SRC: %p | %s\n", &s2, s2);
+                printf("42 DST: %p | %s\n", &s2, s2);
 		puts("=== AFTER");
-                memmove(a1, a1, 3);
-                printf("C  SRC: %p | %s\n", &a1, a1);
-		printf("C  DST: %p | %s\n", &a1, a1);
-	        ft_memmove(a2, a2, 3);
-                printf("42 SRC: %p | %s\n", &a2, a2);
-                printf("42 DST: %p | %s\n", &a2, a2);
+                memmove(s1, s1, 3);
+                printf("C  SRC: %p | %s\n", &s1, s1);
+		printf("C  DST: %p | %s\n", &s1, s1);
+	        ft_memmove(s2, s2, 3);
+                printf("42 SRC: %p | %s\n", &s2, s2);
+                printf("42 DST: %p | %s\n", &s2, s2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
 	}
 	
 	{	
-		char a1[1024] = "000111222333444555666";
-                char a2[1024] = "000111222333444555666";
+		char s1[] = "000111222333444555666";
+                char s2[] = "000111222333444555666";
 		puts("=== SRC > DST");
                 puts("=== BEFORE");
-                printf("C  SRC: %p | %s\n", &a1 + 3, a1 + 3);
-                printf("C  DST: %p | %s\n", &a1, a1);
-                printf("42 SRC: %p | %s\n", &a2 + 3, a2 + 3);
-                printf("42 DST: %p | %s\n", &a2, a2);
+                printf("C  SRC: %p | %s\n", &s1 + 3, s1 + 3);
+                printf("C  DST: %p | %s\n", &s1, s1);
+                printf("42 SRC: %p | %s\n", &s2 + 3, s2 + 3);
+                printf("42 DST: %p | %s\n", &s2, s2);
                 puts("=== AFTER");
-                memmove(a1, a1 + 3, 3);
-                printf("C  SRC: %p | %s\n", &a1 + 3, a1 + 3);
-                printf("C  DST: %p | %s\n", &a1, a1);
-                ft_memmove(a2, a2 + 3, 3);
-                printf("42 SRC: %p | %s\n", &a2 + 3, a2 + 3);
-                printf("42 DST: %p | %s\n", &a2, a2);
+                memmove(s1, s1 + 3, 3);
+                printf("C  SRC: %p | %s\n", &s1 + 3, s1 + 3);
+                printf("C  DST: %p | %s\n", &s1, s1);
+                ft_memmove(s2, s2 + 3, 3);
+                printf("42 SRC: %p | %s\n", &s2 + 3, s2 + 3);
+                printf("42 DST: %p | %s\n", &s2, s2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
 	}
 
 	{
-		char a1[1024] = "000111222333444555666";
-                char a2[1024] = "000111222333444555666";
+		char s1[] = "000111222333444555666";
+                char s2[] = "000111222333444555666";
 		puts("=== SRC < DST");
                 puts("=== BEFORE");
-                printf("C  SRC: %p | %s\n", &a1, a1);
-                printf("C  DST: %p | %s\n", &a1 + 3, a1 + 3);
-                printf("42 SRC: %p | %s\n", &a2, a2);
-                printf("42 DST: %p | %s\n", &a2 + 3, a2 + 3);
+                printf("C  SRC: %p | %s\n", &s1, s1);
+                printf("C  DST: %p | %s\n", &s1 + 3, s1 + 3);
+                printf("42 SRC: %p | %s\n", &s2, s2);
+                printf("42 DST: %p | %s\n", &s2 + 3, s2 + 3);
                 puts("=== AFTER");
-                memmove(a1 + 3, a1, 3);
-                printf("C  SRC: %p | %s\n", &a1, a1);
-                printf("C  DST: %p | %s\n", &a1 + 3, a1 + 3);
-                ft_memmove(a2 + 3, a2, 3);
-                printf("42 SRC: %p | %s\n", &a2, a2);
-                printf("42 DST: %p | %s\n", &a2 + 3, a2 + 3);
+                memmove(s1 + 3, s1, 3);
+                printf("C  SRC: %p | %s\n", &s1, s1);
+                printf("C  DST: %p | %s\n", &s1 + 3, s1 + 3);
+                ft_memmove(s2 + 3, s2, 3);
+                printf("42 SRC: %p | %s\n", &s2, s2);
+                printf("42 DST: %p | %s\n", &s2 + 3, s2 + 3);
+		printf("=== FINAL CHECK: %s\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
 	}
 	
-	puts("\n=== ft_strlcpy.c ===");
+	puts("\n================================= ft_strlcpy.c\n");
 
 	{
 		char d1[] = "000000000";
                 char d2[] = "000000000";
-                char src[] = "";
+                char s[] = "";
 		puts("=== SRC == NUL");
 		puts("=== BEFORE");
-		printf("   SRC: %s\n", src);
+		printf("   SRC: %s\n", s);
 		printf("C  DST: %s\n", d1);
 	        printf("42 DST: %s\n", d2);	
 		puts("=== AFTER");
-		printf("   SRC: %zu | %s\n", ft_strlen(src), src);
-                printf("C  DST: %zu | %s\n", strlcpy(d1, src, 3), d1);
-                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 3), d2);
+		printf("   SRC: %zu | %s\n", ft_strlen(s), s);
+                printf("C  DST: %zu | %s\n", strlcpy(d1, s, 3), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, s, 3), d2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
 	}
 
 	{
                 char d1[] = "000000000";
                 char d2[] = "000000000";
-                char src[] = "12345";
+                char s[] = "12345";
 		puts("=== SIZE == 0");
                 puts("=== BEFORE");
-                printf("   SRC: %s\n", src);
+                printf("   SRC: %s\n", s);
                 printf("C  DST: %s\n", d1);
                 printf("42 DST: %s\n", d2);
                 puts("=== AFTER");
-                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
-                printf("C  DST: %zu | %s\n", strlcpy(d1, src, 0), d1);
-                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 0), d2);
+                printf("   SRC: %zu | %s\n", ft_strlen(s), s);
+                printf("C  DST: %zu | %s\n", strlcpy(d1, s, 0), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, s, 0), d2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 
 	{
                 char d1[] = "000000000";
                 char d2[] = "000000000";
-                char src[] = "12345";
+                char s[] = "12345";
                 puts("=== SRC < SIZE");
 		puts("=== BEFORE");
-                printf("   SRC: %s\n", src);
+                printf("   SRC: %s\n", s);
                 printf("C  DST: %s\n", d1);
                 printf("42 DST: %s\n", d2);
                 puts("=== AFTER");
-                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
-                printf("C  DST: %zu | %s\n", strlcpy(d1, src, 10), d1);
-                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 10), d2);
+                printf("   SRC: %zu | %s\n", ft_strlen(s), s);
+                printf("C  DST: %zu | %s\n", strlcpy(d1, s, 10), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, s, 10), d2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 	
 	{
                 char d1[] = "000000000";
                 char d2[] = "000000000";
-                char src[] = "12345";
+                char s[] = "12345";
 		puts("=== SRC > SIZE");
                 puts("=== BEFORE");
-                printf("   SRC: %s\n", src);
+                printf("   SRC: %s\n", s);
                 printf("C  DST: %s\n", d1);
                 printf("42 DST: %s\n", d2);
                 puts("=== AFTER");
-                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
-                printf("C  DST: %zu | %s\n", strlcpy(d1, src, 3), d1);
-                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, src, 3), d2);
+                printf("   SRC: %zu | %s\n", ft_strlen(s), s);
+                printf("C  DST: %zu | %s\n", strlcpy(d1, s, 3), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcpy(d2, s, 3), d2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 
-	puts("\n=== ft_strlcat.c ===");
+	puts("\n================================= ft_strlcat.c\n");
 
 	{
                 char d1[] = "000000000";
                 char d2[] = "000000000";
-                char src[] = "111111";
+                char s[] = "111111";
                 puts("=== SIZE <= DST");
                 puts("=== BEFORE");
-                printf("   SRC: %s\n", src);
+                printf("   SRC: %s\n", s);
                 printf("C  DST: %s\n", d1);
                 printf("42 DST: %s\n", d2);
                 puts("=== AFTER");
-                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
-                printf("C  DST: %zu | %s\n", strlcat(d1, src, 3), d1);
-                printf("42 DST: %zu | %s\n", ft_strlcat(d2, src, 3), d2);
+                printf("   SRC: %zu | %s\n", ft_strlen(s), s);
+                printf("C  DST: %zu | %s\n", strlcat(d1, s, 3), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcat(d2, s, 3), d2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 
 	{
                 char d1[] = "000000000";
                 char d2[] = "000000000";
-                char src[] = "111111";
+                char s[] = "111111";
                 puts("=== SIZE > DST");
                 puts("=== BEFORE");
-                printf("   SRC: %s\n", src);
+                printf("   SRC: %s\n", s);
                 printf("C  DST: %s\n", d1);
                 printf("42 DST: %s\n", d2);
                 puts("=== AFTER");
-                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
-                printf("C  DST: %zu | %s\n", strlcat(d1, src, 9), d1);
-                printf("42 DST: %zu | %s\n", ft_strlcat(d2, src, 9), d2);
+                printf("   SRC: %zu | %s\n", ft_strlen(s), s);
+                printf("C  DST: %zu | %s\n", strlcat(d1, s, 9), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcat(d2, s, 9), d2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 
 	{
 		char d1[] = "000000000";
                 char d2[] = "000000000";
-		char src[] = "111111";
+		char s[] = "111111";
 		puts("=== SIZE = SRC + DST");
                 puts("=== BEFORE");
-                printf("   SRC: %s\n", src);
+                printf("   SRC: %s\n", s);
                 printf("C  DST: %s\n", d1);
                 printf("42 DST: %s\n", d2);
                 puts("=== AFTER");
-                printf("   SRC: %zu | %s\n", ft_strlen(src), src);
-                printf("C  DST: %zu | %s\n", strlcat(d1, src, 15), d1);
-                printf("42 DST: %zu | %s\n", ft_strlcat(d2, src, 15), d2);
+                printf("   SRC: %zu | %s\n", ft_strlen(s), s);
+                printf("C  DST: %zu | %s\n", strlcat(d1, s, 15), d1);
+                printf("42 DST: %zu | %s\n", ft_strlcat(d2, s, 15), d2);
+		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
 	}
 	return(0);
 }
