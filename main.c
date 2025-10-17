@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/17 10:24:34 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/17 10:31:07 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int	main()
                 char s2[10] = "000000000";
 		size_t n = 8;
                 puts("=== BEFORE");
-                printf("ORIGINAL | %s\nCUSTOM   | %s\n\n", s1, s2);
+                printf("ORIGINAL | %s\nCUSTOM   | %s\n", s1, s2);
                 puts("=== AFTER");
                 bzero(s1, n);
                 ft_bzero(s2, n);
@@ -133,7 +133,7 @@ int	main()
 	        ft_memmove(s2, s2, 3);
                 printf("42 SRC: %p | %s\n", &s2, s2);
                 printf("42 DST: %p | %s\n", &s2, s2);
-		printf("=== FINAL CHECK: %s\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
+		printf("=== FINAL CHECK: %s\n\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
 	}
 	
 	{	
@@ -152,7 +152,7 @@ int	main()
                 ft_memmove(s2, s2 + 3, 3);
                 printf("42 SRC: %p | %s\n", &s2 + 3, s2 + 3);
                 printf("42 DST: %p | %s\n", &s2, s2);
-		printf("=== FINAL CHECK: %s\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
+		printf("=== FINAL CHECK: %s\n\n", (strcmp(s1, s2)) ? "KO!" : "OK!");
 	}
 
 	{
@@ -189,7 +189,7 @@ int	main()
 		printf("   SRC: %zu | %s\n", ft_strlen(s), s);
                 printf("C  DST: %zu | %s\n", strlcpy(d1, s, 3), d1);
                 printf("42 DST: %zu | %s\n", ft_strlcpy(d2, s, 3), d2);
-		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
+		printf("=== FINAL CHECK: %s\n\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
 	}
 
 	{
@@ -205,7 +205,7 @@ int	main()
                 printf("   SRC: %zu | %s\n", ft_strlen(s), s);
                 printf("C  DST: %zu | %s\n", strlcpy(d1, s, 0), d1);
                 printf("42 DST: %zu | %s\n", ft_strlcpy(d2, s, 0), d2);
-		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
+		printf("=== FINAL CHECK: %s\n\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 
 	{
@@ -221,7 +221,7 @@ int	main()
                 printf("   SRC: %zu | %s\n", ft_strlen(s), s);
                 printf("C  DST: %zu | %s\n", strlcpy(d1, s, 10), d1);
                 printf("42 DST: %zu | %s\n", ft_strlcpy(d2, s, 10), d2);
-		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
+		printf("=== FINAL CHECK: %s\n\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 	
 	{
@@ -255,7 +255,7 @@ int	main()
                 printf("   SRC: %zu | %s\n", ft_strlen(s), s);
                 printf("C  DST: %zu | %s\n", strlcat(d1, s, 3), d1);
                 printf("42 DST: %zu | %s\n", ft_strlcat(d2, s, 3), d2);
-		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
+		printf("=== FINAL CHECK: %s\n\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 
 	{
@@ -271,7 +271,7 @@ int	main()
                 printf("   SRC: %zu | %s\n", ft_strlen(s), s);
                 printf("C  DST: %zu | %s\n", strlcat(d1, s, 9), d1);
                 printf("42 DST: %zu | %s\n", ft_strlcat(d2, s, 9), d2);
-		printf("=== FINAL CHECK: %s\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
+		printf("=== FINAL CHECK: %s\n\n", (strcmp(d1, d2)) ? "KO!" : "OK!");
         }
 
 	{
