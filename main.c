@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/17 18:39:58 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/18 18:49:23 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -301,10 +301,23 @@ int	main()
 	{
 		char s[] = "qwertcasdfgczxcvb";
 		int c = 'c';
+	
+		puts("=== CHAR");
 		printf("TEST STR | %s\n", s);
 		printf("ORIGINAL | %s\n", strchr(s, c));
 		printf("CUSTOM   | %s\n", ft_strchr(s, c));
 		printf("=== FINAL CHECK: %s\n", (strcmp(strchr(s, c), ft_strchr(s, c))) ? "KO!" : "OK!");
+	}
+
+	{
+		char s[] = "qwert\0casdfgczxcvb";
+		int c = '\0';
+		
+		puts("\n=== CHAR = NUL");
+		printf("TEST STR | %s\n", s);
+		printf("ORIGINAL | %s\n", strchr(s, c));
+		printf("CUSTOM   | %s\n", ft_strchr(s, c));
+		printf("=== FINAL CHECK: unavailable\n");
 	}
 
 	puts("\n================================= ft_strrchr.c\n");
@@ -312,18 +325,119 @@ int	main()
 	{
 		char s[] = "qwertcasdfgczxcvb";
 		int c = 'c';
+		
+		puts("=== CHAR");
+		printf("TEST STR | %s\n", s);
 		printf("TEST STR | %s\n", s);
 		printf("ORIGINAL | %s\n", strrchr(s, c));
 		printf("CUSTOM   | %s\n", ft_strrchr(s, c));
 		printf("=== FINAL CHECK: %s\n", (strcmp(strrchr(s, c), ft_strchr(s, c))) ? "KO!" : "OK!");
         }
 
+	{
+		char s[] = "qwert\0casdfgczxcvb";
+		int c = 'c';
+		
+		puts("\n=== CHAR = NUL");
+		printf("TEST STR | %s\n", s);
+		printf("TEST STR | %s\n", s);
+		printf("ORIGINAL | %s\n", strrchr(s, c));
+		printf("CUSTOM   | %s\n", ft_strrchr(s, c));
+		printf("=== FINAL CHECK: unavailable\n");		
+	}
+
 	puts("\n================================= ft_strncmp.c\n");
 
 	{
+		puts("=== EQUAL STRINGS");
+		printf("ORIGINAL |  %d\n", strncmp("abc", "abc", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "abc", 3));
+	}
 
+	{
+		puts("\n=== SAME 1ST 3 CHAR");
+		printf("ORIGINAL |  %d\n", strncmp("abcdef", "abcxyz", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abcdef", "abcxyz", 3));
+	}	
+
+	{
+		puts("\n=== =/= 4TH POSITION");
+		printf("ORIGINAL |  %d\n", strncmp("abcdef", "abcxyz", 4));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abcdef", "abcxyz", 4));
+	}
+
+	{
+		puts("\n=== CASE SENSITIVITY");
+		printf("ORIGINAL |  %d\n", strncmp("abc", "ABC", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "ABC", 3));
+	}
+
+	{
+		puts("\n=== SIZE = 0");
+		printf("ORIGINAL |  %d\n", strncmp("abc", "xyz", 0));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "xyz", 0));
+	}
+
+	{
+		puts("\n=== s1 SHORTER");
+		printf("ORIGINAL |  %d\n", strncmp("abc", "abcd", 4));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "abcd", 4));
+	}
+
+	{
+		puts("\n=== s2 SHORTER");
+		printf("ORIGINAL |  %d\n", strncmp("abcd", "abc", 4));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abcd", "abc", 4));
+	}
+
+	{
+		puts("\n=== DIFFERENCE BEFORE SIZE");
+		printf("ORIGINAL |  %d\n", strncmp("abcd", "acbd", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abcd", "acbd", 3));
+	}
+
+	{
+		puts("\n=== SAME PREFIX, s2 LONGER");
+		printf("ORIGINAL |  %d\n", strncmp("abc", "abcdef", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "abcdef", 3));
+	}
+
+	{
+		puts("\n=== BOTH EMPTY");
+		printf("ORIGINAL |  %d\n", strncmp("", "", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("", "", 3));
 	}
 	
+	{
+		puts("\n=== s1 EMPTY");
+		printf("ORIGINAL |  %d\n", strncmp("", "abc", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("", "abc", 3));
+	}
+	
+	{
+		puts("\n=== s2 EMPTY");
+		printf("ORIGINAL |  %d\n", strncmp("abc", "", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "", 3));
+	}
+	
+	{
+		puts("\n=== SIZE > BOTH");
+		printf("ORIGINAL |  %d\n", strncmp("qwerty", "qwerty", 100));
+		printf("CUSTOM   |  %d\n", ft_strncmp("qwerty", "qwerty", 100));
+	}
+
+	{
+		puts("\n=== SIZE > s1");
+		printf("ORIGINAL |  %d\n", strncmp("ab", "abcdef", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("ab", "abcdef", 3));
+	}
+	
+	{
+		puts("\n=== SIZE > s2");
+		printf("ORIGINAL |  %d\n", strncmp("abcdef", "ab", 3));
+		printf("CUSTOM   |  %d\n", ft_strncmp("abcdef", "ab", 3));
+	}
+
 	puts("\n================================= ft_memchr.c\n");
 		
 	{
@@ -345,7 +459,11 @@ int	main()
 	puts("\n================================= ft_atoi.c\n");
 
 	{
-
+		char s[] = "-0123456789 0123456789";
+		printf("TEST STR | %s\n", s);
+		printf("ORIGINAL | %d\n", atoi(s));
+		printf("CUSTOM   | %d\n", ft_atoi(s));
+		
 	}
 
 	return(0);

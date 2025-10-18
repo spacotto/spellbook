@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:20:34 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/17 17:43:37 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/18 18:34:36 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ char	*ft_strrchr(const char *s, int c)
         int	i;
 	
 	i = ft_strlen(s);
-	while (s[i] != '\0' && s[i] > 0)
+	while (i >= 0)
         {
-                if (i == c)
-		{       	
+        	if (s[i] == c)
+		{
 			s += i;
-                        return ((char *)s[i]);
+			return ((char *)s);
 		}
 		i--;
-        }
+	}
         return (NULL);
 }
