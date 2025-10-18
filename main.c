@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/18 18:49:23 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/18 23:19:22 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,48 +23,79 @@ int	main()
 	puts("\n================================= ft_isalpha.c\n");
 	
 	{
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isalpha('A'), ft_isalpha('A'));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isalpha(' '), ft_isalpha(' '));
+		int tests[] = {31, 32, 64, 65, 90, 91, 96, 97, 122, 123, 126, 127, 300, 0, -1};
+		for (int i = 0; tests[i]; i++) 
+		{
+			int og = isalpha(tests[i]);
+			int ft = ft_isalpha(tests[i]);
+			printf("TEST: %d ('%c')\nORIGINAL[%d] CUSTOM[%d]\n=== FINAL CHECK: %s\n\n",
+				tests[i], tests[i], og, ft,
+				(!!og == !!ft) ? "OK!" : "KO!");
+		}
 	}
 	
 	puts("\n================================= ft_isdigit.c\n");
 
 	{
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isdigit('3'), ft_isdigit('3'));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isdigit('C'), ft_isdigit('C'));
+		int tests[] = {31, 32, 47, 48, 57, 58, 126, 127, 300, 0, -1};
+		for (int i = 0; tests[i]; i++) 
+		{
+			int og = isdigit(tests[i]);
+			int ft = ft_isdigit(tests[i]);
+			printf("TEST: %d ('%c')\nORIGINAL[%d] CUSTOM[%d]\n=== FINAL CHECK: %s\n\n",
+				tests[i], tests[i], og, ft,
+				(!!og == !!ft) ? "OK!" : "KO!");
+		}
 	}
-
+	
 	puts("\n================================= ft_isalnum.c\n");
 
 	{
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum('3'), ft_isalnum('3'));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum('c'), ft_isalnum('c'));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isalnum(' '), ft_isalnum(' '));
+		int tests[] = {31, 32, 47, 48, 57, 58, 64, 65, 90, 91, 96, 97, 122, 123, 126, 127, 300, 0, -1};
+		for (int i = 0; tests[i]; i++) 
+		{
+			int og = isalnum(tests[i]);
+			int ft = ft_isalnum(tests[i]);
+			printf("TEST: %d ('%c')\nORIGINAL[%d] CUSTOM[%d]\n=== FINAL CHECK: %s\n\n",
+				tests[i], tests[i], og, ft,
+				(!!og == !!ft) ? "OK!" : "KO!");
+		}
 	}
-
+	
 	puts("\n================================= ft_isascii.c\n");
 
 	{
-	       	printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(0), ft_isascii(0));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(127), ft_isascii(127));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(128), ft_isascii(128));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isascii(-1), ft_isascii(-1));
-        }
+		int tests[] = {1, 2, 3, 125, 126, 127, 300, 0, -1};
+		for (int i = 0; tests[i]; i++) 
+		{
+			int og = isascii(tests[i]);
+			int ft = ft_isascii(tests[i]);
+			printf("TEST: %d ('%c')\nORIGINAL[%d] CUSTOM[%d]\n=== FINAL CHECK: %s\n\n",
+				tests[i], tests[i], og, ft,
+				(!!og == !!ft) ? "OK!" : "KO!");
+		}
+	}
 
 	puts("\n================================= ft_isprint.c\n");
 
 	{
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(31), ft_isprint(31));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(32), ft_isprint(32));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(126), ft_isprint(126));
-		printf("ORIGINAL: %d | CUSTOM: %d\n", isprint(127), ft_isprint(127));
-        }
-
+		int tests[] = {31, 32, 126, 127, 300, 0, -1};
+		for (int i = 0; tests[i]; i++) 
+		{
+			int og = isascii(tests[i]);
+			int ft = ft_isascii(tests[i]);
+			printf("TEST: %d ('%c')\nORIGINAL[%d] CUSTOM[%d]\n=== FINAL CHECK: %s\n\n",
+				tests[i], tests[i], og, ft,
+				(!!og == !!ft) ? "OK!" : "KO!");
+		}
+	}
+	
 	puts("\n================================= ft_strlen.c\n");
 
 	{
 		char *s = "Excusatio non petita, accusatio manifesta";
-		printf("ORIGINAL: %lu | CUSTOM: %zu\n", strlen(s), ft_strlen(s));
+		printf("ORIGINAL: %ld | CUSTOM: %ld\n=== FINAL CHECK: %s\n",
+			strlen(s), ft_strlen(s), (!!strlen(s) == !!ft_strlen(s)) ? "OK!" : "KO!");
 	}
 
 	puts("\n================================= ft_memset.c\n");
@@ -279,23 +310,33 @@ int	main()
 	}
 
 	puts("\n================================= ft_toupper.c\n");
-
-	{
-		printf("ORIGINAL: %c | CUSTOM: %c\n", toupper('a'), ft_toupper('a'));
-		printf("ORIGINAL: %c | CUSTOM: %c\n", toupper('z'), ft_toupper('z'));
-		printf("ORIGINAL: %c | CUSTOM: %c\n", toupper('A'), ft_toupper('A'));
-		printf("ORIGINAL: %c | CUSTOM: %c\n", toupper('*'), ft_toupper('*'));
-	}
 	
+	{
+		int tests[] = {31, 32, 42, 65, 90, 97, 122, 127, 300, 0, -1};
+		for (int i = 0; tests[i]; i++) 
+		{
+			int og = toupper(tests[i]);
+			int ft = ft_toupper(tests[i]);
+			printf("TEST: %d ('%c')\nORIGINAL[%c] CUSTOM[%c]\n=== FINAL CHECK: %s\n\n",
+				tests[i], tests[i], og, ft,
+				(!!og == !!ft) ? "OK!" : "KO!");
+		}
+	}
+
 	puts("\n================================= ft_tolower.c\n");
 
 	{
-		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('A'), ft_tolower('A'));
-		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('Z'), ft_tolower('Z'));
-		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('a'), ft_tolower('a'));
-		printf("ORIGINAL: %c | CUSTOM: %c\n", tolower('*'), ft_tolower('*'));
+		int tests[] = {31, 32, 42, 65, 90, 97, 122, 127, 300, 0, -1};
+		for (int i = 0; tests[i]; i++) 
+		{
+			int og = tolower(tests[i]);
+			int ft = ft_tolower(tests[i]);
+			printf("TEST: %d ('%c')\nORIGINAL[%c] CUSTOM[%c]\n=== FINAL CHECK: %s\n\n",
+				tests[i], tests[i], og, ft,
+				(!!og == !!ft) ? "OK!" : "KO!");
+		}
 	}
-	
+		
 	puts("\n================================= ft_strchr.c\n");
 
 	{
@@ -331,7 +372,7 @@ int	main()
 		printf("TEST STR | %s\n", s);
 		printf("ORIGINAL | %s\n", strrchr(s, c));
 		printf("CUSTOM   | %s\n", ft_strrchr(s, c));
-		printf("=== FINAL CHECK: %s\n", (strcmp(strrchr(s, c), ft_strchr(s, c))) ? "KO!" : "OK!");
+		printf("=== FINAL CHECK: %s\n", (strcmp(strrchr(s, c), ft_strrchr(s, c))) ? "KO!" : "OK!");
         }
 
 	{
@@ -349,95 +390,173 @@ int	main()
 	puts("\n================================= ft_strncmp.c\n");
 
 	{
+		char *s1 = "abc";
+		char *s2 = "abc";
+		size_t size = 3;
+
 		puts("=== EQUAL STRINGS");
-		printf("ORIGINAL |  %d\n", strncmp("abc", "abc", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "abc", 3));
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
 	}
 
 	{
-		puts("\n=== SAME 1ST 3 CHAR");
-		printf("ORIGINAL |  %d\n", strncmp("abcdef", "abcxyz", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abcdef", "abcxyz", 3));
-	}	
+		char s1[] = "abcdef";
+		char s2[] = "abcxyz";
+		size_t size = 3;
 
-	{
-		puts("\n=== =/= 4TH POSITION");
-		printf("ORIGINAL |  %d\n", strncmp("abcdef", "abcxyz", 4));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abcdef", "abcxyz", 4));
+		puts("=== SAME 1ST 3 CHAR");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
 	}
-
+		
 	{
-		puts("\n=== CASE SENSITIVITY");
-		printf("ORIGINAL |  %d\n", strncmp("abc", "ABC", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "ABC", 3));
-	}
+		char s1[] = "abcdef";
+		char s2[] = "abcxyz";
+		size_t size = 4;
 
-	{
-		puts("\n=== SIZE = 0");
-		printf("ORIGINAL |  %d\n", strncmp("abc", "xyz", 0));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "xyz", 0));
-	}
-
-	{
-		puts("\n=== s1 SHORTER");
-		printf("ORIGINAL |  %d\n", strncmp("abc", "abcd", 4));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "abcd", 4));
-	}
-
-	{
-		puts("\n=== s2 SHORTER");
-		printf("ORIGINAL |  %d\n", strncmp("abcd", "abc", 4));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abcd", "abc", 4));
-	}
-
-	{
-		puts("\n=== DIFFERENCE BEFORE SIZE");
-		printf("ORIGINAL |  %d\n", strncmp("abcd", "acbd", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abcd", "acbd", 3));
-	}
-
-	{
-		puts("\n=== SAME PREFIX, s2 LONGER");
-		printf("ORIGINAL |  %d\n", strncmp("abc", "abcdef", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "abcdef", 3));
-	}
-
-	{
-		puts("\n=== BOTH EMPTY");
-		printf("ORIGINAL |  %d\n", strncmp("", "", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("", "", 3));
+		puts("=== DIFFERENT 4TH POSITION");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
 	}
 	
 	{
-		puts("\n=== s1 EMPTY");
-		printf("ORIGINAL |  %d\n", strncmp("", "abc", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("", "abc", 3));
-	}
-	
-	{
-		puts("\n=== s2 EMPTY");
-		printf("ORIGINAL |  %d\n", strncmp("abc", "", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abc", "", 3));
-	}
-	
-	{
-		puts("\n=== SIZE > BOTH");
-		printf("ORIGINAL |  %d\n", strncmp("qwerty", "qwerty", 100));
-		printf("CUSTOM   |  %d\n", ft_strncmp("qwerty", "qwerty", 100));
-	}
+		char s1[] = "abc";
+		char s2[] = "ABC";
+		size_t size = 3;
 
-	{
-		puts("\n=== SIZE > s1");
-		printf("ORIGINAL |  %d\n", strncmp("ab", "abcdef", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("ab", "abcdef", 3));
+		puts("=== CASE SENSITIVE");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
 	}
 	
 	{
-		puts("\n=== SIZE > s2");
-		printf("ORIGINAL |  %d\n", strncmp("abcdef", "ab", 3));
-		printf("CUSTOM   |  %d\n", ft_strncmp("abcdef", "ab", 3));
-	}
+		char s1[] = "abc";
+		char s2[] = "xyz";
+		size_t size = 0;
 
+		puts("=== SIZE = 0");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+	
+	{
+		char s1[] = "abc";
+		char s2[] = "abcd";
+		size_t size = 3;
+
+		puts("=== s1 SHORTER");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+	
+	{
+		char s1[] = "abcd";
+		char s2[] = "abc";
+		size_t size = 3;
+
+		puts("=== s2 SHORTER");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+	
+	{
+		char s1[] = "abcd";
+		char s2[] = "abdc";
+		size_t size = 3;
+
+		puts("=== DIFFERENCE BEFORE SIZE");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+	
+	{
+		char *s1= "";
+		char *s2 = "";
+		size_t size = 3;
+
+		puts("=== BOTH EMPTY");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+		
+	{
+		char s1[] = "";
+		char s2[] = "abc";
+		size_t size = 3;
+
+		puts("=== s1 EMPTY");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+		
+	{
+		char s1[] = "abc";
+		char s2[] = "";
+		size_t size = 3;
+
+		puts("=== s2 EMPTY");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+		
+	{
+		char *s1 = "qwerty";
+		char *s2 = "qwerty";
+		size_t size = 100;
+
+		puts("=== SIZE > BOTH");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+	
+	{
+		char s1[] = "ab";
+		char s2[] = "abcdef";
+		size_t size = 3;
+
+		puts("=== SIZE > s1");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+		
+	{
+		char s1[] = "abcdef";
+		char s2[] = "ab";
+		size_t size = 3;
+
+		puts("=== SIZE > s2");
+		printf("ORIGINAL |  %d\n", strncmp(s1, s2, size));
+		printf("CUSTOM   |  %d\n", ft_strncmp(s1, s2, size));
+		printf("=== FINAL CHECK: %s\n",	
+			(!!strncmp(s1, s2, size) == !!ft_strncmp(s1, s2, size)) ? "OK!" : "KO!");
+	}
+	
 	puts("\n================================= ft_memchr.c\n");
 		
 	{
@@ -463,7 +582,7 @@ int	main()
 		printf("TEST STR | %s\n", s);
 		printf("ORIGINAL | %d\n", atoi(s));
 		printf("CUSTOM   | %d\n", ft_atoi(s));
-		
+		printf("=== FINAL CHECK: %s\n",	(!!atoi(s) == !!ft_atoi(s)) ? "OK!" : "KO!");
 	}
 
 	return(0);
