@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:48:02 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/17 18:49:25 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/19 23:04:23 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,20 @@
 
 char    *ft_strnstr(const char *big, const char *little, size_t len)
 {
-	return ();
+	size_t	len_little;
+
+	len_little = ft_strlen(little);
+	if (*little == 0)
+		return ((char *)big);
+	while (*big && len >= len_little)
+	{
+		if (*big == *little)
+		{
+			if (ft_strncmp(big, little, len_little) == 0)
+				return ((char *)big);
+		}
+		big++;
+		len--;
+	}
+	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/19 21:13:24 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/19 22:40:29 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -759,15 +759,24 @@ int	main()
 		puts("=== SIZE > s2");
 		printf("ORIGINAL |  %d\n", memcmp(s1, s2, n));
 		printf("CUSTOM   |  %d\n", ft_memcmp(s1, s2, n));
-		printf("=== FINAL CHECK: %s\n\n",	
+		printf("=== FINAL CHECK: %s\n",	
 			(!!memcmp(s1, s2, n) == !!ft_memcmp(s1, s2, n)) ? "OK!" : "KO!");
 	}
 	
 	puts("\n================================= ft_strnstr.c\n");
 
 	{
-	
-	}
+		char big[] = "Homo quisque faber ipse forfortunae suae";
+		char little[] = "fortunae";
+		size_t len = 8;
+
+		puts("=== TITLE");
+		printf("BIG : %s\n", big);
+		printf("ORIGINAL | %s\n", strnstr(big, little, len));	
+		printf("CUSTOM	 | %s\n", ft_strnstr(big, little, len));	
+		//printf("=== FINAL CHECK: %s\n", (strcmp(strnstr(big, little, len), 
+		//				ft_strnstr(big, little, len))) ? "KO!" : "OK!");
+		}
 
 	puts("\n================================= ft_atoi.c\n");
 
