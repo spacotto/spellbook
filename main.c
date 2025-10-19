@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/18 23:19:22 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/19 19:18:48 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -560,9 +560,49 @@ int	main()
 	puts("\n================================= ft_memchr.c\n");
 		
 	{
+		char s[] = "0123456789";
+		int c = '3';
+		size_t n = 5;
 	
+		puts("=== c BEFORE size");
+		printf("ORIGINAL | %p\n", memchr(s, c, n));
+		printf("CUSTOM   | %p\n", ft_memchr(s, c, n));
+		printf("=== FINAL CHECK: unavailable\n\n");	
 	}	
 	
+	{
+		char s[] = "0123456789";
+		int c = '7';
+		size_t n = 5;
+	
+		puts("=== c AFTER size");
+		printf("ORIGINAL | %p\n", memchr(s, c, n));
+		printf("CUSTOM   | %p\n", ft_memchr(s, c, n));
+		printf("=== FINAL CHECK: unavailable\n\n");	
+	}	
+
+	{
+		char s[] = "0123456789";
+		int c = 'c';
+		size_t n = strlen(s);
+	
+		puts("=== c ABSENT");
+		printf("ORIGINAL | %p\n", memchr(s, c, n));
+		printf("CUSTOM   | %p\n", ft_memchr(s, c, n));
+		printf("=== FINAL CHECK: unavailable\n\n");	
+	}
+
+	{
+		char s[] = "0123456789";
+		int c = '\0';
+		size_t n = strlen(s);
+	
+		puts("=== c == NUL");
+		printf("ORIGINAL | %p\n", memchr(s, c, n));
+		printf("CUSTOM   | %p\n", ft_memchr(s, c, n));
+		printf("=== FINAL CHECK: unavailable\n");	
+	}
+
 	puts("\n================================= ft_memcmp.c\n");
 
 	{
