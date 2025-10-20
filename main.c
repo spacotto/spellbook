@@ -6,14 +6,13 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/19 22:40:29 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/20 13:47:14 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <ctype.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <strings.h>
 #include <bsd/string.h>
@@ -369,7 +368,6 @@ int	main()
 		
 		puts("=== CHAR");
 		printf("TEST STR | %s\n", s);
-		printf("TEST STR | %s\n", s);
 		printf("ORIGINAL | %s\n", strrchr(s, c));
 		printf("CUSTOM   | %s\n", ft_strrchr(s, c));
 		printf("=== FINAL CHECK: %s\n", (strcmp(strrchr(s, c), ft_strrchr(s, c))) ? "KO!" : "OK!");
@@ -381,7 +379,6 @@ int	main()
 		
 		puts("\n=== CHAR = NUL");
 		printf("TEST STR | %s\n", s);
-		printf("TEST STR | %s\n", s);
 		printf("ORIGINAL | %s\n", strrchr(s, c));
 		printf("CUSTOM   | %s\n", ft_strrchr(s, c));
 		printf("=== FINAL CHECK: unavailable\n");		
@@ -390,8 +387,8 @@ int	main()
 	puts("\n================================= ft_strncmp.c\n");
 
 	{
-		char *s1 = "abc";
-		char *s2 = "abc";
+		char *s1 = "abcd";
+		char *s2 = "abcd";
 		size_t size = 3;
 
 		puts("=== EQUAL STRINGS");
@@ -766,17 +763,65 @@ int	main()
 	puts("\n================================= ft_strnstr.c\n");
 
 	{
-		char big[] = "Homo quisque faber ipse forfortunae suae";
-		char little[] = "fortunae";
-		size_t len = 8;
+		char big[] = "qwert asdfg zxcvb yuiop hjkl nm";
+		char little[] = "zxcvb";
+		size_t len = 20;
 
-		puts("=== TITLE");
+		puts("=== big && len > len_little");
 		printf("BIG : %s\n", big);
 		printf("ORIGINAL | %s\n", strnstr(big, little, len));	
 		printf("CUSTOM	 | %s\n", ft_strnstr(big, little, len));	
-		//printf("=== FINAL CHECK: %s\n", (strcmp(strnstr(big, little, len), 
-		//				ft_strnstr(big, little, len))) ? "KO!" : "OK!");
-		}
+		printf("=== FINAL CHECK: %s\n\n", (strcmp(strnstr(big, little, len), 
+						ft_strnstr(big, little, len))) ? "KO!" : "OK!");
+	}
+
+	{
+		char big[] = "qwert asdfg zxcvb yuiop hjkl nm";
+		char little[] = "qwert";
+		size_t len = 3;
+
+		puts("=== big && len < len_little");
+		printf("BIG : %s\n", big);
+		printf("ORIGINAL | %s\n", strnstr(big, little, len));	
+		printf("CUSTOM	 | %s\n", ft_strnstr(big, little, len));	
+		printf("=== FINAL CHECK: unavailable\n\n");
+	}
+
+	{
+		char big[] = "qwert asdfg zxcvb yuiop hjkl nm";
+		char little[] = "000000";
+		size_t len = strlen(big);
+
+		puts("=== big && len > len_little");
+		printf("BIG : %s\n", big);
+		printf("ORIGINAL | %s\n", strnstr(big, little, len));	
+		printf("CUSTOM	 | %s\n", ft_strnstr(big, little, len));	
+		printf("=== FINAL CHECK: unavailable\n\n");
+	}
+
+	{
+		char big[] = "";
+		char little[] = "qwert";
+		size_t len = strlen(big);
+
+		puts("=== big EMPTY");
+		printf("BIG : %s\n", big);
+		printf("ORIGINAL | %s\n", strnstr(big, little, len));	
+		printf("CUSTOM	 | %s\n", ft_strnstr(big, little, len));	
+		printf("=== FINAL CHECK: unavailable\n\n");
+	}
+
+	{
+		char big[] = "qwert asdfg zxcvb yuiop hjkl nm";
+		char little[] = "qwert";
+		size_t len = 0;
+
+		puts("=== len == 0");
+		printf("BIG : %s\n", big);
+		printf("ORIGINAL | %s\n", strnstr(big, little, len));	
+		printf("CUSTOM	 | %s\n", ft_strnstr(big, little, len));	
+		printf("=== FINAL CHECK: unavailable\n");
+	}
 
 	puts("\n================================= ft_atoi.c\n");
 
@@ -786,6 +831,39 @@ int	main()
 		printf("ORIGINAL | %d\n", atoi(s));
 		printf("CUSTOM   | %d\n", ft_atoi(s));
 		printf("=== FINAL CHECK: %s\n",	(!!atoi(s) == !!ft_atoi(s)) ? "OK!" : "KO!");
+	}
+
+	puts("\n================================= ft_calloc.c\n");
+
+	{
+		size_t n = 5;
+		size_t size = 3;
+			
+		void *t = ft_calloc(n, size);
+		printf("ADRESS : %p\n", t);
+		free(t);		
+	}
+
+	puts("\n================================= ft_strdup.c\n");
+	
+	{
+		char s[] = "qwert asdfg zxcvb";
+		puts("=== *s EXISTS");
+		printf("TEST STR | %s\n", s);
+		printf("ORIGINAL | %s\n", strdup(s));
+		printf("CUSTOM	 | %s\n", ft_strdup(s));
+		printf("=== FINAL CHECK: %s\n\n", 
+			(strcmp(strdup(s), ft_strdup(s))) ? "KO!" : "OK!");
+	}
+
+	{
+		char s[] = "";
+		puts("=== *s DOES NOT EXIST");
+		printf("TEST STR | %s\n", s);
+		printf("ORIGINAL | %s\n", strdup(s));
+		printf("CUSTOM	 | %s\n", ft_strdup(s));
+		printf("=== FINAL CHECK: %s\n\n", 
+			(strcmp(strdup(s), ft_strdup(s))) ? "KO!" : "OK!");
 	}
 
 	return(0);
