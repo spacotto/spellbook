@@ -6,12 +6,12 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/20 15:20:27 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/21 14:15:00 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
+#include <stdio.h>
 
 int	main()
 {
@@ -21,28 +21,197 @@ int	main()
 		char const *s = "0123456789 0123456789";
 		unsigned int start = 4;
 		size_t len = 3;
+		char *str;
 
 		puts("=== s len > start && len > ft_strlen(s + start)");
-		printf("RESULT : %s\n\n", ft_substr(s, start, len));
+		str = ft_substr(s, start, len);
+		printf("RESULT : %s\n\n", str);
+		free(str);
 	}
 	
 	{
 		char const *s = "0123456789 0123456789";
 		unsigned int start = 100;
 		size_t len = 3;
+		char *str;
 
 		puts("=== start > s len");
-		printf("RESULT : %s\n\n", ft_substr(s, start, len));
+		str = ft_substr(s, start, len);
+		printf("RESULT : %s\n\n", str);
+		free(str);
 	}
 
 	{
 		char const *s = "0123456789 0123456789";
 		unsigned int start = 3;
 		size_t len = ft_strlen(s + start) + 10;
+		char *str;
 
 		puts("=== len > ft_strlen(s + start)");
-		printf("RESULT : %s\n", ft_substr(s, start, len));
+		str = ft_substr(s, start, len);
+		printf("RESULT : %s\n", str);
+		free(str);
 	}
+	
+	puts("\n================================= ft_strjoin.c\n");
 
+	{
+		char *s1 = "qwert";
+		char *s2 = "asdfg";
+		char *str;
+		
+		puts("=== BOTH EXIST");
+		printf("s1 : %s | s2 : %s\n", s1, s2);	
+		str = ft_strjoin(s1, s2);
+		printf("RESULT : %s\n\n", str);
+		free(str);
+	}
+		
+	{
+		char *s1 = "";
+		char *s2 = "";
+		char *str;
+
+		puts("=== BOTH EMPTY");
+		printf("s1 : %s | s2 : %s\n", s1, s2);	
+		str = ft_strjoin(s1, s2);
+		printf("RESULT : %s\n\n", str);
+		free(str);
+	}
+		
+	{
+		char *s1 = "";
+		char *s2 = "asdfg";
+		char *str;
+
+		puts("=== s1 EMPTY");
+		printf("s1 : %s | s2 : %s\n", s1, s2);	
+		str = ft_strjoin(s1, s2);
+		printf("RESULT : %s\n\n", str);
+		free(str);
+	}
+		
+	{
+		char *s1 = "qwert";
+		char *s2 = "";
+		char *str;
+
+		puts("=== s2 EMPTY");
+		printf("s1 : %s | s2 : %s\n", s1, s2);	
+		str = ft_strjoin(s1, s2);
+		printf("RESULT : %s\n\n", str);
+		free(str);
+	}
+		
+	puts("\n================================= ft_strtrim.c (NOT OK)\n");
+
+	{
+		char *s1 = "qwert---asdfg---zxcvb---yuiop";
+		char *set = "---";
+		char *str;
+		
+		puts("=== BOTH EXIST");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+		
+	{
+		char *s1 = "";
+		char *set = "asdfg";
+		char *str;
+		
+		puts("=== EMPTY S1");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+	
+	{
+		char *s1 = "qwert asdfg zxcvb";
+		char *set = "";
+		char *str;
+		
+		puts("=== EMPTY SET");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+		
+	{
+		char *s1 = "";
+		char *set = "";
+		char *str;
+		
+		puts("=== BOTH EMPTY");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+		
+	{
+		char *s1 = "qwert asdfg zxcvb";
+		char *set = "000000";
+		char *str;
+		
+		puts("=== SET ABSENT");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+		
+	
+	puts("\n================================= ft_split.c\n");
+	
+	{
+		char *s = "-qwert-asdfg-zxcvb-yuiop-";
+		char c = '-';
+		
+		puts("=== DIV START, MIDDLE & END");
+		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
+		printf("RESULT  | %d\n\n", ft_split(s, c));
+	} 
+ 	
+	{
+		char *s = "-qwert-asdfg-zxcvb-yuiop";
+		char c = '-';
+		
+		puts("=== DIV START & MIDDLE");
+		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
+		printf("RESULT  | %d\n\n", ft_split(s, c));
+	} 
+ 	
+	{
+		char *s = "qwert-asdfg-zxcvb-yuiop-";
+		char c = '-';
+		
+		puts("=== DIV MIDDLE & END");
+		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
+		printf("RESULT  | %d\n\n", ft_split(s, c));
+	} 
+ 
+	{
+		char *s = "qwert-asdfg-zxcvb-yuiop-";
+		char c = '\0';
+		
+		puts("=== NUL DIV");
+		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
+		printf("RESULT  | %d\n\n", ft_split(s, c));
+	} 
+ 
+	{
+		char *s = "";
+		char c = '-';
+		
+		puts("=== EMPTY S");
+		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
+		printf("RESULT  | %d\n\n", ft_split(s, c));
+	} 
+ 
 	return(0);
 }
