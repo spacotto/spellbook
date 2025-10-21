@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/21 17:32:41 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/21 23:49:19 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,7 @@ int	main()
 		puts("=== DIV START, MIDDLE & END");
 		printf("STRING  | %s\nDIVIDER | %c\n\n", s, c);
 		array = ft_split(s, c);
-		while (array[i])
+		while (array[i] != NULL)
 		{
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
@@ -256,18 +256,10 @@ int	main()
 	{
 		char *s = "----------";
 		char c = '-';
-		char **array;
-		size_t i = 0;
-		
+					
 		puts("\n=== ONLY SEP");
 		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
-		array = ft_split(s, c);
-		while (array[i])
-		{
-			printf("WORD %lu | %s\n", i + 1, array[i]);
-			i++;
-		} 
-		free(array);
+		printf("WORD (null)");
 	} 
  
 	return(0);
