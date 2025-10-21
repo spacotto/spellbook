@@ -1,39 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/20 16:30:03 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/21 11:44:14 by spacotto         ###   ########.fr       */
+/*   Created: 2025/10/20 17:36:48 by spacotto          #+#    #+#             */
+/*   Updated: 2025/10/20 17:38:38 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+char	*ft_itoa(int n)
 {
-	char	*trim;
-	char	*start;
-	char	*end;
-
-	start = (char *)s1;
-	end = (char *)s1 + ft_strlen(set) - 1; 
-	trim = ft_calloc(ft_strlen(s1), sizeof(char));
-	if (trim)
-	{
-		if (!*s1)
-			return (ft_strdup(""));
-		else
-		{	
-			while (*start && ft_strchr(start, *set))
-				start++;
-			while (end > start && ft_strchr(end, *set))
-				end--;
-		}
-		ft_memcpy(trim, start, ft_strlen(s1));	
-		return (trim);
-	}
 	return (NULL);
 }

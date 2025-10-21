@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/21 14:15:00 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:32:41 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -171,46 +171,103 @@ int	main()
 	{
 		char *s = "-qwert-asdfg-zxcvb-yuiop-";
 		char c = '-';
-		
+		char **array;
+		size_t i = 0;
+
 		puts("=== DIV START, MIDDLE & END");
-		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
-		printf("RESULT  | %d\n\n", ft_split(s, c));
+		printf("STRING  | %s\nDIVIDER | %c\n\n", s, c);
+		array = ft_split(s, c);
+		while (array[i])
+		{
+			printf("WORD %lu | %s\n", i + 1, array[i]);
+			i++;
+		}
+		free(array);
 	} 
  	
 	{
 		char *s = "-qwert-asdfg-zxcvb-yuiop";
 		char c = '-';
-		
-		puts("=== DIV START & MIDDLE");
-		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
-		printf("RESULT  | %d\n\n", ft_split(s, c));
+		char **array;
+		size_t i = 0;
+			
+		puts("\n=== DIV START & MIDDLE");
+		printf("STRING  | %s\nDIVIDER | %c\n\n", s, c);
+		array = ft_split(s, c);
+		while (array[i])
+		{
+			printf("WORD %lu | %s\n", i + 1, array[i]);
+			i++;
+		}
+		free(array);
 	} 
  	
 	{
 		char *s = "qwert-asdfg-zxcvb-yuiop-";
 		char c = '-';
+		char **array;
+		size_t i = 0;
 		
-		puts("=== DIV MIDDLE & END");
-		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
-		printf("RESULT  | %d\n\n", ft_split(s, c));
+		puts("\n=== DIV MIDDLE & END");
+		printf("STRING  | %s\nDIVIDER | %c\n\n", s, c);
+		array = ft_split(s, c);
+		while (array[i])
+		{
+			printf("WORD %lu | %s\n", i + 1, array[i]);
+			i++;
+		}
+		free(array);
 	} 
  
 	{
 		char *s = "qwert-asdfg-zxcvb-yuiop-";
 		char c = '\0';
+		char **array;
+		size_t i = 0;
 		
-		puts("=== NUL DIV");
-		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
-		printf("RESULT  | %d\n\n", ft_split(s, c));
+		puts("\n=== NUL DIV");
+		printf("STRING  | %s\nDIVIDER | %c\n\n", s, c);
+		array = ft_split(s, c);
+		while (array[i])
+		{
+			printf("WORD %lu | %s\n", i + 1, array[i]);
+			i++;
+		}
+		free(array);
 	} 
  
 	{
 		char *s = "";
 		char c = '-';
+		char **array;
+		size_t i = 0;
 		
-		puts("=== EMPTY S");
+		puts("\n=== EMPTY S");
 		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
-		printf("RESULT  | %d\n\n", ft_split(s, c));
+		array = ft_split(s, c);
+		while (array[i])
+		{
+			printf("WORD %lu | %s\n", i + 1, array[i]);
+			i++;
+		}
+		free(array);
+	} 
+	
+	{
+		char *s = "----------";
+		char c = '-';
+		char **array;
+		size_t i = 0;
+		
+		puts("\n=== ONLY SEP");
+		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
+		array = ft_split(s, c);
+		while (array[i])
+		{
+			printf("WORD %lu | %s\n", i + 1, array[i]);
+			i++;
+		} 
+		free(array);
 	} 
  
 	return(0);
