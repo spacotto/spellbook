@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/22 14:20:35 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/22 17:43:57 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ typedef struct s_trim
 	size_t	setlen;
 	size_t	i;
 }	t_trim;
+
+typedef struct s_itoa
+{
+	char	*result;
+	char	*sign;
+	char	*number;
+	size_t	len;
+}	t_itoa;
 
 /* MANDATORY PART: LIBC FUNCTIONS */
 

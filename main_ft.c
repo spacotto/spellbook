@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/22 12:53:42 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/22 17:45:34 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -319,8 +319,60 @@ int	main()
 					
 		puts("\n=== ONLY SEP");
 		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
-		printf("WORD (null)");
+		printf("WORD (null)\n");
 	} 
+	
+	puts("\n================================= ft_itoa.c\n");
+
+	{
+		int n = 1234567890;
+		char *s;
+
+		puts("=== ALL DIGITS");
+		printf("NUMBER | %d\n", n);
+		s = ft_itoa(n);
+		printf("RESULT | %s\n", s);
+	}
+ 
+	{
+		int n = -1234567890;
+		char *s;
+
+		puts("\n=== NEGATIVE NUMBER");
+		printf("NUMBER | %d\n", n);
+		s = ft_itoa(n);
+		printf("RESULT | %s\n", s);
+	}
+ 
+	{
+		int n = 2147483647;
+		char *s;
+
+		puts("\n=== INT MAX");
+		printf("NUMBER | %d\n", n);
+		s = ft_itoa(n);
+		printf("RESULT | %s\n", s);
+	}
+ 
+	{
+		int n = -2147483648;
+		char *s;
+
+		puts("\n=== INT MIN");
+		printf("NUMBER | %d\n", n);
+		s = ft_itoa(n);
+		printf("RESULT | %s\n", s);
+	}
+ 
+	{
+		int n = 0;
+		char *s;
+
+		puts("\n=== ZERO");
+		printf("NUMBER | %d\n", n);
+		s = ft_itoa(n);
+		printf("RESULT | %s\n", s);
+	}
  
 	return(0);
 }

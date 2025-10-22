@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 09:34:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/10/21 12:11:15 by spacotto         ###   ########.fr        #
+#    Updated: 2025/10/22 15:33:16 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,7 +30,7 @@ SRC_CNV	:= ft_toupper.c ft_tolower.c ft_atoi.c
 
 SRC_MLC	:= ft_calloc.c ft_strdup.c
 
-SRC_FT	:= ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c #ft_itoa.c 
+SRC_FT	:= ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c 
 
 SRC_FN	:= ft_strmapi.c ft_striteri.c
 
