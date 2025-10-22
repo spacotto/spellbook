@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:36:48 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/22 17:52:46 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/22 18:07:50 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,10 +64,13 @@ char	*ft_itoa(int n)
 	t.result = calloc(t.len + 1, sizeof(char));
 	if (!t.result)
 		return (NULL);
-	t.sign = ft_strdup("");
 	if (n < 0)
+	{
 		t.sign = ft_strdup("-");
-	t.number = ft_conversion(n);
-	t.result = ft_strjoin(t.sign, t.number);
+		t.number = ft_conversion(n);
+		t.result = ft_strjoin(t.sign, t.number);
+	}
+	else
+		t.result = ft_conversion(n);
 	return (t.result);
 }
