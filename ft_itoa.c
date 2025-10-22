@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:36:48 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/22 18:07:50 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/22 18:21:51 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static int	ft_countdigits(size_t n)
 }
 
 static char	*ft_conversion(int n)
-{	
+{
 	t_itoa	t;
 	size_t	nba;
 
@@ -41,18 +41,12 @@ static char	*ft_conversion(int n)
 	t.len = ft_countdigits(n) + 1;
 	t.number = calloc(t.len + 1, sizeof(char));
 	if (n < 0)
-	{
 		nba = -n;
-	}
 	if (nba > 9)
-	{
 		t.number = ft_strjoin(ft_conversion(n / 10), ft_conversion(n % 10));
-	}
 	else
-	{
 		t.number[0] = nba + '0';
-		t.number[1] = '\0';
-	}
+	t.number[t.len] = '\0';
 	return (t.number);
 }
 
