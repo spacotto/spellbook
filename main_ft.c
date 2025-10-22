@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/21 23:49:19 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/22 12:53:42 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,20 +103,80 @@ int	main()
 		free(str);
 	}
 		
-	puts("\n================================= ft_strtrim.c (NOT OK)\n");
+	puts("\n================================= ft_strtrim.c\n");
 
 	{
-		char *s1 = "qwert---asdfg---zxcvb---yuiop";
+		char *s1 = "---qwert---asdfg---zxcvb---yuiop---";
 		char *set = "---";
 		char *str;
 		
-		puts("=== BOTH EXIST");
+		puts("=== SET @ START & END");
 		printf("S1     | %s\nSET    | %s\n", s1, set);	
 		str = ft_strtrim(s1, set);
 		printf("RESULT | %s\n\n", str);
 		free(str);
 	}
+			
+	{
+		char *s1 = "---qwert---asdfg---zxcvb---yuiop";
+		char *set = "---";
+		char *str;
 		
+		puts("=== SET @ START");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+			
+	{
+		char *s1 = "qwert---asdfg---zxcvb---yuiop---";
+		char *set = "---";
+		char *str;
+		
+		puts("=== SET @ END");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+			
+	{
+		char *s1 = "----qwert---asdfg---zxcvb---yuiopi----";
+		char *set = "---";
+		char *str;
+		
+		puts("=== OVERFLOWING SET (LONG)");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+			
+	{
+		char *s1 = "-qwert---asdfg---zxcvb---yuiop-";
+		char *set = "---";
+		char *str;
+		
+		puts("=== OVERFLOWING SET (SHORT)");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+			
+	{
+		char *s1 = "-*--qwert---asdfg---zxcvb---yuiop--*-";
+		char *set = "---";
+		char *str;
+		
+		puts("=== BROKEN SET");
+		printf("S1     | %s\nSET    | %s\n", s1, set);	
+		str = ft_strtrim(s1, set);
+		printf("RESULT | %s\n\n", str);
+		free(str);
+	}
+			
 	{
 		char *s1 = "";
 		char *set = "asdfg";

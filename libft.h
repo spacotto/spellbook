@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/20 17:57:43 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/22 14:20:35 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,15 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+
+/* STRUCTURES */
+
+typedef struct s_trim
+{
+	size_t  trimlen;	
+	size_t	setlen;
+	size_t	i;
+}	t_trim;
 
 /* MANDATORY PART: LIBC FUNCTIONS */
 
