@@ -6,13 +6,13 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:36:48 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/22 18:21:51 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/22 21:34:43 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countdigits(size_t n)
+static int	ft_countdigits(ssize_t n)
 {
 	size_t	counter;
 
@@ -32,6 +32,22 @@ static int	ft_countdigits(size_t n)
 	return (counter);
 }
 
+static char	*ft_strcat(char *dst, char *src)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = ft_strlen(dst);
+	while (src[i] != '\0')
+	{
+		dst[j + i] = src[i];
+		i++;
+	}
+	dst[i + j] = '\0';
+	return (dst);
+}
+
 static char	*ft_conversion(int n)
 {
 	t_itoa	t;
@@ -43,7 +59,7 @@ static char	*ft_conversion(int n)
 	if (n < 0)
 		nba = -n;
 	if (nba > 9)
-		t.number = ft_strjoin(ft_conversion(n / 10), ft_conversion(n % 10));
+		t.number = ft_strcat(ft_conversion(n / 10), ft_conversion(n % 10));
 	else
 		t.number[0] = nba + '0';
 	t.number[t.len] = '\0';
