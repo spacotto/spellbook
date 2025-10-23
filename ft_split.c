@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:33:22 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/21 23:48:06 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/22 10:55:49 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ static char	*ft_fill(char *array, size_t *irow, char const *s, char c)
 	array[*irow] = '\0';
 	return (array);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
@@ -47,7 +48,7 @@ char	**ft_split(char const *s, char c)
 	size_t	irow;
 
 	icol = 0;
-	array = ft_calloc(ft_countwords(s, c), sizeof(char*));
+	array = ft_calloc(ft_countwords(s, c), sizeof(char *));
 	if (!array)
 		return (NULL);
 	while (*s)

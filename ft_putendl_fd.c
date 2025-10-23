@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:51:27 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/20 17:53:52 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/23 12:57:45 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-
+	write (fd, s, ft_strlen(s));
+	write (fd, "\n", 1);
 }

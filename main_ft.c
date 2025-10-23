@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/22 17:45:34 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/23 14:21:15 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -242,6 +242,11 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		while (array[i])
+		{
+			free(array[i]);
+			i++;
+		}
 		free(array);
 	} 
  	
@@ -257,6 +262,11 @@ int	main()
 		while (array[i])
 		{
 			printf("WORD %lu | %s\n", i + 1, array[i]);
+			i++;
+		}
+		while (array[i])
+		{
+			free(array[i]);
 			i++;
 		}
 		free(array);
@@ -276,6 +286,11 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		while (array[i])
+		{
+			free(array[i]);
+			i++;
+		}
 		free(array);
 	} 
  
@@ -291,6 +306,11 @@ int	main()
 		while (array[i])
 		{
 			printf("WORD %lu | %s\n", i + 1, array[i]);
+			i++;
+		}
+		while (array[i])
+		{
+			free(array[i]);
 			i++;
 		}
 		free(array);
@@ -310,6 +330,11 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		while (array[i])
+		{
+			free(array[i]);
+			i++;
+		}
 		free(array);
 	} 
 	
@@ -322,7 +347,7 @@ int	main()
 		printf("WORD (null)\n");
 	} 
 	
-	puts("\n================================= ft_itoa.c\n");
+	puts("\n================================= ft_itoa.c - NOT OK!\n");
 
 	{
 		int n = 1234567890;
@@ -332,6 +357,7 @@ int	main()
 		printf("NUMBER | %d\n", n);
 		s = ft_itoa(n);
 		printf("RESULT | %s\n", s);
+		free(s);
 	}
  
 	{
@@ -342,6 +368,7 @@ int	main()
 		printf("NUMBER | %d\n", n);
 		s = ft_itoa(n);
 		printf("RESULT | %s\n", s);
+		free(s);
 	}
  
 	{
@@ -352,6 +379,7 @@ int	main()
 		printf("NUMBER | %d\n", n);
 		s = ft_itoa(n);
 		printf("RESULT | %s\n", s);
+		free(s);
 	}
  
 	{
@@ -362,6 +390,7 @@ int	main()
 		printf("NUMBER | %d\n", n);
 		s = ft_itoa(n);
 		printf("RESULT | %s\n", s);
+		free(s);
 	}
  
 	{
@@ -372,7 +401,80 @@ int	main()
 		printf("NUMBER | %d\n", n);
 		s = ft_itoa(n);
 		printf("RESULT | %s\n", s);
+		free(s);
 	}
  
+	puts("\n================================= ft_strmapi.c\n");
+/*
+	{
+		char *s = "Hello world!";
+		char *d = ft_strmapi(s, &ft_toupper);
+		printf("STRING | %s\nFUNCTION | TO UPPER\n", s);
+		printf("RESULT |  %s\n", d);
+		free(d);
+	}
+	
+	puts("\n================================= ft_striteri.c\n");
+
+	{
+		char *s = "Hello world!";
+		printf("STRING | %s\nFUNCTION | TO UPPER\n", s);
+		printf("RESULT |  %s\n", ft_striteri(s, &ft_isalpha));
+	}
+*/
+	ft_putendl_fd("\n================================= ft_putchar_fd.c\n", 1);
+	
+	{
+		ft_putendl_fd("=== INSERT CHAR", 1);
+		ft_putchar_fd('3', 1);
+		ft_putendl_fd("", 1);
+	}
+	
+	ft_putendl_fd("\n================================= ft_putstr_fd.c\n", 1);
+
+	{
+		ft_putendl_fd("=== INSERT STR", 1);
+		ft_putstr_fd("Hello World!\n", 1);
+	}
+	
+	ft_putendl_fd("\n================================= ft_putendl_fd.c\n", 1);
+
+	{
+		ft_putendl_fd("=== INSERT STR", 1);
+		ft_putendl_fd("Hello World!", 1);
+	}
+	
+	ft_putendl_fd("\n================================= ft_putnbr_fd.c\n", 1);
+
+	{
+		ft_putendl_fd("=== ALL DIGITS", 1);
+		ft_putnbr_fd(1234567890, 1);
+		ft_putendl_fd("\n", 1);
+	}
+	
+	{
+		ft_putendl_fd("=== INT_MAX", 1);
+		ft_putnbr_fd(2147483647, 1);
+		ft_putendl_fd("\n", 1);
+	}
+	
+	{
+		ft_putendl_fd("=== INT_MIN", 1);
+		ft_putnbr_fd(-2147483648, 1);
+		ft_putendl_fd("\n", 1);
+	}
+	
+	{
+		ft_putendl_fd("=== SINGLE DIGIT", 1);
+		ft_putnbr_fd(9, 1);
+		ft_putendl_fd("\n", 1);
+	}
+
+	{
+		ft_putendl_fd("=== ZERO", 1);
+		ft_putnbr_fd(0, 1);
+		ft_putendl_fd("\n", 1);
+	}
+
 	return(0);
 }

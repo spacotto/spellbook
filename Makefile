@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 09:34:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/10/22 15:33:16 by spacotto         ###   ########.fr        #
+#    Updated: 2025/10/23 12:50:34 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,8 @@ SRC_FN	:= ft_strmapi.c ft_striteri.c
 
 SRC_FD	:= ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRCS	:= $(SRC_ISC) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) $(SRC_MLC) $(SRC_FT)
+SRCS	:= $(SRC_ISC) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) $(SRC_MLC) \
+			$(SRC_FT) $(SRC_FN) $(SRC_FD)
 
 SRCS_B	:=
 

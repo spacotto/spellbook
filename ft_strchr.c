@@ -6,17 +6,17 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:17:40 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/18 18:26:32 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/20 14:22:51 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c) 
+		if (*s == c)
 			return ((char *)s);
 		s++;
 	}
