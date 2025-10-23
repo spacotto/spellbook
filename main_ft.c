@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/23 14:21:15 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/23 15:49:01 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ int	main()
 		puts("=== s2 EMPTY");
 		printf("s1 : %s | s2 : %s\n", s1, s2);	
 		str = ft_strjoin(s1, s2);
-		printf("RESULT : %s\n\n", str);
+		printf("RESULT : %s\n", str);
 		free(str);
 	}
 		
@@ -221,7 +221,7 @@ int	main()
 		puts("=== SET ABSENT");
 		printf("S1     | %s\nSET    | %s\n", s1, set);	
 		str = ft_strtrim(s1, set);
-		printf("RESULT | %s\n\n", str);
+		printf("RESULT | %s\n", str);
 		free(str);
 	}
 		
@@ -336,6 +336,7 @@ int	main()
 			i++;
 		}
 		free(array);
+		printf("WORD (empty)\n");
 	} 
 	
 	{
@@ -347,7 +348,7 @@ int	main()
 		printf("WORD (null)\n");
 	} 
 	
-	puts("\n================================= ft_itoa.c - NOT OK!\n");
+	puts("\n================================= ft_itoa.c (NOT OK!)\n");
 
 	{
 		int n = 1234567890;
@@ -404,7 +405,7 @@ int	main()
 		free(s);
 	}
  
-	puts("\n================================= ft_strmapi.c\n");
+	puts("\n================================= ft_strmapi.c (NOT OK!)\n");
 /*
 	{
 		char *s = "Hello world!";
@@ -413,9 +414,9 @@ int	main()
 		printf("RESULT |  %s\n", d);
 		free(d);
 	}
-	
-	puts("\n================================= ft_striteri.c\n");
-
+*/	
+	puts("\n================================= ft_striteri.c (NOT OK!)\n");
+/*
 	{
 		char *s = "Hello world!";
 		printf("STRING | %s\nFUNCTION | TO UPPER\n", s);

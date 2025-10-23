@@ -6,22 +6,17 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:36:48 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/23 11:26:36 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/23 15:45:51 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_countdigits(ssize_t n)
+static int	ft_countdigits(size_t n)
 {
 	size_t	counter;
 
 	counter = 0;
-	if (n < 0)
-	{
-		counter++;
-		n = -n;
-	}
 	if (n == 0)
 		counter++;
 	while (n > 0)
@@ -71,16 +66,18 @@ char	*ft_itoa(int n)
 	t_itoa	t;
 
 	t.len = ft_countdigits(n) + 1;
-	t.result = calloc(t.len + 1, sizeof(char));
 	if (!t.result)
 		return (NULL);
 	if (n < 0)
 	{
-		t.sign = ft_strdup("-");
-		t.number = ft_conversion(n);
-		t.result = ft_strjoin(t.sign, t.number);
+		t.result = calloc(t.len + 2, sizeof(char));
+		t.sign = ft_strdup("-");	
+		t.result = ft_strcat(t.sign, ft_conversion(n));
 	}
 	else
+	{
+		t.result = calloc(t.len + 1, sizeof(char));
 		t.result = ft_conversion(n);
+	}
 	return (t.result);
 }
