@@ -12,10 +12,10 @@
 
 #include "libft.h"
 #include <stdio.h>
-/*
+
 static char	ft_strmapi_helper(unsigned int i, char c)
 {
-	(void)i;
+	i = 0;
 	ft_toupper(c);
 	return(c);		
 }
@@ -25,10 +25,10 @@ static void	ft_striteri_helper(unsigned int i, char *s)
 	i = 0;
 	write(1, &s[i], 1);
 }
-*/
+
 int	main()
 {
-/*	puts("\n================================= ft_substr.c\n");
+	puts("\n================================= ft_substr.c\n");
 
 	{
 		char const *s = "0123456789 0123456789";
@@ -237,7 +237,7 @@ int	main()
 		printf("RESULT | %s\n", str);
 		free(str);
 	}
-*/			
+			
 	puts("\n================================= ft_split.c\n");
 	
 	{
@@ -364,7 +364,7 @@ int	main()
 		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
 		printf("WORD (null)\n");
 	} 
-/*	
+	
 	puts("\n================================= ft_itoa.c (NOT OK!)\n");
 
 	{
@@ -493,6 +493,6 @@ int	main()
 		ft_putnbr_fd(0, 1);
 		ft_putendl_fd("\n", 1);
 	}
-*/
+
 	return(0);
 }
