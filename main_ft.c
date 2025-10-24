@@ -6,16 +6,29 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/23 15:49:01 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/24 18:44:55 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
+/*
+static char	ft_strmapi_helper(unsigned int i, char c)
+{
+	(void)i;
+	ft_toupper(c);
+	return(c);		
+}
 
+static void	ft_striteri_helper(unsigned int i, char *s)
+{
+	i = 0;
+	write(1, &s[i], 1);
+}
+*/
 int	main()
 {
-	puts("\n================================= ft_substr.c\n");
+/*	puts("\n================================= ft_substr.c\n");
 
 	{
 		char const *s = "0123456789 0123456789";
@@ -56,8 +69,8 @@ int	main()
 	puts("\n================================= ft_strjoin.c\n");
 
 	{
-		char *s1 = "qwert";
-		char *s2 = "asdfg";
+		char *s1 = "Hello ";
+		char *s2 = "World!";
 		char *str;
 		
 		puts("=== BOTH EXIST");
@@ -81,7 +94,7 @@ int	main()
 		
 	{
 		char *s1 = "";
-		char *s2 = "asdfg";
+		char *s2 = "World!";
 		char *str;
 
 		puts("=== s1 EMPTY");
@@ -92,7 +105,7 @@ int	main()
 	}
 		
 	{
-		char *s1 = "qwert";
+		char *s1 = "Hello ";
 		char *s2 = "";
 		char *str;
 
@@ -179,7 +192,7 @@ int	main()
 			
 	{
 		char *s1 = "";
-		char *set = "asdfg";
+		char *set = "---";
 		char *str;
 		
 		puts("=== EMPTY S1");
@@ -190,7 +203,7 @@ int	main()
 	}
 	
 	{
-		char *s1 = "qwert asdfg zxcvb";
+		char *s1 = "---qwert---asdfg---zxcvb---yuiop---";
 		char *set = "";
 		char *str;
 		
@@ -214,8 +227,8 @@ int	main()
 	}
 		
 	{
-		char *s1 = "qwert asdfg zxcvb";
-		char *set = "000000";
+		char *s1 = "---qwert---asdfg---zxcvb---yuiop---";
+		char *set = "000";
 		char *str;
 		
 		puts("=== SET ABSENT");
@@ -224,8 +237,7 @@ int	main()
 		printf("RESULT | %s\n", str);
 		free(str);
 	}
-		
-	
+*/			
 	puts("\n================================= ft_split.c\n");
 	
 	{
@@ -242,6 +254,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		i = 0;
 		while (array[i])
 		{
 			free(array[i]);
@@ -264,6 +277,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		i = 0;
 		while (array[i])
 		{
 			free(array[i]);
@@ -286,6 +300,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		i = 0;
 		while (array[i])
 		{
 			free(array[i]);
@@ -308,6 +323,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		i = 0;
 		while (array[i])
 		{
 			free(array[i]);
@@ -330,6 +346,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		i = 0;
 		while (array[i])
 		{
 			free(array[i]);
@@ -347,7 +364,7 @@ int	main()
 		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
 		printf("WORD (null)\n");
 	} 
-	
+/*	
 	puts("\n================================= ft_itoa.c (NOT OK!)\n");
 
 	{
@@ -405,24 +422,24 @@ int	main()
 		free(s);
 	}
  
-	puts("\n================================= ft_strmapi.c (NOT OK!)\n");
-/*
+	puts("\n================================= ft_strmapi.c\n");
+
 	{
 		char *s = "Hello world!";
-		char *d = ft_strmapi(s, &ft_toupper);
-		printf("STRING | %s\nFUNCTION | TO UPPER\n", s);
-		printf("RESULT |  %s\n", d);
+		char *d = ft_strmapi(s, ft_strmapi_helper);
+		printf("STRING | %s\n", s);
+		printf("%s\n", d);
 		free(d);
 	}
-*/	
-	puts("\n================================= ft_striteri.c (NOT OK!)\n");
-/*
+	
+	ft_putendl_fd("\n================================= ft_striteri.c\n", 1);
+
 	{
-		char *s = "Hello world!";
-		printf("STRING | %s\nFUNCTION | TO UPPER\n", s);
-		printf("RESULT |  %s\n", ft_striteri(s, &ft_isalpha));
+		char *s = "Hello world!\n";
+		ft_putendl_fd("STRING | Hello world!", 1);
+		ft_striteri(s, ft_striteri_helper);
 	}
-*/
+
 	ft_putendl_fd("\n================================= ft_putchar_fd.c\n", 1);
 	
 	{
@@ -476,6 +493,6 @@ int	main()
 		ft_putnbr_fd(0, 1);
 		ft_putendl_fd("\n", 1);
 	}
-
+*/
 	return(0);
 }

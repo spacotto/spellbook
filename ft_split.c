@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:33:22 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/22 10:55:49 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/24 18:49:49 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,32 +24,32 @@ static int	ft_countwords(char const *s, char c)
 		counter = 0;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c && s[i + 1] != '\0')
+		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
 			counter++;
 		i++;
 	}
 	return (counter);
 }
 
-static char	*ft_fill(char *array, size_t *irow, char const *s, char c)
+static void	free_tab(char **tab)
 {
-	while (s[*irow] != '\0' && s[*irow] != c)
-		*irow = *irow + 1;
-	array = ft_calloc(*irow * 4 + 1, sizeof(char));
-	ft_memcpy(array, s, *irow);
-	array[*irow] = '\0';
-	return (array);
+	size_t	i;
+
+	if (!tab)
+		return ;
+	i = 0;
+	while (tab[i])
+		free(tab[i++]);
+	free(tab);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**array;
-	size_t	icol;
-	size_t	irow;
+	t_split	t;
 
-	icol = 0;
-	array = ft_calloc(ft_countwords(s, c), sizeof(char *));
-	if (!array)
+	t.i = 0;
+	t.array = ft_calloc(ft_countwords(s, c) + 1, sizeof(char *));
+	if (!t.array)
 		return (NULL);
 	while (*s)
 	{
@@ -57,12 +57,16 @@ char	**ft_split(char const *s, char c)
 			s++;
 		else
 		{
-			irow = 0;
-			array[icol] = ft_fill(array[icol], &irow, s, c);
-			icol++;
-			s += irow;
+			t.j = 0;
+			while (s[t.j] != '\0' && s[t.j] != c)
+				t.j++;
+			t.array[t.i] = ft_calloc(t.j + 1, sizeof(char));
+			if (!t.array[t.i])
+				free_tab(t.array);
+			ft_memcpy(t.array[t.i], s, t.j);
+			t.i++;
+			s += t.j;
 		}
 	}
-	array[icol] = NULL;
-	return (array);
+	return (t.array);
 }
