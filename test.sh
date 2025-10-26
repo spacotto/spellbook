@@ -1,5 +1,5 @@
 clear
-make all
-cc -Wall -Wextra -Werror main_ft.c libft.a -o libft -lbsd 
+make bonus
+cc -Wall -Wextra -Werror main_bonus.c libft.a -o libft -lbsd 
 ./libft
 make fclean

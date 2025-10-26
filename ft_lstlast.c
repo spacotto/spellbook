@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:31:56 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/23 17:40:06 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/26 18:27:42 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ t_list	*ft_lstlast(t_list *lst)
 	if (!lst)
 		return (NULL);
 	while (lst && lst->next)
-		lst = lst->next
+		lst = lst->next;
 			return (lst);
 }

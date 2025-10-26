@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/14 09:34:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/10/25 19:40:17 by spacotto         ###   ########.fr        #
+#    Updated: 2025/10/26 23:46:51 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,16 +36,16 @@ SRC_FN	:= ft_strmapi.c ft_striteri.c
 
 SRC_FD	:= ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRCS	:= $(SRC_ISC) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) $(SRC_MLC) \
-		$(SRC_FT) $(SRC_FN) $(SRC_FD)
-
 SRCS_B	:= ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 		ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+
+SRCS	:= $(SRC_ISC) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) $(SRC_MLC) \
+		$(SRC_FT) $(SRC_FN) $(SRC_FD)
 
 # OBJECTS
 OBJS	:= $(SRCS:.c=.o)
 
-OBJS_B	:= $(SRCS_B: .c=.o)
+OBJS_B	:= $(SRCS_B:.c=.o)
 
 # RULES
 all: $(NAME)
@@ -58,7 +58,7 @@ $(NAME) : $(OBJS)
 	$(CC) $(FLAGS) $(INC) $< -o $@
 
 clean:
-	/bin/rm -rf $(OBJS) 
+	/bin/rm -rf $(OBJS) $(OBJS_B) 
 
 fclean: clean
 	/bin/rm -rf $(NAME)
@@ -66,7 +66,7 @@ fclean: clean
 re: fclean all
 
 bonus: $(NAME) $(OBJS_B) 
-	ar rc $(NAME) $(OBJS_S)
+	ar rc $(NAME) $(OBJS_B)
 	ranlib $(NAME)
 
 .PHONY: all, clean, fclean, re, bonus
