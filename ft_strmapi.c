@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:39:52 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/22 18:45:00 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/26 17:09:43 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s || !f)
 		return (NULL);
 	len = ft_strlen(s);
-	str = calloc(len + 1, sizeof(char));
+	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
 	i = 0;

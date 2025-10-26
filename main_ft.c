@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/24 18:44:55 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/26 17:54:16 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,16 @@
 
 static char	ft_strmapi_helper(unsigned int i, char c)
 {
-	i = 0;
-	ft_toupper(c);
+	(void)i;
+	c = ft_toupper(c);
 	return(c);		
 }
 
 static void	ft_striteri_helper(unsigned int i, char *s)
 {
-	i = 0;
-	write(1, &s[i], 1);
+	(void)i;
+	if (*s >= 'a' && *s <= 'z')
+		*s -= 32;
 }
 
 int	main()
@@ -125,7 +126,7 @@ int	main()
 		
 		puts("=== SET @ START & END");
 		printf("S1     | %s\nSET    | %s\n", s1, set);	
-		str = ft_strtrim(s1, set);
+	str = ft_strtrim(s1, set);
 		printf("RESULT | %s\n\n", str);
 		free(str);
 	}
@@ -426,18 +427,19 @@ int	main()
 
 	{
 		char *s = "Hello world!";
-		char *d = ft_strmapi(s, ft_strmapi_helper);
+		char *d = ft_strmapi(s, &ft_strmapi_helper);
 		printf("STRING | %s\n", s);
-		printf("%s\n", d);
+		printf("RESULT | %s\n", d);
 		free(d);
 	}
 	
-	ft_putendl_fd("\n================================= ft_striteri.c\n", 1);
+	puts("\n================================= ft_striteri.c\n");
 
 	{
-		char *s = "Hello world!\n";
-		ft_putendl_fd("STRING | Hello world!", 1);
-		ft_striteri(s, ft_striteri_helper);
+		char s[] = "Hello world!";
+		printf("STRING | %s\n", s);
+		ft_striteri(s, &ft_striteri_helper);
+		printf("RESULT | %s\n", s);
 	}
 
 	ft_putendl_fd("\n================================= ft_putchar_fd.c\n", 1);
