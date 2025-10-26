@@ -11,11 +11,11 @@
 # **************************************************************************** #
 
 NAME	:= libft.a
-CC	:= cc
+CC		:= cc
 FLAGS	:= -c -Wall -Wextra -Werror
 
 # INCLUDES
-INC	:= -I .
+INC		:= -I .
 
 # SOURCES
 SRC_ISC	:= ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c
