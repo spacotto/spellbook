@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 10:08:53 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/20 13:47:14 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/27 11:33:04 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -848,22 +848,35 @@ int	main()
 	
 	{
 		char s[] = "qwert asdfg zxcvb";
+		char *d1;			
+		char *d2;
+
 		puts("=== *s EXISTS");
 		printf("TEST STR | %s\n", s);
-		printf("ORIGINAL | %s\n", strdup(s));
-		printf("CUSTOM	 | %s\n", ft_strdup(s));
+		d1 = strdup(s);
+		printf("ORIGINAL | %s\n", d1);
+		d2 = ft_strdup(s);
+		printf("CUSTOM	 | %s\n", d2);
 		printf("=== FINAL CHECK: %s\n\n", 
-			(strcmp(strdup(s), ft_strdup(s))) ? "KO!" : "OK!");
+			(strcmp(d1, d2)) ? "KO!" : "OK!");
+		free(d1);
+		free(d2);
 	}
 
 	{
 		char s[] = "";
+		char *d1;			
+		char *d2;
 		puts("=== *s DOES NOT EXIST");
 		printf("TEST STR | %s\n", s);
-		printf("ORIGINAL | %s\n", strdup(s));
-		printf("CUSTOM	 | %s\n", ft_strdup(s));
+		d1 = strdup(s);
+		printf("ORIGINAL | %s\n", d1);
+		d2 = ft_strdup(s);
+		printf("CUSTOM	 | %s\n", d2);
 		printf("=== FINAL CHECK: %s\n\n", 
-			(strcmp(strdup(s), ft_strdup(s))) ? "KO!" : "OK!");
+			(strcmp(d1, d2)) ? "KO!" : "OK!");
+		free(d1);
+		free(d2);
 	}
 
 	return(0);

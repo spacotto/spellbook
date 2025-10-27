@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/26 18:29:01 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:24:23 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,10 @@ typedef struct s_split
 typedef struct s_itoa
 {
 	char	*result;
-    size_t	len;    
-    ssize_t	nb;
+	size_t	len;
+	ssize_t	nb;
+	size_t	i;
+	size_t	b;
 }	t_itoa;
 
 typedef struct s_list

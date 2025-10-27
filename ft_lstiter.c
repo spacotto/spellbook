@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:14:19 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/26 18:30:47 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/27 16:51:07 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	t_list	*node;
+	t_list	*head;
 
-	node = lst;
-	while (node)
+	if (!lst || !f)
+		return ;
+	head = lst;
+	while (head)
 	{
-		f(node->content);
-		node = node->next;
+		f(head->content);
+		head = head->next;
 	}
 }

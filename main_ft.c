@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 13:49:20 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/26 17:54:16 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:35:58 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,7 +156,7 @@ int	main()
 	}
 			
 	{
-		char *s1 = "----qwert---asdfg---zxcvb---yuiopi----";
+		char *s1 = "----qwert---asdfg---zxcvb---yuiop----";
 		char *set = "---";
 		char *str;
 		
@@ -255,6 +255,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		printf("\nTOTAL WORDS: %lu\n", i);
 		i = 0;
 		while (array[i])
 		{
@@ -278,6 +279,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		printf("\nTOTAL WORDS: %lu\n", i);
 		i = 0;
 		while (array[i])
 		{
@@ -301,6 +303,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		printf("\nTOTAL WORDS: %lu\n", i);
 		i = 0;
 		while (array[i])
 		{
@@ -311,7 +314,7 @@ int	main()
 	} 
  
 	{
-		char *s = "qwert-asdfg-zxcvb-yuiop-";
+		char *s = "-qwert-asdfg-zxcvb-yuiop-";
 		char c = '\0';
 		char **array;
 		size_t i = 0;
@@ -324,6 +327,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		printf("\nTOTAL WORDS: %lu\n", i);
 		i = 0;
 		while (array[i])
 		{
@@ -347,6 +351,7 @@ int	main()
 			printf("WORD %lu | %s\n", i + 1, array[i]);
 			i++;
 		}
+		printf("\nTOTAL WORDS: %lu\n", i);
 		i = 0;
 		while (array[i])
 		{
@@ -354,7 +359,6 @@ int	main()
 			i++;
 		}
 		free(array);
-		printf("WORD (empty)\n");
 	} 
 	
 	{
@@ -363,10 +367,10 @@ int	main()
 					
 		puts("\n=== ONLY SEP");
 		printf("STRING  | %s\nDIVIDER | %c\n", s, c);
-		printf("WORD (null)\n");
+		printf("\nTOTAL WORDS: 0\n");
 	} 
 	
-	puts("\n================================= ft_itoa.c (NOT OK!)\n");
+	puts("\n================================= ft_itoa.c\n");
 
 	{
 		int n = 1234567890;
@@ -406,6 +410,17 @@ int	main()
 		char *s;
 
 		puts("\n=== INT MIN");
+		printf("NUMBER | %d\n", n);
+		s = ft_itoa(n);
+		printf("RESULT | %s\n", s);
+		free(s);
+	}
+ 
+	{
+		int n = 9;
+		char *s;
+
+		puts("\n=== SINGLE DIGIT");
 		printf("NUMBER | %d\n", n);
 		s = ft_itoa(n);
 		printf("RESULT | %s\n", s);

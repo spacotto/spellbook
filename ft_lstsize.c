@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 17:13:48 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/23 17:17:25 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:46:36 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_lstsize(t_list *lst)
 {
 	int	size;
 
+	size = 0;
 	while (lst)
 	{
 		size++;
