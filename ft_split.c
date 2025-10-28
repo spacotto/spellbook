@@ -62,8 +62,10 @@ char	**ft_split(char const *s, char c)
 				t.j++;
 			t.array[t.i] = ft_calloc(t.j + 1, sizeof(char));
 			if (!t.array[t.i])
+			{
 				free_tab(t.array);
 				return (NULL);
+			}
 			ft_memcpy(t.array[t.i], s, t.j);
 			t.i++;
 			s += t.j;
