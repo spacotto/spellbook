@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:39:49 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/27 23:05:19 by spacotto         ###   ########.fr       */
+/*      Updated: 2025/10/28 08:34:14 by espadara                              */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -287,13 +287,11 @@ int	main()
 		 (strcmp(s1, "one") == 0) ? "OK" : "KO",
 		 (strcmp(s2, "two") == 0) ? "OK" : "KO");
 	  s1 = new->content;
-	  printf("%p\n", new->content);
-
+	  s2 = new->next->content;
 	  printf("new->content = |%s| new->next->content = |%s|\n", s1, s2);
 	  puts("\n");
 	  puts("\n");
 	  puts("\n");
-
 
 	}
 	return (0);

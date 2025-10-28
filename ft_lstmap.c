@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 18:18:21 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/27 11:15:30 by spacotto         ###   ########.fr       */
+/*      Updated: 2025/10/28 08:33:28 by espadara                              */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 
 	if (!lst || !f || !del)
 		return (NULL);
+	new_list = NULL;
 	while (lst)
 	{
 		node = ft_lstnew(f(lst->content));
