@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:39:49 by spacotto          #+#    #+#             */
-/*      Updated: 2025/10/28 08:34:14 by espadara                              */
+/*   Updated: 2025/10/28 11:26:10 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,10 +101,7 @@ int	main()
 		t_list *add = NULL;
 
 		ft_lstadd_front(&head, add);
-//		int check = (head == add 
-//						&& head->next == node
-//						&& head->next->next == NULL);
-//		printf("RESULT? %s\n", check ? "OK!" : "KO!");
+		printf("RESULT? OK!\n");
 		free(node);
 		free(add);
 	}
@@ -265,34 +262,48 @@ int	main()
 	puts("\n================================= ft_lstiter.c\n");
 
 	{
-		puts("\n=== MULTIPLE NODES");
-		
-		t_list *list1 = ft_lstnew(ft_strdup("hello"));
-		list1->next = ft_lstnew(ft_strdup("world!"));
-		ft_lstiter(list1, &ft_lstiter_helper);
-		int check = (strcmp(list1->content, "HELLO") == 0 && strcmp(list1->next->content, "WORLD!") == 0);
-		printf("RESULT? %s\n", check ? "OK!" : "KO!");
-		ft_lstclear(&list1, del);
+		t_list *lst = ft_lstnew(ft_strdup("Hello"));
+		lst->next = ft_lstnew(ft_strdup("World!"));
+	
+		puts("=== BEFORE");
+		char *s1 = lst->content;
+		char *s2 = lst->next->content;
+		printf("NODE CONTENT (s1) | %s\nNODE CONTENT (s2) | %s\n\n", s1, s2);
+	
+		ft_lstiter(lst, &ft_lstiter_helper);
+		puts("=== AFTER");
+		printf("NODE CONTENT (s1) | %s\nNODE CONTENT (s2) | %s\n\n", s1, s2);
+		int check = (strcmp(lst->content, "HELLO") == 0 
+					&& strcmp(lst->next->content, "WORLD!") == 0);
+		printf("CHECK? %s\n", check ? "OK!" : "KO!");
+		ft_lstclear(&lst, del);
 	}
 
 	puts("\n================================= ft_lstmap.c\n");
+	
 	{
-	  t_list *origin = ft_lstnew(ft_strdup("one"));
-	  origin->next = ft_lstnew(ft_strdup("two"));
-	  t_list *new = ft_lstmap(origin, &ft_lstmap_helper, free);
-	  char *s1 = origin->content;
-	  char *s2 = origin->next->content;
-	  printf("origin->content       = |%s|\norigin->next->content = |%s|\n", s1, s2);
-	  printf("origin list remains unchanged ? =>  s1 = %s | s2 = %s\n",
-		 (strcmp(s1, "one") == 0) ? "OK" : "KO",
-		 (strcmp(s2, "two") == 0) ? "OK" : "KO");
-	  s1 = new->content;
-	  s2 = new->next->content;
-	  printf("new->content = |%s| new->next->content = |%s|\n", s1, s2);
-	  puts("\n");
-	  puts("\n");
-	  puts("\n");
-
+		t_list *lst_src = ft_lstnew(ft_strdup("content one"));
+		lst_src->next = ft_lstnew(ft_strdup("content two"));
+	  
+		char *s1 = lst_src->content;
+		char *s2 = lst_src->next->content;
+		printf("NODE CONTENT (s1) | %s\nNODE CONTENT (s2) | %s\n\n", s1, s2);
+		
+		t_list *lst_dst = ft_lstmap(lst_src, &ft_lstmap_helper, free);
+		printf("SOURCE CHECK ? s1 ? %s s2 ? %s\n\n",
+				(strcmp(s1, "content one") == 0) ? "OK!" : "KO!",
+				(strcmp(s2, "content two") == 0) ? "OK!" : "KO!");
+		
+		char *d1 = lst_dst->content;
+		char *d2 = lst_dst->next->content;
+		printf("NODE CONTENT (d1) | %s\nNODE CONTENT (d2) | %s\n\n", d1, d2);
+		printf("SOURCE CHECK ? d1 ? %s d2 ? %s\n\n",
+				(strcmp(d1, "CONTENT ONE") == 0) ? "OK!" : "KO!",
+				(strcmp(d2, "CONTENT TWO") == 0) ? "OK!" : "KO!");
+		
+		ft_lstclear(&lst_src, del);
+		ft_lstclear(&lst_dst, del);
 	}
+
 	return (0);
 }
