@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:39:49 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/27 18:23:51 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/27 23:05:19 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,29 @@ static void	ft_lstiter_helper(void *content)
 	{
 		while (*s)
 		{
-			*s = ft_toupper((size_t)*s);
+			*s = ft_toupper((unsigned char)*s);
 			s++;
 		}
 	}
+}
+
+static void	*ft_lstmap_helper(void *content)
+{
+    char *str = (char *)content;
+    char *new_str;
+    int i = 0;
+
+    if (content == NULL)
+        return (NULL);
+    new_str = ft_strdup(str);
+    if (!new_str)
+        return (NULL);
+    while (new_str[i])
+    {
+        new_str[i] = ft_toupper(new_str[i]);
+        i++;
+    }
+    return (new_str);
 }
 
 int	main()
@@ -184,11 +203,11 @@ int	main()
 		puts("\n=== ADD EMPTY NODE");
 		
 		t_list *node = ft_lstnew("content");
-		t_list *head = NULL; 
+		t_list *head = node; 
 		t_list *add = NULL;
 
 		ft_lstadd_back(&head, add);
-		int check = (head == node && node->next == NULL);
+		int check = (head == node && head->next == NULL);
 		printf("RESULT? %s\n", check ? "OK!" : "KO!");
 		free(node);
 	}
@@ -248,21 +267,34 @@ int	main()
 	{
 		puts("\n=== MULTIPLE NODES");
 		
-		t_list *node_1 = ft_lstnew(ft_strdup("Hello")); 
-		t_list *head = node_1;
-		t_list *node_2 = ft_lstnew(ft_strdup("World!")); 
-			
-		ft_lstadd_back(&head, node_1);
-		ft_lstadd_back(&head, node_2);
-
-//		ft_lstiter(head, &ft_lstiter_helper);
-		int check = (strcmp(node_1->content, "HELLO") == 0 && strcmp(node_2->content, "WORLD!") == 0);
+		t_list *list1 = ft_lstnew(ft_strdup("hello"));
+		list1->next = ft_lstnew(ft_strdup("world!"));
+		ft_lstiter(list1, &ft_lstiter_helper);
+		int check = (strcmp(list1->content, "HELLO") == 0 && strcmp(list1->next->content, "WORLD!") == 0);
 		printf("RESULT? %s\n", check ? "OK!" : "KO!");
-		free(node_2);
-		free(node_1);
+		ft_lstclear(&list1, del);
 	}
 
 	puts("\n================================= ft_lstmap.c\n");
-	
+	{
+	  t_list *origin = ft_lstnew(ft_strdup("one"));
+	  origin->next = ft_lstnew(ft_strdup("two"));
+	  t_list *new = ft_lstmap(origin, &ft_lstmap_helper, free);
+	  char *s1 = origin->content;
+	  char *s2 = origin->next->content;
+	  printf("origin->content       = |%s|\norigin->next->content = |%s|\n", s1, s2);
+	  printf("origin list remains unchanged ? =>  s1 = %s | s2 = %s\n",
+		 (strcmp(s1, "one") == 0) ? "OK" : "KO",
+		 (strcmp(s2, "two") == 0) ? "OK" : "KO");
+	  s1 = new->content;
+	  printf("%p\n", new->content);
+
+	  printf("new->content = |%s| new->next->content = |%s|\n", s1, s2);
+	  puts("\n");
+	  puts("\n");
+	  puts("\n");
+
+
+	}
 	return (0);
 }
