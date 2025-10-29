@@ -7,3 +7,9 @@ cc -Wall -Wextra -Werror ft_isalnum_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_isascii_test.c libft.a -o libft -lbsd 
 ./libft
+cc -Wall -Wextra -Werror ft_isprint_test.c libft.a -o libft -lbsd 
+./libft
+cc -Wall -Wextra -Werror ft_strlen_test.c libft.a -o libft -lbsd 
+./libft
+cc -Wall -Wextra -Werror ft_memset_test.c libft.a -o libft -lbsd 
+./libft
