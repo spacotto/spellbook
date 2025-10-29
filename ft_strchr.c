@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 15:17:40 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/20 14:22:51 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/29 11:29:08 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	int	i;
 
 	i = 0;
-	while (i != '\0');
+	while (i != '\0')
 	{
 		if (s[i] == c)
 		{
