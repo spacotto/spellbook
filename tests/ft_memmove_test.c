@@ -64,11 +64,13 @@ int	main()
 		char s1[] = "000111222333444555666";
 		char s2[] = "000111222333444555666";
 		puts("=== SRC < DST");
+		
 		puts("=== BEFORE");
 		printf("C  SRC: %p | %s\n", &s1, s1);
 		printf("C  DST: %p | %s\n", &s1 + 3, s1 + 3);
 		printf("42 SRC: %p | %s\n", &s2, s2);
 		printf("42 DST: %p | %s\n", &s2 + 3, s2 + 3);
+		
 		puts("=== AFTER");
 		memmove(s1 + 3, s1, 3);
 		printf("C  SRC: %p | %s\n", &s1, s1);
