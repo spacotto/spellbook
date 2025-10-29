@@ -41,3 +41,5 @@ cc -Wall -Wextra -Werror ft_atoi_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_calloc_test.c libft.a -o libft -lbsd 
 ./libft
+cc -Wall -Wextra -Werror ft_strdup_test.c libft.a -o libft -lbsd 
+./libft
