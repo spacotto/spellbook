@@ -13,3 +13,5 @@ cc -Wall -Wextra -Werror ft_strlen_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_memset_test.c libft.a -o libft -lbsd 
 ./libft
+cc -Wall -Wextra -Werror ft_bzero_test.c libft.a -o libft -lbsd 
+./libft
