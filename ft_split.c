@@ -31,16 +31,17 @@ static int	ft_countwords(char const *s, char c)
 	return (counter);
 }
 
-static void	free_tab(char **tab)
+static void	*free_tab(char **tab)
 {
 	size_t	i;
 
 	if (!tab)
-		return ;
+		return (NULL);
 	i = 0;
 	while (tab[i])
 		free(tab[i++]);
 	free(tab);
+	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
@@ -62,10 +63,7 @@ char	**ft_split(char const *s, char c)
 				t.j++;
 			t.array[t.i] = ft_calloc(t.j + 1, sizeof(char));
 			if (!t.array[t.i])
-			{
-				free_tab(t.array);
-				return (NULL);
-			}
+				return (free_tab(t.array));
 			ft_memcpy(t.array[t.i], s, t.j);
 			t.i++;
 			s += t.j;
