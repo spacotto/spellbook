@@ -35,3 +35,5 @@ cc -Wall -Wextra -Werror ft_memchr_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_memcmp_test.c libft.a -o libft -lbsd 
 ./libft
+cc -Wall -Wextra -Werror ft_strnstr_test.c libft.a -o libft -lbsd 
+./libft
