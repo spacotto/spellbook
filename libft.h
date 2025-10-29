@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/27 13:24:23 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/29 11:35:18 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,12 @@
 /* INCLUDES */
 
 # include <unistd.h>
+# include <stdio.h>
 # include <stdlib.h>
+# include <ctype.h>
+# include <string.h>
+# include <strings.h>
+# include <bsd/string.h>
 
 /* STRUCTURES */
 
