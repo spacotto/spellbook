@@ -21,3 +21,5 @@ cc -Wall -Wextra -Werror ft_memmove_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_strlcpy_test.c libft.a -o libft -lbsd 
 ./libft
+cc -Wall -Wextra -Werror ft_strlcat_test.c libft.a -o libft -lbsd 
+./libft
