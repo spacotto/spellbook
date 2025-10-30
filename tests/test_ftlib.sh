@@ -19,5 +19,5 @@ cc -Wall -Wextra -Werror ft_putstr_fd_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_putendl_fd_test.c libft.a -o libft -lbsd
 ./libft
-#cc -Wall -Wextra -Werror ft_putnbr_fd_test.c libft.a -o libft -lbsd
-#./libft
+cc -Wall -Wextra -Werror ft_putnbr_fd_test.c libft.a -o libft -lbsd
+./libft
