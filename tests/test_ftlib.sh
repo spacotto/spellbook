@@ -3,8 +3,8 @@ cc -Wall -Wextra -Werror ft_substr_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_strjoin_test.c libft.a -o libft -lbsd
 ./libft
-#cc -Wall -Wextra -Werror ft_strtrim_test.c libft.a -o libft -lbsd
-#./libft
+cc -Wall -Wextra -Werror ft_strtrim_test.c libft.a -o libft -lbsd
+./libft
 #cc -Wall -Wextra -Werror ft_split_test.c libft.a -o libft -lbsd
 #./libft
 #cc -Wall -Wextra -Werror ft_itoa_test.c libft.a -o libft -lbsd
