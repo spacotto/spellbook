@@ -7,8 +7,8 @@ cc -Wall -Wextra -Werror ft_strtrim_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_split_test.c libft.a -o libft -lbsd
 ./libft
-#cc -Wall -Wextra -Werror ft_itoa_test.c libft.a -o libft -lbsd
-#./libft
+cc -Wall -Wextra -Werror ft_itoa_test.c libft.a -o libft -lbsd
+./libft
 #cc -Wall -Wextra -Werror ft_strmapi_test.c libft.a -o libft -lbsd
 #./libft
 #cc -Wall -Wextra -Werror ft_striteri_test.c libft.a -o libft -lbsd
