@@ -15,5 +15,5 @@ cc -Wall -Wextra -Werror ft_lstclear_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_lstiter_test.c libft.a -o libft -lbsd
 ./libft
-#cc -Wall -Wextra -Werror ft_lstmap_test.c libft.a -o libft -lbsd
-#./libft
+cc -Wall -Wextra -Werror ft_lstmap_test.c libft.a -o libft -lbsd
+./libft
