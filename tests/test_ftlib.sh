@@ -13,8 +13,8 @@ cc -Wall -Wextra -Werror ft_strmapi_test.c libft.a -o libft -lbsd
 ./libft
 cc -Wall -Wextra -Werror ft_striteri_test.c libft.a -o libft -lbsd
 ./libft
-#cc -Wall -Wextra -Werror ft_putchar_fd_test.c libft.a -o libft -lbsd
-#./libft
+cc -Wall -Wextra -Werror ft_putchar_fd_test.c libft.a -o libft -lbsd
+./libft
 #cc -Wall -Wextra -Werror ft_putstr_fd_test.c libft.a -o libft -lbsd
 #./libft
 #cc -Wall -Wextra -Werror ft_putendl_fd_test.c libft.a -o libft -lbsd
