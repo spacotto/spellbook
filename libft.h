@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/29 11:35:18 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/10/30 15:24:50 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,10 @@
 
 typedef struct s_trim
 {
+	char	*trim;
+	char	*start;
+	char	*end;	
 	size_t	trimlen;	
-	size_t	setlen;
-	size_t	i;
 }	t_trim;
 
 typedef struct s_split
@@ -44,8 +45,6 @@ typedef struct s_itoa
 	char	*result;
 	size_t	len;
 	ssize_t	nb;
-	size_t	i;
-	size_t	b;
 }	t_itoa;
 
 typedef struct s_list
