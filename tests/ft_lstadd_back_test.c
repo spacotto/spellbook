@@ -59,7 +59,7 @@ int	main()
 	}
 
 	{
-		puts("\n=== KEEP ADDING HEADS");
+		puts("\n=== KEEP ADDING NODES");
 		
 		t_list *head = NULL;
 		t_list *node_1 = ft_lstnew("A"); 
