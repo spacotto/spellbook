@@ -1,6 +1,14 @@
 # Library 42: Documentation
 Build a comprehensive and reusable C programming library by re-implementing foundational functions, thereby deepening understanding of their mechanics and creating an essential toolkit for future projects.
 
+The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
+1. **Part 1:** Recreate a set of functions from the official C library.
+2. **Part 2:** Create a customised set of functions.
+3. **Part 3:** Create a set functions designed to introduc you to **linked lists**.
+
+> [!WARNING]
+> Some fuctions have been changed after passing the Moulinette! They might not be norm-compliant or subject compliant! Never trust other's code blindly!
+
 ## Libc Functions
 Recreate a set of functions from the official C library.
 
