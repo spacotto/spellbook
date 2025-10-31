@@ -10,17 +10,17 @@ The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
 3. **Part 3:** Create a set functions designed to introduc you to **linked lists**.
 
 > [!WARNING]
-> Some functions are from other project or custom and not originally from the Libft!
+> Some functions are from other projects or custom and not originally from the Libft!
 
 ## Table of Contents
 
-- [Checks](url)
-- [Conversions](url)
-- [String Manipulation](url)
-- [Memory Manipulation](url)
-- [Memory Allocation](url)
-- [File Descriptor Functions](url)
-- [Linked Lists](url)
+- [Checks](https://github.com/spacotto/libft/blob/main/README.md#checks)
+- [Conversions](https://github.com/spacotto/libft/blob/main/README.md#conversions)
+- [String Manipulation](https://github.com/spacotto/libft/blob/main/README.md#string-manipulation)
+- [Memory Manipulation](https://github.com/spacotto/libft/blob/main/README.md#memory-manipulation)
+- [Memory Allocation](https://github.com/spacotto/libft/blob/main/README.md#memory-allocation)
+- [File Descriptor Functions](https://github.com/spacotto/libft/blob/main/README.md#file-descriptor-functions)
+- [Linked Lists](https://github.com/spacotto/libft/blob/main/README.md#linked-lists)
 
 ## Functions Inventory
 
