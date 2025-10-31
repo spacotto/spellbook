@@ -44,6 +44,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!t.trim)
 		return (NULL);
 	ft_memcpy(t.trim, t.start, t.trimlen);
-	t.trim[t.trimlen] = '\0';
 	return (t.trim);
 }
