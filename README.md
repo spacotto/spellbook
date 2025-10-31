@@ -2,7 +2,7 @@
 Build a comprehensive and reusable C programming library by re-implementing foundational functions, thereby deepening understanding of their mechanics and creating an essential toolkit for future projects.
 
 > [!CAUTION]
-> Some fuctions have been changed after passing the Moulinette! They might not be norm-compliant or subject-compliant! Never trust code blindly!
+> Some functions have been changed after passing the Moulinette! They might not be norm-compliant or subject-compliant! Never trust code blindly!
 
 The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
 1. **Part 1:** Recreate a set of functions from the official C library.
@@ -10,7 +10,7 @@ The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
 3. **Part 3:** Create a set functions designed to introduc you to **linked lists**.
 
 > [!WARNING]
-> Some functions are from other projects or custom and not originally from the Libft!
+> Some functions are from other projects or custom, and not originally from the Libft!
 
 ## Table of Contents
 
@@ -28,33 +28,33 @@ The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
 These functions are used to check if a character belongs to a certain type (e.g., alphabetic, digit).
 | Function Name | Description                                              |
 | :------------ | :------------------------------------------------------- |
-| `isalpha`     | Checks if a character is an alphabet (a-z, A-Z).         |
-| `isdigit`     | Checks if a character is a decimal digit (0-9).          |
-| `isalnum`     | Checks if a character is alphanumeric (a-z, A-Z, 0-9).   |
-| `isascii`     | Checks if a character is a 7-bit ASCII character.        |
-| `isprint`     | Checks if a character is printable, including space.     |
+| `ft_isalpha`  | Checks if a character is an alphabet (a-z, A-Z).         |
+| `ft_isdigit`  | Checks if a character is a decimal digit (0-9).          |
+| `ft_isalnum`  | Checks if a character is alphanumeric (a-z, A-Z, 0-9).   |
+| `ft_isascii`  | Checks if a character is a 7-bit ASCII character.        |
+| `ft_isprint`  | Checks if a character is printable, including space.     |
 
 ### Conversions
 These functions are used to convert characters or strings.
 | Function Name | Description                                                 |
 | :------------ | :---------------------------------------------------------- |
-| `toupper`     | Converts a lowercase letter to its uppercase equivalent.    |
-| `tolower`     | Converts an uppercase letter to its lowercase equivalent.   |
-| `atoi`        | Converts a string to an integer.                            |
-| `ft_itoa`     | Allocates memory and convers an integer to a string.        |
+| `ft_toupper`  | Converts a lowercase letter to its uppercase equivalent.    |
+| `ft_tolower`  | Converts an uppercase letter to its lowercase equivalent.   |
+| `ft_atoi`     | Converts a string to an integer.                            |
+| `ft_itoa`     | Allocates memory and converts an integer to a string.       |
 
 ### String Manipulation
 This category includes functions for handling strings. They are used for copying, comparing, and searching within data.
 | Function Name | Description                                                                                                        |
 | :------------ | :----------------------------------------------------------------------------------------------------------------- |
-| `strlen`      | Calculates the length of a string, excluding the null terminator.                                                  |
-| `strlcpy`     | Copies a string with a size limit, ensuring the destination is null-terminated.                                    |
-| `strlcat`     | Appends a string with a size limit, ensuring the destination is null-terminated.                                   |
-| `strchr`      | Locates the first occurrence of a character in a string.                                                           |
-| `strrchr`     | Locates the last occurrence of a character in a string.                                                            |
-| `strncmp`     | Compares two strings up to a specified number of characters.                                                       |
-| `strnstr`     | Locates the first occurrence of a substring within a string, searching up to a specified length.                   |
-| `strdup`      | Duplicates a string by allocating new memory and copying the contents.                                             |
+| `ft_strlen`   | Calculates the length of a string, excluding the null terminator.                                                  |
+| `ft_strlcpy`  | Copies a string with a size limit, ensuring the destination is null-terminated.                                    |
+| `ft_strlcat`  | Appends a string with a size limit, ensuring the destination is null-terminated.                                   |
+| `ft_strchr`   | Locates the first occurrence of a character in a string.                                                           |
+| `ft_strrchr`  | Locates the last occurrence of a character in a string.                                                            |
+| `ft_strncmp`  | Compares two strings up to a specified number of characters.                                                       |
+| `ft_strnstr`  | Locates the first occurrence of a substring within a string, searching up to a specified length.                   |
+| `ft_strdup`   | Duplicates a string by allocating new memory and copying the contents.                                             |
 | `ft_substr`   | Allocates memory and returns a substring from a source, given the substring start and size.                        |
 | `ft_strjoin`  | Allocates memory and returns a new string, which is the result of concatenating `s1` and `s2`.                     |
 | `ft_strtrim`  | Allocates memory and returns a copy of `s1` with characters from `set` removed from the beginning and the end.     |
@@ -66,18 +66,18 @@ This category includes functions for handling strings. They are used for copying
 This category includes functions for handling blocks of memory. They are used for copying, comparing, and searching within data.
 | Function Name | Description                                                                                       |
 | :------------ | :------------------------------------------------------------------------------------------------ |
-| `memset`      | Fills a block of memory with a specific byte value.                                               |
-| `bzero`       | Sets a block of memory to all zeros. (Note: This is similar to `memset` with a value of 0).       |
-| `memcpy`      | Copies a block of memory from a source to a destination.                                          |
-| `memmove`     | Copies a block of memory, handling overlapping source and destination regions safely.             |
-| `memchr`      | Scans a block of memory for the first occurrence of a specific character.                         |
-| `memcmp`      | Compares two blocks of memory.                                                                    |
+| `ft_memset`   | Fills a block of memory with a specific byte value.                                               |
+| `ft_bzero`    | Sets a block of memory to all zeros. (Note: This is similar to `memset` with a value of 0).       |
+| `ft_memcpy`   | Copies a block of memory from a source to a destination.                                          |
+| `ft_memmove`  | Copies a block of memory, handling overlapping source and destination regions safely.             |
+| `ft_memchr`   | Scans a block of memory for the first occurrence of a specific character.                         |
+| `ft_memcmp`   | Compares two blocks of memory.                                                                    |
 
 ### Memory Allocation
-This category includes functions for memory allocation.
+This category includes functions for memory allocation and management.
 | Function Name | Description                                                                 |
 | :------------ | :-------------------------------------------------------------------------- |
-| `calloc`      | Allocates a block of memory for an array and initialises all bytes to zero. |
+| `ft_calloc`   | Allocates a block of memory for an array and initialises all bytes to zero. |
 
 ### File Descriptor Functions
 These functions write various data types to a specified file descriptor, which can be a file, standard output, or standard error. They are a common way to handle I/O in a modular and consistent manner.
