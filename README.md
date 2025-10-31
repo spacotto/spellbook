@@ -22,6 +22,8 @@ The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
 - [File Descriptor Functions](url)
 - [Linked Lists](url)
 
+## Functions Inventory
+
 ### Checks
 These functions are used to check if a character belongs to a certain type (e.g., alphabetic, digit).
 | Function Name | Description                                              |
@@ -99,3 +101,5 @@ These functions are specifically designed to teach you the basics of **linked li
 | `ft_lstclear`     | Deletes and frees the given node and all its successors, using the function `del` and `free(3)`. Finally, set the pointer to the list to NULL. |
 | `ft_lstiter`      | Iterates through the list `lst` and applies the function `f` to the content of each node.                                                      |
 | `ft_lstmap`       | Iterates through the list `lst`, applies the function `f` to each node’s content, and creates a new list as a result.                          |
+> [!TIP]
+> The order of the functions follows a specific logic. Pay attention to it!
