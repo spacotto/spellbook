@@ -93,8 +93,8 @@ These functions write various data types to a specified file descriptor, which c
 
 ### Linked Lists
 These functions are specifically designed to teach you the basics of **linked lists**, a fundamental data structure in computer science. They teach you the creation, deletion, modification, and iteration of individual list nodes (or "links") and the list as a whole. All these functions are based on the same given structure.
-| Function Name | Description |
-| :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Function Name     | Description                                                                                                                                    |
+| :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
 | `ft_lstnew`       | Creates a new node.                                                                                                                            |
 | `ft_lstadd_front` | Adds the node `new` at the beginning of the list.                                                                                              |
 | `ft_lstsize`      | Counts the number of nodes in the list.                                                                                                        |
