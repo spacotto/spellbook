@@ -2,7 +2,7 @@
 Build a comprehensive and reusable C programming library by re-implementing foundational functions, thereby deepening understanding of their mechanics and creating an essential toolkit for future projects.
 
 > [!CAUTION]
-> Some functions have been changed after passing the Moulinette! They might not be norm-compliant or subject-compliant! Never trust code blindly!
+> The structure of the project (and thus the Makefile) is custom. The Makefile required by the subject is much simpler.
 
 The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
 1. **Part 1:** Recreate a set of functions from the official C library.
@@ -21,6 +21,9 @@ The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
 - [Memory Allocation](https://github.com/spacotto/libft/blob/main/README.md#memory-allocation)
 - [File Descriptor Functions](https://github.com/spacotto/libft/blob/main/README.md#file-descriptor-functions)
 - [Linked Lists](https://github.com/spacotto/libft/blob/main/README.md#linked-lists)
+
+> [!CAUTION]
+> Some functions have been changed after passing the Moulinette! They might not be norm-compliant or subject-compliant! Never trust code blindly!
 
 ## Functions Inventory
 
