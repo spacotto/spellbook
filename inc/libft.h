@@ -54,7 +54,6 @@ typedef struct s_list
 }	t_list;
 
 /* PROTOTYPES : CHECKS */
-
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
