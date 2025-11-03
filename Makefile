@@ -40,6 +40,8 @@ SRC_LSTS	:= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			   ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 			   ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
+SRC_PRINTF	:= ft_printf.c
+
 # OBJECTS
 OBJS_DIR	:= objs
 
@@ -50,9 +52,10 @@ OBJS_CONV	:= $(addprefix $(OBJS_DIR)/conversions/, $(SRC_CONV:.c=.o))
 OBJS_ALLOC	:= $(addprefix $(OBJS_DIR)/alloc/, $(SRC_ALLOC:.c=.o))
 OBJS_FD		:= $(addprefix $(OBJS_DIR)/fd/, $(SRC_FD:.c=.o))
 OBJS_LSTS	:= $(addprefix $(OBJS_DIR)/lists/, $(SRC_LSTS:.c=.o))
+OBJS_PRINTF	:= $(addprefix $(OBJS_DIR)/lists/, $(SRC_LSTS:.c=.o))
 
 OBJS		:= $(OBJS_IS) $(OBJS_STR) $(OBJS_MEM) $(OBJS_CONV) \
-			   $(OBJS_ALLOC) $(OBJS_FD) $(OBJS_LSTS)
+			   $(OBJS_ALLOC) $(OBJS_FD) $(OBJS_LSTS) $(OBJS_PRINTF)
 
 # RULES
 all: $(NAME)
@@ -85,6 +88,10 @@ $(OBJS_DIR)/fd/%.o: $(SRCS_DIR)fd/%.c
 	$(CC) $(FLAGS) -c $(INC) $< -o $@
 
 $(OBJS_DIR)/lists/%.o: $(SRCS_DIR)lists/%.c
+	/bin/mkdir -p $(dir $@)
+	$(CC) $(FLAGS) -c $(INC) $< -o $@
+
+$(OBJS_DIR)/printf/%.o: $(SRCS_DIR)printf/%.c
 	/bin/mkdir -p $(dir $@)
 	$(CC) $(FLAGS) -c $(INC) $< -o $@
 
