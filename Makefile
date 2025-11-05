@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/01 14:04:37 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/05 11:48:23 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ WHITE		:= \033[0;97m
 
 # COMMANDS
 AR			:= /bin/ar rcs
-ECHO		:= /bin/echo
+ECHO		:= @echo
 MKDIR		:= /bin/mkdir
 RM			:= /bin/rm -rf
 
@@ -123,9 +123,11 @@ $(OBJS_DIR)/printf/%.o:	$(SRCS_DIR)printf/%.c
 
 clean:
 						$(RM) $(OBJS_DIR)
+						$(ECHO) "$(RED)Object removed!$(RESET)"
 
 fclean: 				clean
 						$(RM) $(NAME)
+						$(ECHO) "$(RED)Archive removed!$(RESET)"
 
 re: 					fclean all
 						$(ECHO) "$(GREEN)Cleaned and rebuilt everything :)$(RESET)"
