@@ -6,12 +6,20 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 15:04:11 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/05 13:57:17 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/05 15:09:14 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "printf.h"
 
+/* PRINT %c*/
+void	ft_printchar(char c)
+{
+	ft_putchar_fd(c, 1);
+}
+
+/* CORE */
 void	ft_typefield(const char **format, t_args *args)
 {
 	char c = **format;
