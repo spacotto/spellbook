@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 /* INCLUDES */
+# include "ft_printf.h"
 
 # include <ctype.h>
 # include <bsd/string.h>
@@ -115,8 +116,5 @@ void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 int		ft_lstsize(t_list *lst);
-
-/* PROTOTYPES : PRINTF */
-int		ft_printf(const char *, ...);
 
 #endif
