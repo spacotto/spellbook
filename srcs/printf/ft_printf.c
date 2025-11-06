@@ -6,68 +6,79 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 15:04:11 by spacotto          #+#    #+#             */
-/*      Updated: 2025/11/06 08:49:19 by espadara                              */
+/*   Updated: 2025/11/06 18:27:08 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include "printf.h"
+
+/* PRINT %s*/
+static void	ft_printstr(t_format *sformat)
+{
+	char	*s;
+	size_t	len;
+
+	s = va_arg(sformat->args, char *);
+	len = ft_strlen(s);
+	ft_putstr_fd(s, 1);
+	sformat->print_len += len;
+}
 
 /* PRINT %c*/
-void	ft_printchar(t_args *args)
+static void	ft_printchar(t_format *sformat)
 {
-	char c	= va_arg(args->args, int);
+	char	c;
+
+	c = va_arg(sformat->args, int);
 	ft_putchar_fd(c, 1);
-	args->print_len++;
+	sformat->print_len++;
 }
 
 /* CORE */
-void	ft_typefield(const char **format, t_args *args)
+static void	ft_typefield(const char **format, t_format *sformat)
 {
-	char c = **format;
-	
-	if (c == 'c')
-		ft_printchar(args);
-/*	else if (c == 's')
-		ft_printstr(args);	
-	else if (c == 'p')
+	if (**format == 'c')
+		ft_printchar(sformat);
+	else if (**format == 's')
+		ft_printstr(sformat);	
+/*	else if (**format == 'p')
 		ft_printptr(args);	
-	else if (c == 'd' || c == 'i')
+	else if (**format == 'd' || c == 'i')
 		ft_printnbr(args);	
-	else if (c == 'u')
+	else if (**format == 'u')
 		ft_printunb(args);	
-	else if (c == 'x' || c == 'X')
+	else if (**format == 'x' || c == 'X')
 		ft_printhex(args);	
-	else if (c == '%')
+	else if (**format == '%')
 		ft_printpercent(args);
 */	else
 	{
-		ft_putchar_fd(c, 1);
-		args->print_len++;
+		ft_putchar_fd(**format, 1);
+		sformat->print_len++;
 	}
 	(*format)++;
 }
 
 int	ft_printf(const char *format, ...)
 {
-	t_args	t;
+	t_format	f;
 
-	t.print_len = 0;
-	va_start(t.args, format);
+	f.print_len = 0;
+	va_start(f.args, format);
 	while (*format)
 	{
 		if (*format == '%')
 		{
 			format++;
-			ft_typefield(&format, &t);
+			ft_typefield(&format, &f);
 		}
 		else
 		{
 			ft_putchar_fd(*format, 1);
-			t.print_len++;
+			f.print_len++;
 			format++;
-		}	
-	}	
-	va_end(t.args);
-	return(t.print_len);
+		}
+	}
+	va_end(f.args);
+	return (f.print_len);
 }

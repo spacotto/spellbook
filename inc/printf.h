@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:57:46 by spacotto          #+#    #+#             */
-/*      Updated: 2025/11/06 08:47:05 by espadara                              */
+/*   Updated: 2025/11/06 17:37:33 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 # define PRINTF_H
 
 /* INCLUDES */
-# include <aio.h>
 # include <stdarg.h>
 
 /* STRUCTURES */
 
-typedef struct s_args
+typedef struct s_format
 {
 	va_list	args;
 	size_t	print_len;
-}	t_args;
+}	t_format;
 
 /* PROTOTYPES : CORE */
 
