@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:57:46 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/05 15:14:57 by spacotto         ###   ########.fr       */
+/*      Updated: 2025/11/06 08:47:05 by espadara                              */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ typedef struct s_args
 
 /* PROTOTYPES : CORE */
 
-//int	ft_printf(const char *format, ...);
+int	ft_printf(const char *format, ...);
 
 /* PROTOTYPES : TYPE FIELD */
 

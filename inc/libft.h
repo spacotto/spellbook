@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/05 14:53:14 by spacotto         ###   ########.fr       */
+/*      Updated: 2025/11/06 08:48:57 by espadara                              */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@
 # include <string.h>
 # include <strings.h>
 # include <unistd.h>
+# include "printf.h"
 
 /* STRUCTURES */
 

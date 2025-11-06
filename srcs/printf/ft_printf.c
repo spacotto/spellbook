@@ -6,19 +6,19 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 15:04:11 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/05 15:25:36 by spacotto         ###   ########.fr       */
+/*      Updated: 2025/11/06 08:49:19 by espadara                              */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "printf.h"
+//#include "printf.h"
 
 /* PRINT %c*/
 void	ft_printchar(t_args *args)
 {
-	char c	= *args;
-
+	char c	= va_arg(args->args, int);
 	ft_putchar_fd(c, 1);
+	args->print_len++;
 }
 
 /* CORE */
@@ -27,7 +27,7 @@ void	ft_typefield(const char **format, t_args *args)
 	char c = **format;
 	
 	if (c == 'c')
-		ft_printchar(*args);	
+		ft_printchar(args);
 /*	else if (c == 's')
 		ft_printstr(args);	
 	else if (c == 'p')
@@ -59,7 +59,7 @@ int	ft_printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			ft_typefield(&format, t.args);
+			ft_typefield(&format, &t);
 		}
 		else
 		{
