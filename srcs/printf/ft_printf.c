@@ -6,11 +6,21 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 15:04:11 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/06 18:27:08 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/06 22:21:47 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/* PRINT %c*/
+static void	ft_printchar(t_format *sformat)
+{
+	char	c;
+
+	c = va_arg(sformat->args, int);
+	ft_putchar_fd(c, 1);
+	sformat->print_len++;
+}
 
 /* PRINT %s*/
 static void	ft_printstr(t_format *sformat)
@@ -22,16 +32,6 @@ static void	ft_printstr(t_format *sformat)
 	len = ft_strlen(s);
 	ft_putstr_fd(s, 1);
 	sformat->print_len += len;
-}
-
-/* PRINT %c*/
-static void	ft_printchar(t_format *sformat)
-{
-	char	c;
-
-	c = va_arg(sformat->args, int);
-	ft_putchar_fd(c, 1);
-	sformat->print_len++;
 }
 
 /* CORE */
