@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:57:46 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 15:28:48 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 16:51:38 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,9 @@ typedef struct s_format
 	size_t	print_len;
 }	t_format;
 
-/* PROTOTYPES : CORE */
+/* PROTOTYPES */
 
-int	ft_printf(const char *format, ...);
-
-/* PROTOTYPES : TYPE FIELD */
-
+int		ft_printf(const char *format, ...);
 void	ft_typefield(const char **format, t_format *sformat);
 void	ft_printchar(t_format *sformat);
 void	ft_printstr(t_format *sformat);
