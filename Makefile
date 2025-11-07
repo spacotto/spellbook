@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/07 15:20:37 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/07 18:14:24 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,10 +26,10 @@ CYAN		:= \033[0;96m
 WHITE		:= \033[0;97m
 
 # COMMANDS
-AR			:= /bin/ar rcs
+AR			:= @/bin/ar rcs
 ECHO		:= @echo
-MKDIR		:= /bin/mkdir
-RM			:= /bin/rm -rf
+MKDIR		:= @/bin/mkdir
+RM			:= @/bin/rm -rf
 
 # INCLUDES
 INC			:= -I ./inc/
