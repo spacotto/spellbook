@@ -20,5 +20,6 @@ void ft_printstr(t_format *sformat)
     s = va_arg(sformat->args, char *);
     len = ft_strlen(s);
     ft_putstr_fd(s, 1);
+    free(s);
     sformat->print_len += len;
 }
