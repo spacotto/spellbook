@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:26:18 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/06 18:38:14 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 11:22:37 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,7 +87,7 @@ int	main()
 	{
 		void *p = NULL;
 
-		int ft = ft_printf(YELLOW "%p\n" RESET);
+		int ft = ft_printf(YELLOW "%p\n" RESET, p);
 		int c = printf(CYAN "%p\n" RESET, p);
 
 		check(c, ft);
@@ -97,7 +97,7 @@ int	main()
 	{
 		int d = 42;
 		
-		int ft = ft_printf(YELLOW "%d\n" RESET);
+		int ft = ft_printf(YELLOW "%d\n" RESET, d);
 		int c = printf(CYAN "%d\n" RESET, d);
 
 		check(c, ft);
@@ -107,7 +107,7 @@ int	main()
 	{
 		int i = 42;
 
-		int ft = ft_printf(YELLOW "%i\n" RESET);
+		int ft = ft_printf(YELLOW "%d\n" RESET, i);
 		int c = printf(CYAN "%i\n" RESET, i);
 
 		check(c, ft);
@@ -129,7 +129,7 @@ int	main()
 	{
 		int i = -2147483648;
 
-		int ft = ft_printf(YELLOW "%d\n" RESET);
+		int ft = ft_printf(YELLOW "%d\n" RESET, i);
 		int c = printf(CYAN "%d\n" RESET, i);
 
 		check(c, ft);
@@ -140,7 +140,7 @@ int	main()
 	{
 		int i = 2147483647;
 		
-		int ft = ft_printf(YELLOW "%d\n" RESET);
+		int ft = ft_printf(YELLOW "%d\n" RESET, i);
 		int c = printf(CYAN "%d\n" RESET, i);
 
 		check(c, ft);
@@ -150,7 +150,7 @@ int	main()
 	{
 		unsigned int u = 42;
 		
-		int ft = ft_printf(YELLOW "%u\n" RESET);
+		int ft = ft_printf(YELLOW "%u\n" RESET, u);
 		int c = printf(CYAN "%u\n" RESET, u);
 
 		check(c, ft);
@@ -160,7 +160,7 @@ int	main()
 	{
 		unsigned int i = 2882400009;
 
-		int ft = ft_printf(YELLOW "%X\n" RESET);
+		int ft = ft_printf(YELLOW "%X\n" RESET, i);
 		int c = printf(CYAN "%X\n" RESET, i);
 
 		check(c, ft);
@@ -170,7 +170,7 @@ int	main()
 	{
 		unsigned int i = 2882400009;
 
-		int ft = ft_printf(YELLOW "%x\n" RESET);
+		int ft = ft_printf(YELLOW "%x\n" RESET, i);
 		int c = printf(CYAN "%x\n" RESET, i);
 
 		check(c, ft);
@@ -191,7 +191,7 @@ int	main()
 		int i = 2147483642;
 		unsigned int u = 2147483642;
 		
-		int ft = ft_printf(YELLOW "CHARACTER | %c\nSTRING	  | %s\nADRESS	  | %p\nDECIMAL	  | %d\nINT	  | %i\nUNSIGNED  | %u\nHEX LOWER | %x\nHEX UPPER | %X\nNO FLAG	  | %%\n\n" RESET, s[0]);
+		int ft = ft_printf(YELLOW "CHARACTER | %c\nSTRING	  | %s\nADRESS	  | %p\nDECIMAL	  | %d\nINT	  | %i\nUNSIGNED  | %u\nHEX LOWER | %x\nHEX UPPER | %X\nNO FLAG	  | %%\n\n" RESET, s[0], s, &s[0], i, i, u, i, i);
 		
 		int c = printf( CYAN "CHARACTER | %c\nSTRING	  | %s\nADRESS	  | %p\nDECIMAL	  | %d\nINT	  | %i\nUNSIGNED  | %u\nHEX LOWER | %x\nHEX UPPER | %X\nNO FLAG	  | %%\n" RESET, s[0], s, &s[0], i, i, u, i, i);
 

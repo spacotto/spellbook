@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/06 12:39:54 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 12:41:43 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,7 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
+char	*ft_utoa_base(size_t n, char *base);
 
 /* PROTOTYPES : ALLOC */
 void	*ft_calloc(size_t nmemb, size_t size);
