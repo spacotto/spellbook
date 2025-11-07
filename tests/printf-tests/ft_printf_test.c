@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:26:18 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 16:00:49 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 16:17:29 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,18 @@ static int passed = 0;
 
 void	check(int c, int ft)
 {
-		total++;
-		if (c == ft)
-		{
-			passed++;
-			printf(GREEN "\nOK! %d / %d\n\n" RESET, passed, total);
-		}
-		else
-			printf(RED "\nKO! %d / %d\n\n" RESET, passed, total);
+	printf("\nReturn value: ");
+	printf(YELLOW "%d" RESET, ft);
+	printf(" / ");
+	printf(CYAN "%d\n" RESET, c);
+	total++;
+	if (c == ft)
+	{
+		passed++;
+		printf(GREEN "OK! %d / %d\n\n" RESET, passed, total);
+	}
+	else
+		printf(RED "KO! %d / %d\n\n" RESET, passed, total);
 }
 
 int	main()
@@ -62,12 +66,27 @@ int	main()
 	}
 
 	puts("=== EMPTY STRING");
-	
 	{
 		char s[1024] = "";
 		
-		int ft = ft_printf(YELLOW "(empty) %s\n" RESET, s);
-		int c = printf(CYAN "(empty) %s\n" RESET, s);
+		ft_printf(YELLOW "(empty)\n" RESET);
+		printf(CYAN "(empty)\n" RESET);
+		int ft = ft_printf("%s", s);
+		int c = printf("%s", s);
+
+		check(c, ft);
+	}
+
+	puts("=== MULTIPLE EMPTY STRINGS");
+	{
+		char s1[1024] = "";
+		char s2[1024] = "";
+		char s3[1024] = "";
+		
+		ft_printf(YELLOW "(empty)\n" RESET);
+		printf(CYAN "(empty)\n" RESET);
+		int ft = ft_printf("%s%s%s", s1, s2, s3);
+		int c = printf("%s%s%s", s1, s2, s3);
 
 		check(c, ft);
 	}
