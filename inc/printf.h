@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:57:46 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 15:00:03 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 15:28:48 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ void	ft_printstr(t_format *sformat);
 void	ft_printptr(t_format *sformat);
 void	ft_printnbr(t_format *sformat);
 void	ft_printunb(t_format *sformat);
+void	ft_printhex_lower(t_format *sformat);
+void	ft_printhex_upper(t_format *sformat);
 
 #endif

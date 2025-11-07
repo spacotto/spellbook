@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:26:18 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 15:09:16 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 16:00:49 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -221,9 +221,29 @@ int	main()
 		int i = 2147483642;
 		unsigned int u = 2147483642;
 		
-		int ft = ft_printf(YELLOW "CHARACTER | %c\nSTRING	  | %s\nADRESS	  | %p\nDECIMAL	  | %d\nINT	  | %i\nUNSIGNED  | %u\nHEX LOWER | %x\nHEX UPPER | %X\nNO FLAG	  | %%\n\n" RESET, s[0], s, &s[0], i, i, u, i, i);
+		int ft = ft_printf(YELLOW "\nc | %c\ns | %s\np | %p\nd | %d\ni | %i\nu | %u\nx | %x\nX | %X\n%% | %%\n" RESET, s[0], s, &s[0], i, i, u, i, i);
 		
-		int c = printf( CYAN "CHARACTER | %c\nSTRING	  | %s\nADRESS	  | %p\nDECIMAL	  | %d\nINT	  | %i\nUNSIGNED  | %u\nHEX LOWER | %x\nHEX UPPER | %X\nNO FLAG	  | %%\n" RESET, s[0], s, &s[0], i, i, u, i, i);
+		int c = printf(CYAN "\nc | %c\ns | %s\np | %p\nd | %d\ni | %i\nu | %u\nx | %x\nX | %X\n%% | %%\n" RESET, s[0], s, &s[0], i, i, u, i, i);
+
+		check(c, ft);
+	}
+
+	puts("=== ALL FLAGS (DOUBLE)");
+	
+	{
+		char s1[1024] = "Hello ";
+		int i1 = -2147483648;
+		unsigned int u1 = 4294967295;
+		
+		char s2[1024] = "World!";
+		int i2 = 2147483647;
+		unsigned int u2 = 0;
+
+		int ft = ft_printf(YELLOW "\nc | %c %c\ns | %s %s\np | %p %p\nd | %d %d\ni | %i %i\nu | %u %u\nx | %x %x\nX | %X %X\n%% | %% %%\n" RESET, 
+							s1[0],s2[0], s1, s2, &s1[0], &s2[0], i1, i2, i1, i2, u1, u2, i1, i2, i1, i2);
+		
+		int c = printf(CYAN "\nc | %c %c\ns | %s %s\np | %p %p\nd | %d %d\ni | %i %i\nu | %u %u\nx | %x %x\nX | %X %X\n%% | %% %%\n" RESET,
+						s1[0],s2[0], s1, s2, &s1[0], &s2[0], i1, i2, i1, i2, u1, u2, i1, i2, i1, i2);
 
 		check(c, ft);
 	}

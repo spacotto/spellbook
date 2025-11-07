@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/07 14:55:54 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/07 15:20:37 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ SRC_LSTS	:= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			   ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 SRC_PRINTF	:= ft_printf.c ft_printchar.c ft_printstr.c ft_printptr.c ft_printnbr.c \
-				ft_printunb.c
+				ft_printunb.c ft_printhex.c
 
 # OBJECTS
 OBJS_DIR	:= objs
