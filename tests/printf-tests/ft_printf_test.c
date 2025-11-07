@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:26:18 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 11:22:37 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 15:09:16 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,36 @@ int	main()
 	puts("=== PRINT %u");
 	{
 		unsigned int u = 42;
+		
+		int ft = ft_printf(YELLOW "%u\n" RESET, u);
+		int c = printf(CYAN "%u\n" RESET, u);
+
+		check(c, ft);
+	}
+
+	puts("=== PRINT UNSIGNED INT MAX");
+	{
+		unsigned int u = 4294967295;
+		
+		int ft = ft_printf(YELLOW "%u\n" RESET, u);
+		int c = printf(CYAN "%u\n" RESET, u);
+
+		check(c, ft);
+	}
+
+	puts("=== PRINT UNSIGNED 0");
+	{
+		unsigned int u = 0;
+		
+		int ft = ft_printf(YELLOW "%u\n" RESET, u);
+		int c = printf(CYAN "%u\n" RESET, u);
+
+		check(c, ft);
+	}
+
+	puts("=== PRINT UNSIGNED NEGATIVE BEHAVIOUR");
+	{
+		unsigned int u = -42;
 		
 		int ft = ft_printf(YELLOW "%u\n" RESET, u);
 		int c = printf(CYAN "%u\n" RESET, u);
