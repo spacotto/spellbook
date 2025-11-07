@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 12:54:19 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 13:16:36 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 16:38:04 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	countdigits_base(size_t n, size_t blen)
 {
 	size_t	counter;
-	
+
 	counter = 1;
 	while (n >= blen)
 	{
@@ -25,7 +25,7 @@ static int	countdigits_base(size_t n, size_t blen)
 	return (counter);
 }
 
-char    *ft_utoa_base(size_t n, char *base)
+char	*ft_utoa_base(size_t n, char *base)
 {
 	size_t	blen;
 	size_t	len;

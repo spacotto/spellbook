@@ -6,13 +6,13 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 15:19:19 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 15:29:45 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 16:46:29 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_printhex_lower(t_format *sformat)
+void	ft_printhex_lower(t_format *sformat)
 {
 	size_t	hex;
 	char	*s;
@@ -26,16 +26,16 @@ void    ft_printhex_lower(t_format *sformat)
 	sformat->print_len += len;
 }
 
-void    ft_printhex_upper(t_format *sformat)
+void	ft_printhex_upper(t_format *sformat)
 {
-    size_t  hex;
-    char    *s;
-    size_t  len;
+	size_t	hex;
+	char	*s;
+	size_t	len;
 
-    hex = (size_t)va_arg(sformat->args, size_t);
-    s = ft_utoa_base(hex, "0123456789ABCDEF");
-    ft_putstr_fd(s, 1);
-    len = ft_strlen(s);
-    free(s);
-    sformat->print_len += len;
+	hex = (size_t)va_arg(sformat->args, size_t);
+	s = ft_utoa_base(hex, "0123456789ABCDEF");
+	ft_putstr_fd(s, 1);
+	len = ft_strlen(s);
+	free(s);
+	sformat->print_len += len;
 }

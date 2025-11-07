@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 15:04:11 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 15:38:09 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 16:48:11 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,17 +17,17 @@ void	ft_typefield(const char **format, t_format *sformat)
 	if (**format == 'c')
 		ft_printchar(sformat);
 	else if (**format == 's')
-		ft_printstr(sformat);	
+		ft_printstr(sformat);
 	else if (**format == 'p')
-		ft_printptr(sformat);	
+		ft_printptr(sformat);
 	else if (**format == 'd' || **format == 'i')
-		ft_printnbr(sformat);	
+		ft_printnbr(sformat);
 	else if (**format == 'u')
-		ft_printunb(sformat);	
+		ft_printunb(sformat);
 	else if (**format == 'x')
-		ft_printhex_lower(sformat);	
+		ft_printhex_lower(sformat);
 	else if (**format == 'X')
-		ft_printhex_upper(sformat);	
+		ft_printhex_upper(sformat);
 	else if (**format == '%')
 	{
 		ft_putchar_fd('%', 1);

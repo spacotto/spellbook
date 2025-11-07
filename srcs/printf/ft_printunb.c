@@ -6,13 +6,13 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 14:54:24 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 15:00:21 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 16:42:41 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_printunb(t_format *sformat)
+void	ft_printunb(t_format *sformat)
 {
 	size_t	u;
 	char	*s;
