@@ -22,5 +22,6 @@ void    ft_printunb(t_format *sformat)
 	s = ft_utoa_base(u, "0123456789");
 	ft_putstr_fd(s, 1);
 	len = ft_strlen(s);
+	free(s);
 	sformat->print_len += len;
 }
