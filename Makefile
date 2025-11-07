@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/07 12:42:31 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/07 14:45:58 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ SRC_LSTS	:= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			   ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 			   ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-SRC_PRINTF	:= ft_printf.c ft_printchar.c ft_printstr.c ft_printptr.c
+SRC_PRINTF	:= ft_printf.c ft_printchar.c ft_printstr.c ft_printptr.c ft_printnbr.c
 
 # OBJECTS
 OBJS_DIR	:= objs
@@ -79,47 +79,55 @@ all:					$(NAME)
 
 $(NAME):				$(OBJS)
 						$(AR) $(NAME) $(OBJS)
-						$(ECHO) "$(GREEN)Archive compiled :)$(RESET)"
+						$(ECHO) "$(GREEN)Archive is ready :)$(RESET)"
 
 $(OBJS_DIR)/checks/%.o:	$(SRCS_DIR)checks/%.c
 						$(MKDIR) -p $(dir $@)
 						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
 						$(CC) $(FLAGS) $(INC) $< -o $@
+						$(ECHO) "$(GREEN)$< created $(RESET)"
 
 $(OBJS_DIR)/strs/%.o:	$(SRCS_DIR)strings/%.c
 						$(MKDIR) -p $(dir $@)
 						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
 						$(CC) $(FLAGS) $(INC) $< -o $@
+						$(ECHO) "$(GREEN)$< created $(RESET)"
 
 $(OBJS_DIR)/mem/%.o:	$(SRCS_DIR)memory/%.c
 						$(MKDIR) -p $(dir $@)
 						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
 						$(CC) $(FLAGS) $(INC) $< -o $@
+						$(ECHO) "$(GREEN)$< created $(RESET)"
 
 $(OBJS_DIR)/convs/%.o:	$(SRCS_DIR)conversions/%.c
 						$(MKDIR) -p $(dir $@)
 						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
 						$(CC) $(FLAGS) $(INC) $< -o $@
+						$(ECHO) "$(GREEN)$< created $(RESET)"
 
 $(OBJS_DIR)/alloc/%.o:	$(SRCS_DIR)alloc/%.c
 						$(MKDIR) -p $(dir $@)
 						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
 						$(CC) $(FLAGS) $(INC) $< -o $@
+						$(ECHO) "$(GREEN)$< created $(RESET)"
 
 $(OBJS_DIR)/fd/%.o:		$(SRCS_DIR)fd/%.c
 						$(MKDIR) -p $(dir $@)
 						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
 						$(CC) $(FLAGS) $(INC) $< -o $@
+						$(ECHO) "$(GREEN)$< created $(RESET)"
 
 $(OBJS_DIR)/lists/%.o:	$(SRCS_DIR)lists/%.c
 						$(MKDIR) -p $(dir $@)
 						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
 						$(CC) $(FLAGS) $(INC) $< -o $@
+						$(ECHO) "$(GREEN)$< created $(RESET)"
 
 $(OBJS_DIR)/printf/%.o:	$(SRCS_DIR)printf/%.c
 						$(MKDIR) -p $(dir $@)
 						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
 						$(CC) $(FLAGS) $(INC) $< -o $@
+						$(ECHO) "$(GREEN)$< created $(RESET)"
 
 clean:
 						$(RM) $(OBJS_DIR)

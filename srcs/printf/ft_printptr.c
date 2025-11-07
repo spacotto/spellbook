@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 12:06:22 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 13:21:41 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/07 14:51:02 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void	ft_printptr(t_format *sformat)
 		ft_putstr_fd(s, 1);
 		len = ft_strlen(s) + 2;
 	}
-    sformat->print_len += len;
+	free(s);
+	sformat->print_len += len;
 }
