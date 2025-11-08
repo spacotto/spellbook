@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 14:55:58 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/08 15:44:20 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/08 16:51:01 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,12 @@ t_arena	*arena_init(void)
 	t_list	*first_node;
 
 	// Create arena
-	arena = ft_calloc(1, sizeof(t_arena);
+	arena = ft_calloc(1, sizeof(t_arena));
 	if (!arena)
 		return (NULL);
 
 	// Allocate 1st page	
-	first_page = ft_calloc(PAGE_SIZE);
+	first_page = ft_calloc(PAGE_SIZE, sizeof(char));
 	if (!first_page)
 	{
 		free(arena);
@@ -63,7 +63,7 @@ void	*arena_alloc(t_arena *arena, size_t size)
 	void	*new_page;
 	t_list	*new_node;
 	
-	if (!arena || size == 0 || size > PAGE_SIZE)
+	if (!arena || size == 0)
 		return (NULL);
 	
 	// Check if allocation fits in current page
