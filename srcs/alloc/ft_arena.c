@@ -6,19 +6,13 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 14:55:58 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/08 17:07:51 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/08 17:22:33 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 #define	PAGE_SIZE 4096
-
-void	del(void *data)
-{
-	if (data)
-		free(data);
-}
 
 // Initialize a new arena
 t_arena	*arena_init(void)
