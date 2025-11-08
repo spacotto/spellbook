@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/08 16:47:00 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/08 17:04:07 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ WHITE		:= \033[0;97m
 # ============================================================================
 
 AR			:= @/bin/ar rcs
-ECHO		:= @echo
+ECHO		:= @echo -e
 MKDIR		:= @/bin/mkdir
 RM			:= @/bin/rm -rf
 
@@ -61,7 +61,7 @@ SRC_MEM		:= ft_memset.c ft_bzero.c ft_memcpy.c \
 
 SRC_CONV	:= ft_toupper.c ft_tolower.c ft_atoi.c ft_itoa.c ft_utoa_base.c 
 
-SRC_ALLOC	:= ft_calloc.c
+SRC_ALLOC	:= ft_calloc.c ft_arena.c
 
 SRC_FD		:= ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 

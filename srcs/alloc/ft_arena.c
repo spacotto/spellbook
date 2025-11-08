@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 14:55:58 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/08 16:51:01 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/08 17:07:51 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ void	*arena_alloc(t_arena *arena, size_t size)
 	}
 	
 	// Need a new page
-	new_page = ft_calloc(PAGE_SIZE);
+	new_page = ft_calloc(PAGE_SIZE, sizeof(char));
 	if (!new_page)
 		return (NULL);
 	
@@ -91,17 +91,6 @@ void	*arena_alloc(t_arena *arena, size_t size)
 	arena->used_mem = size;
 	
 	return (new_page);
-}
-
-// Reset arena (keep pages but reset offset to reuse memory)
-void	arena_reset(t_arena *arena)
-{
-	if (!arena)
-		return ;
-	
-	if (arena->pages)
-		arena->current_page = arena->pages->content;
-	arena->used_mem = 0;
 }
 
 // Free all arena memory

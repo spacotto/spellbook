@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/08 15:46:31 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/08 17:07:15 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,9 +67,9 @@ typedef struct s_list
 
 typedef struct	s_arena
 {
-	t_list	*pages; //Linked list of allocated pages
-	size_t	used_mem; // Where the next free space starts in current mem page
-	void	*current_page; // Pointer to current page's memory
+	t_list	*pages;			// Linked list of allocated pages
+	size_t	used_mem;		// Where the next free space starts in current mem page
+	void	*current_page;	// Pointer to current page's memory
 }	t_arena;
 
 // ============================================================================
@@ -121,6 +121,10 @@ char	*ft_utoa_base(size_t n, char *base);
 // ALLOC
 void	*ft_calloc(size_t nmemb, size_t size);
 
+t_arena	*arena_init(void);
+void    *arena_alloc(t_arena *arena, size_t size);
+void    arena_free(t_arena *arena);
+
 // FD
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
@@ -134,18 +138,12 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 void	ft_lstadd_front(t_list **lst, t_list *new);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+void	del(void *data);
 void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 int		ft_lstsize(t_list *lst);
-
-// ARENA
-void	del(void *data);
-t_arena	*arena_init(void);
-void    *arena_alloc(t_arena *arena, size_t size);
-void    arena_reset(t_arena *arena);
-void    arena_free(t_arena *arena);
 
 // ============================================================================
 // COLORS
