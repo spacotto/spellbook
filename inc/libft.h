@@ -6,14 +6,23 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 16:50:17 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/08 15:46:31 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-/* INCLUDES */
+// ============================================================================
+// DEFINES
+// ============================================================================
+
+# define PAGE_SIZE 4096
+
+// ============================================================================
+// INCLUDES
+// ============================================================================
+
 # include <ctype.h>
 # include <bsd/string.h>
 # include <stdio.h>
@@ -21,9 +30,12 @@
 # include <string.h>
 # include <strings.h>
 # include <unistd.h>
+
 # include "printf.h"
 
-/* STRUCTURES */
+// ============================================================================
+// STRUCTURES
+// ============================================================================
 
 typedef struct s_trim
 {
@@ -53,14 +65,25 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-/* PROTOTYPES : CHECKS */
+typedef struct	s_arena
+{
+	t_list	*pages; //Linked list of allocated pages
+	size_t	used_mem; // Where the next free space starts in current mem page
+	void	*current_page; // Pointer to current page's memory
+}	t_arena;
+
+// ============================================================================
+// PROTOTYPES 
+// ============================================================================
+
+// CHECKS
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
 
-/* PROTOTYPES : STRINGS */
+// STRINGS
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
 size_t	ft_strlen(const char *s);
@@ -79,7 +102,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 
-/* PROTOTYPES : MEMORY */
+// MEMORY
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void	*ft_memset(void *s, int c, size_t n);
@@ -88,23 +111,23 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 
-/* PROTOTYPES : CONVERSIONS */
+// CONVERSIONS 
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
 char	*ft_utoa_base(size_t n, char *base);
 
-/* PROTOTYPES : ALLOC */
+// ALLOC
 void	*ft_calloc(size_t nmemb, size_t size);
 
-/* PROTOTYPES : FD */
+// FD
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-/* PROTOTYPES : LISTS */
+// LISTS
 t_list	*ft_lstnew(void *content);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
@@ -117,7 +140,17 @@ void	ft_lstiter(t_list *lst, void (*f)(void *));
 
 int		ft_lstsize(t_list *lst);
 
-/* COLORS */
+// ARENA
+void	del(void *data);
+t_arena	*arena_init(void);
+void    *arena_alloc(t_arena *arena, size_t size);
+void    arena_reset(t_arena *arena);
+void    arena_free(t_arena *arena);
+
+// ============================================================================
+// COLORS
+// ============================================================================
+
 # define RESET "\033[0m"
 # define GRAY "\033[0;90m"
 # define RED "\033[0;91m"
