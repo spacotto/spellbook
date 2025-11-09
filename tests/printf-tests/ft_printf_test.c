@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:26:18 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/09 14:03:10 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/09 14:10:35 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ static int passed = 0;
 void	check(int c, int ft)
 {
 	printf("\nReturn value: ");
-	ft = ft - 12;
+	ft = ft - 12; 					//Substract the value of the COLORS (7 + 4) + \n (1)
 	printf(YELLOW "%d" RESET, ft);
 	printf(" / ");
-	c = c - 12;
+	c = c - 12; 					//Substract the value of the COLORS (7 + 4) + \n (1)
 	printf(CYAN "%d\n" RESET, c);
 	total++;
 	if (c == ft)
