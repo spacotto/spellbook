@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:26:18 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 16:17:29 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/09 14:03:10 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ static int passed = 0;
 void	check(int c, int ft)
 {
 	printf("\nReturn value: ");
+	ft = ft - 12;
 	printf(YELLOW "%d" RESET, ft);
 	printf(" / ");
+	c = c - 12;
 	printf(CYAN "%d\n" RESET, c);
 	total++;
 	if (c == ft)
@@ -69,10 +71,10 @@ int	main()
 	{
 		char s[1024] = "";
 		
-		ft_printf(YELLOW "(empty)\n" RESET);
-		printf(CYAN "(empty)\n" RESET);
-		int ft = ft_printf("%s", s);
-		int c = printf("%s", s);
+		ft_printf(YELLOW "(empty)" RESET);
+		int ft = ft_printf(YELLOW "%s\n" RESET, s);
+		printf(CYAN "(empty)" RESET);
+		int c = printf(CYAN "%s\n" RESET, s);
 
 		check(c, ft);
 	}
@@ -83,10 +85,10 @@ int	main()
 		char s2[1024] = "";
 		char s3[1024] = "";
 		
-		ft_printf(YELLOW "(empty)\n" RESET);
-		printf(CYAN "(empty)\n" RESET);
-		int ft = ft_printf("%s%s%s", s1, s2, s3);
-		int c = printf("%s%s%s", s1, s2, s3);
+		ft_printf(YELLOW "(empty)" RESET);
+		int ft = ft_printf(YELLOW "%s%s%s\n" RESET, s1, s2, s3);
+		printf(CYAN "(empty)" RESET);
+		int c = printf(CYAN "%s%s%s\n" RESET, s1, s2, s3);
 
 		check(c, ft);
 	}
@@ -274,5 +276,6 @@ int	main()
 		else
 			printf(RED "%d / %d\n\n" RESET, passed, total);	
 	}
+
 	return (0);
 }
