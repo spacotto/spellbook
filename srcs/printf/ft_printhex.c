@@ -18,7 +18,7 @@ void	ft_printhex_lower(t_format *sformat)
 	char	*s;
 	size_t	len;
 
-	hex = (size_t)va_arg(sformat->args, size_t);
+	hex = (size_t)va_arg(sformat->args, unsigned int);
 	s = ft_utoa_base(hex, "0123456789abcdef");
 	ft_putstr_fd(s, 1);
 	len = ft_strlen(s);
@@ -32,7 +32,7 @@ void	ft_printhex_upper(t_format *sformat)
 	char	*s;
 	size_t	len;
 
-	hex = (size_t)va_arg(sformat->args, size_t);
+	hex = (size_t)va_arg(sformat->args, unsigned int);
 	s = ft_utoa_base(hex, "0123456789ABCDEF");
 	ft_putstr_fd(s, 1);
 	len = ft_strlen(s);
