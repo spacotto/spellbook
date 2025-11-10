@@ -1,16 +1,5 @@
-# Libft
-Build a comprehensive and reusable C programming library by re-implementing foundational functions, thereby deepening understanding of their mechanics and creating an essential toolkit for future projects.
-
-> [!CAUTION]
-> The structure of the project (and thus the Makefile) is custom. The Makefile required by the subject is much simpler.
-
-The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
-1. **Part 1:** Recreate a set of functions from the official C library.
-2. **Part 2:** Create a customised set of functions.
-3. **Part 3:** Create a set functions designed to introduc you to **linked lists**.
-
-> [!WARNING]
-> Some functions are from other projects or custom, and not originally from the Libft!
+# 🔮Spellbook
+A comprehensive and reusable C programming library born by the mixing of my **42 projects**.
 
 ## Table of Contents
 
@@ -21,6 +10,7 @@ The original 42 project is divided into 3 parts (2 mandatory and 1 bonus).
 - [Memory Allocation](https://github.com/spacotto/libft/blob/main/README.md#memory-allocation)
 - [File Descriptor Functions](https://github.com/spacotto/libft/blob/main/README.md#file-descriptor-functions)
 - [Linked Lists](https://github.com/spacotto/libft/blob/main/README.md#linked-lists)
+- [Printf](https://github.com/spacotto/libft/blob/main/README.md#printf)
 
 > [!CAUTION]
 > Some functions have been changed after passing the Moulinette! They might not be norm-compliant or subject-compliant! Never trust code blindly!
@@ -39,12 +29,13 @@ These functions are used to check if a character belongs to a certain type (e.g.
 
 ### Conversions
 These functions are used to convert characters or strings.
-| Function Name | Description                                                 |
-| :------------ | :---------------------------------------------------------- |
-| `ft_toupper`  | Converts a lowercase letter to its uppercase equivalent.    |
-| `ft_tolower`  | Converts an uppercase letter to its lowercase equivalent.   |
-| `ft_atoi`     | Converts a string to an integer.                            |
-| `ft_itoa`     | Allocates memory and converts an integer to a string.       |
+| Function Name  | Description                                                              |
+| :------------- | :----------------------------------------------------------------------- |
+| `ft_toupper`   | Converts a lowercase letter to its uppercase equivalent.                 |
+| `ft_tolower`   | Converts an uppercase letter to its lowercase equivalent.                |
+| `ft_atoi`      | Converts a string to an integer.                                         |
+| `ft_itoa`      | Allocates memory and converts an int to a string.                        |
+| `ft_utoa_base` | Given a base, allocates memory and converts an unsigned int to a string. |
 
 ### String Manipulation
 This category includes functions for handling strings. They are used for copying, comparing, and searching within data.
@@ -106,3 +97,6 @@ These functions are specifically designed to teach you the basics of **linked li
 | `ft_lstmap`       | Iterates through the list `lst`, applies the function `f` to each node’s content, and creates a new list as a result.                          |
 > [!TIP]
 > The order of the functions follows a specific logic. Pay attention to it!
+
+### Printf
+Replicates the behaviour of the real printf as far as concerns the following flags: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`.
