@@ -1,4 +1,4 @@
-### Table of Contents
+# Table of Contents
 
 - [Checks](https://github.com/spacotto/libft/blob/main/README.md#checks)
 - [Conversions](https://github.com/spacotto/libft/blob/main/README.md#conversions)
