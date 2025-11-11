@@ -1,7 +1,4 @@
-# 🔮Spellbook
-A comprehensive and reusable C programming library born by the mixing of my **42 projects**.
-
-## Table of Contents
+### Table of Contents
 
 - [Checks](https://github.com/spacotto/libft/blob/main/README.md#checks)
 - [Conversions](https://github.com/spacotto/libft/blob/main/README.md#conversions)
@@ -15,9 +12,7 @@ A comprehensive and reusable C programming library born by the mixing of my **42
 > [!CAUTION]
 > Some functions have been changed after passing the Moulinette! They might not be norm-compliant or subject-compliant! Never trust code blindly!
 
-## Functions Inventory
-
-### Checks
+## Checks
 These functions are used to check if a character belongs to a certain type (e.g., alphabetic, digit).
 | Function Name | Description                                              |
 | :------------ | :------------------------------------------------------- |
@@ -27,7 +22,7 @@ These functions are used to check if a character belongs to a certain type (e.g.
 | `ft_isascii`  | Checks if a character is a 7-bit ASCII character.        |
 | `ft_isprint`  | Checks if a character is printable, including space.     |
 
-### Conversions
+## Conversions
 These functions are used to convert characters or strings.
 | Function Name  | Description                                                              |
 | :------------- | :----------------------------------------------------------------------- |
@@ -37,7 +32,7 @@ These functions are used to convert characters or strings.
 | `ft_itoa`      | Allocates memory and converts an int to a string.                        |
 | `ft_utoa_base` | Given a base, allocates memory and converts an unsigned int to a string. |
 
-### String Manipulation
+## String Manipulation
 This category includes functions for handling strings. They are used for copying, comparing, and searching within data.
 | Function Name | Description                                                                                                        |
 | :------------ | :----------------------------------------------------------------------------------------------------------------- |
@@ -56,7 +51,7 @@ This category includes functions for handling strings. They are used for copying
 | `ft_striteri` | Applies the function `f` to each character of the string passed as argument. It acts directly on the source.       |
 | `ft_strmapi`  | Applies the function `f` to each character of the string passed as argument, and returns a new string as a result. |
 
-### Memory Manipulation
+## Memory Manipulation
 This category includes functions for handling blocks of memory. They are used for copying, comparing, and searching within data.
 | Function Name | Description                                                                                       |
 | :------------ | :------------------------------------------------------------------------------------------------ |
@@ -67,13 +62,13 @@ This category includes functions for handling blocks of memory. They are used fo
 | `ft_memchr`   | Scans a block of memory for the first occurrence of a specific character.                         |
 | `ft_memcmp`   | Compares two blocks of memory.                                                                    |
 
-### Memory Allocation
+## Memory Allocation
 This category includes functions for memory allocation and management.
 | Function Name | Description                                                                 |
 | :------------ | :-------------------------------------------------------------------------- |
 | `ft_calloc`   | Allocates a block of memory for an array and initialises all bytes to zero. |
 
-### File Descriptor Functions
+## File Descriptor Functions
 These functions write various data types to a specified file descriptor, which can be a file, standard output, or standard error. They are a common way to handle I/O in a modular and consistent manner.
 | Function Name   | Description                                                                    |
 | :-------------- | :----------------------------------------------------------------------------- |
@@ -82,7 +77,7 @@ These functions write various data types to a specified file descriptor, which c
 | `ft_putendl_fd` | Outputs the string `s` to the specified file descriptor followed by a newline. |
 | `ft_putnbr_fd`  | Outputs the integer `n` to the specified file descriptor.                      |
 
-### Linked Lists
+## Linked Lists
 These functions are specifically designed to teach you the basics of **linked lists**, a fundamental data structure in computer science. They teach you the creation, deletion, modification, and iteration of individual list nodes (or "links") and the list as a whole. All these functions are based on the same given structure.
 | Function Name     | Description                                                                                                                                    |
 | :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
