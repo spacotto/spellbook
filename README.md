@@ -94,6 +94,7 @@ These functions are specifically designed to teach you the basics of **linked li
 > The order of the functions follows a specific logic. Pay attention to it!
 
 ## Variadic Functions
+Functions that take a variable number of arguments.
 | Function Name     | Description                                                                                                                         |
 | :---------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
 | `ft_printf`       | Replicates the behaviour of the real printf as far as concerns the following flags: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`. |
