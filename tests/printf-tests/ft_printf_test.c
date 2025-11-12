@@ -6,11 +6,11 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 11:26:18 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/10 18:07:26 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/12 11:10:24 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/libft.h"
+#include "./inc/libft.h"
 
 static int total = 0;
 static int passed = 0;
@@ -38,6 +38,17 @@ int	main()
 	puts(RED "\n=== WARNING!" RESET);
 	puts(YELLOW "FT_PRINTF | If you see this color, you're seeing my function." RESET);
 	puts(CYAN "PRINTF	  | If you see this color, you're seeing the original function.\n" RESET);
+
+	puts("=== EMPTY FORMAT");
+	
+	{
+		int ft = ft_printf(YELLOW "" RESET);
+		ft_printf(YELLOW "(empty)\n" RESET);
+		int c = printf(CYAN "" RESET);
+		printf(CYAN "(empty)\n" RESET);
+		
+		check(c, ft);
+	}
 
 	puts("=== FORMAT NO FLAG");
 	
