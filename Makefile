@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/08 17:04:07 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/12 11:27:58 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ WHITE		:= \033[0;97m
 # ============================================================================
 
 AR			:= @/bin/ar rcs
-ECHO		:= @echo -e
+ECHO		:= @echo 
 MKDIR		:= @/bin/mkdir
 RM			:= @/bin/rm -rf
 
@@ -59,104 +59,57 @@ SRC_STR		:= ft_strlen.c ft_strlcpy.c ft_strlcat.c ft_strdup.c \
 SRC_MEM		:= ft_memset.c ft_bzero.c ft_memcpy.c \
 			   ft_memmove.c ft_memchr.c ft_memcmp.c
 
-SRC_CONV	:= ft_toupper.c ft_tolower.c ft_atoi.c ft_itoa.c ft_utoa_base.c 
+SRC_CNV		:= ft_toupper.c ft_tolower.c ft_atoi.c ft_itoa.c ft_utoa_base.c 
 
 SRC_ALLOC	:= ft_calloc.c ft_arena.c
 
 SRC_FD		:= ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
 
-SRC_LSTS	:= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
+SRC_LST		:= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			   ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
 			   ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 SRC_PRINTF	:= ft_printf.c ft_printchar.c ft_printstr.c ft_printptr.c ft_printnbr.c \
 				ft_printunb.c ft_printhex.c
 
+SRCS		:= $(SRC_IS) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) $(SRC_ALLOC) $(SRC_FD) \
+				$(SRC_LST) $(SRC_PRINTF)
+
 # ============================================================================
 # OBJECTS
 # ============================================================================
 
-OBJS_DIR	:= objs
+OBJS_DIR	:= objs/
 
-OBJS_IS		:= $(addprefix $(OBJS_DIR)/checks/, $(SRC_IS:.c=.o))
-OBJS_STR	:= $(addprefix $(OBJS_DIR)/strs/, $(SRC_STR:.c=.o))
-OBJS_MEM	:= $(addprefix $(OBJS_DIR)/mem/, $(SRC_MEM:.c=.o))
-OBJS_CONV	:= $(addprefix $(OBJS_DIR)/convs/, $(SRC_CONV:.c=.o))
-OBJS_ALLOC	:= $(addprefix $(OBJS_DIR)/alloc/, $(SRC_ALLOC:.c=.o))
-OBJS_FD		:= $(addprefix $(OBJS_DIR)/fd/, $(SRC_FD:.c=.o))
-OBJS_LSTS	:= $(addprefix $(OBJS_DIR)/lists/, $(SRC_LSTS:.c=.o))
-OBJS_PRINTF	:= $(addprefix $(OBJS_DIR)/printf/, $(SRC_PRINTF:.c=.o))
+OBJ_PRINTF	:= $(addprefix $(OBJS_DIR)/printf/, $(SRC_PRINTF:.c=.o))
 
-OBJS		:= $(OBJS_IS) $(OBJS_STR) $(OBJS_MEM) $(OBJS_CONV) \
-			   $(OBJS_ALLOC) $(OBJS_FD) $(OBJS_LSTS) $(OBJS_PRINTF)
+OBJS		:= $(addprefix $(OBJS_DIR), $(SRCS:.c=.o)) 
 
 # ============================================================================
 # RULES
 # ============================================================================
 
-all:					$(NAME)
+all:			$(NAME)
 
-$(NAME):				$(OBJS)
-						$(AR) $(NAME) $(OBJS)
-						$(ECHO) "$(GREEN)Archive is ready :)$(RESET)"
+$(NAME):		$(OBJS)
+				$(AR) $(NAME) $(OBJS)
+				$(ECHO) "$(GREEN)Archive is ready :)$(RESET)"
 
-$(OBJS_DIR)/checks/%.o:	$(SRCS_DIR)checks/%.c
-						$(MKDIR) -p $(dir $@)
-						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
-						$(CC) $(FLAGS) $(INC) $< -o $@
-						$(ECHO) "$(GREEN)$< created $(RESET)"
-
-$(OBJS_DIR)/strs/%.o:	$(SRCS_DIR)strings/%.c
-						$(MKDIR) -p $(dir $@)
-						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
-						$(CC) $(FLAGS) $(INC) $< -o $@
-						$(ECHO) "$(GREEN)$< created $(RESET)"
-
-$(OBJS_DIR)/mem/%.o:	$(SRCS_DIR)memory/%.c
-						$(MKDIR) -p $(dir $@)
-						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
-						$(CC) $(FLAGS) $(INC) $< -o $@
-						$(ECHO) "$(GREEN)$< created $(RESET)"
-
-$(OBJS_DIR)/convs/%.o:	$(SRCS_DIR)conversions/%.c
-						$(MKDIR) -p $(dir $@)
-						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
-						$(CC) $(FLAGS) $(INC) $< -o $@
-						$(ECHO) "$(GREEN)$< created $(RESET)"
-
-$(OBJS_DIR)/alloc/%.o:	$(SRCS_DIR)alloc/%.c
-						$(MKDIR) -p $(dir $@)
-						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
-						$(CC) $(FLAGS) $(INC) $< -o $@
-						$(ECHO) "$(GREEN)$< created $(RESET)"
-
-$(OBJS_DIR)/fd/%.o:		$(SRCS_DIR)fd/%.c
-						$(MKDIR) -p $(dir $@)
-						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
-						$(CC) $(FLAGS) $(INC) $< -o $@
-						$(ECHO) "$(GREEN)$< created $(RESET)"
-
-$(OBJS_DIR)/lists/%.o:	$(SRCS_DIR)lists/%.c
-						$(MKDIR) -p $(dir $@)
-						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
-						$(CC) $(FLAGS) $(INC) $< -o $@
-						$(ECHO) "$(GREEN)$< created $(RESET)"
-
-$(OBJS_DIR)/printf/%.o:	$(SRCS_DIR)printf/%.c
-						$(MKDIR) -p $(dir $@)
-						$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
-						$(CC) $(FLAGS) $(INC) $< -o $@
-						$(ECHO) "$(GREEN)$< created $(RESET)"
+$(OBJS_DIR)%.o:	$(SRCS_DIR)%.c
+				$(MKDIR) -p $(dir $@)
+				$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
+				$(CC) $(FLAGS) $(INC) $< -o $@
+				$(ECHO) "$(GREEN)$< created $(RESET)"
 
 clean:
-						$(RM) $(OBJS_DIR)
-						$(ECHO) "$(RED)Object removed!$(RESET)"
+				$(RM) $(OBJS_DIR)
+				$(ECHO) "$(RED)Object removed!$(RESET)"
 
-fclean: 				clean
-						$(RM) $(NAME)
-						$(ECHO) "$(RED)Archive removed!$(RESET)"
+fclean: 		clean
+				$(RM) $(NAME)
+				$(ECHO) "$(RED)Archive removed!$(RESET)"
 
-re: 					fclean all
-						$(ECHO) "$(BLUE)Cleaned and rebuilt everything :)$(RESET)"
+re: 			fclean all
+				$(ECHO) "$(BLUE)Cleaned and rebuilt everything :)$(RESET)"
 
 .PHONY: all clean fclean re
