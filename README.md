@@ -7,7 +7,7 @@
 - [Memory Allocation](https://github.com/spacotto/libft/blob/main/README.md#memory-allocation)
 - [File Descriptor Functions](https://github.com/spacotto/libft/blob/main/README.md#file-descriptor-functions)
 - [Linked Lists](https://github.com/spacotto/libft/blob/main/README.md#linked-lists)
-- [Printf](https://github.com/spacotto/libft/blob/main/README.md#printf)
+- [Variadic Functions](https://github.com/spacotto/libft/blob/main/README.md#variadic-functions)
 
 > [!CAUTION]
 > Some functions have been changed after passing the Moulinette! They might not be norm-compliant or subject-compliant! Never trust code blindly!
@@ -93,5 +93,7 @@ These functions are specifically designed to teach you the basics of **linked li
 > [!TIP]
 > The order of the functions follows a specific logic. Pay attention to it!
 
-### Printf
-Replicates the behaviour of the real printf as far as concerns the following flags: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`.
+## Variadic Functions
+| Function Name     | Description                                                                                                                         |
+| :---------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
+| `ft_printf`       | Replicates the behaviour of the real printf as far as concerns the following flags: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`. |
