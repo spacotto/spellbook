@@ -10,7 +10,7 @@
 - [Variadic Functions](https://github.com/spacotto/libft/blob/main/README.md#variadic-functions)
 
 > [!CAUTION]
-> Some functions have been changed after passing the Moulinette! They might not be norm-compliant or subject-compliant! Never trust code blindly!
+> This is a custom C Library! Some functions might not be norm-compliant or subject-compliant! Never trust code blindly!
 
 ## Checks
 These functions are used to check if a character belongs to a certain type (e.g., alphabetic, digit).
