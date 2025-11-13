@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/12 11:27:58 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/13 17:55:51 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,7 +70,7 @@ SRC_LST		:= ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 			   ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 SRC_PRINTF	:= ft_printf.c ft_printchar.c ft_printstr.c ft_printptr.c ft_printnbr.c \
-				ft_printunb.c ft_printhex.c
+				ft_printunb.c ft_printhex.c itoa_base_buffer.c utoa_base_buffer.c
 
 SRCS		:= $(SRC_IS) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) $(SRC_ALLOC) $(SRC_FD) \
 				$(SRC_LST) $(SRC_PRINTF)
