@@ -4,11 +4,42 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 > [!TIP]
 > `.md` = Markdown file extension
 
-## Basic Markdown Syntax
+## Headings
+### Heading 1
+**Syntax:** `# HEADING`
+**E.g.:**
+# HEADING
+
+### Heading 2
+**Syntax:** `## HEADING`
+**E.g.:**
+## HEADING
+
+### Heading 3
+**Syntax:** `### HEADING`
+**E.g.:**
+### HEADING
+
+### Heading 4
+**Syntax:** `#### HEADING`
+**E.g.:**
+#### HEADING
+
+### Heading 5
+**Syntax:** `##### HEADING`
+**E.g.:**
+##### HEADING
+
+### Heading 6
+**Syntax:** `###### HEADING`
+**E.g.:**
+###### HEADING
+
+## **Bold**
 
 | Purpose              | Markdown                 | Renders As      |
 | -------------------- | ------------------------ | --------------- |
-| **Heading 1–6**      | `# H1` → `###### H6`     | Headings        |
+| ****      |      | Headings        |
 | **Bold**             | `**bold**` or `__bold__` | **bold**        |
 | **Italic**           | `*italic*` or `_italic_` | *italic*        |
 | **Bold + Italic**    | `***text***`             | ***text***      |
