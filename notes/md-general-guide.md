@@ -4,7 +4,7 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 > [!TIP]
 > `.md` = Markdown file extension
 
-## 📌Headings
+## 📌 Headings
 ### Heading 1
 **Syntax:** `# H1`
 
@@ -41,25 +41,91 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 **E.g.:**
 ###### H6
 
-## 📌**Bold**
+## 📌 Bold
 **Syntax:** `**bold**` or `__bold__`
 
 **E.g.:**
 **bold**
 
-## 📌**Italic**
+## 📌 Italic
 **Syntax:** `*italic*` or `_italic_`
 
 **E.g.:**
 *italic*
 
-## 📌**Bold + Italic**
+## 📌 Bold + Italic
 **Syntax:** `***text***`
 
 **E.g.:**
 ***text*** 
 
-| **Strikethrough**    | `~~text~~`               | ~~text~~        |
+## 📌 Strikethrough
+**Syntax:** `~~text~~`
+
+**E.g.:**
+~~text~~
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+## 📌 Title
+**Syntax:** `text`
+
+**E.g.:**
+xxx
+
+| ****    | ``               | ~~text~~        |
 | **Inline code**      | `` `code` ``             | `code`          |
 | **Block code**       | ` `lang … ` `            | code block      |
 | **Blockquote**       | `> quote`                | quoted text     |
