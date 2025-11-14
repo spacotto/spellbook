@@ -72,7 +72,7 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 `code`
 
 ## 📌 Block code
-**Syntax:** `` ```text``` ``
+**Syntax:** `` ```code``` ``
 
 **E.g.:**
 ```
@@ -116,11 +116,11 @@ xxx
 **E.g.:**
 xxx
 
-## 📌 Title
-**Syntax:** `text`
+## 📌 Image
+**Syntax:** `![alt](url)`
 
 **E.g.:**
-xxx
+🖼️
 
 ## 📌 Table
 **Syntax:** 
@@ -144,8 +144,6 @@ xxx
 | **Nested lists**     | indent by 2+ spaces      | sub-list        |
 | **Horizontal line**  | `---` or `***`           | ─────────       |
 | **Link**             | `[text](url)`            | [text](url)     |
-| **Image**            | `![alt](url)`            | 🖼️              |
-| ****            | see this table           | formatted table |
 
 ## 📌Task Lists (GFM)
 - [x] Done
