@@ -65,23 +65,26 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 **E.g.:**
 ~~text~~
 
-## 📌 Title
-**Syntax:** `text`
+## 📌 Inline code
+**Syntax:** `` `code` ``
 
 **E.g.:**
-xxx
+`code`
 
-## 📌 Title
-**Syntax:** `text`
-
-**E.g.:**
-xxx
-
-## 📌 Title
-**Syntax:** `text`
+## 📌 Block code
+**Syntax:** `` ```text``` ``
 
 **E.g.:**
-xxx
+```
+code
+block
+```
+
+## 📌 Blockquote
+**Syntax:** `> quote`
+
+**E.g.:**
+>quote
 
 ## 📌 Title
 **Syntax:** `text`
@@ -136,10 +139,6 @@ xxx
 | text | text | text |
 | text | text | text |
 
-| ****    | ``               | ~~text~~        |
-| **Inline code**      | `` `code` ``             | `code`          |
-| **Block code**       | ` `lang … ` `            | code block      |
-| **Blockquote**       | `> quote`                | quoted text     |
 | **List (unordered)** | `- item` or `* item`     | • item          |
 | **List (ordered)**   | `1. item`                | 1. item         |
 | **Nested lists**     | indent by 2+ spaces      | sub-list        |
