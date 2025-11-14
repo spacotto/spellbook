@@ -4,7 +4,7 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 > [!TIP]
 > `.md` = Markdown file extension
 
-## Headings
+## 📌 Headings
 ### Heading 1
 **Syntax:** `# H1`
 
@@ -41,19 +41,19 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 **E.g.:**
 ###### H6
 
-## **Bold**
+## 📌**Bold**
 **Syntax:** `**bold**` or `__bold__`
 
 **E.g.:**
 **bold**
 
-## **Italic**
+## 📌**Italic**
 **Syntax:** `*italic*` or `_italic_`
 
 **E.g.:**
 *italic*
 
-## **Bold + Italic**
+## 📌**Bold + Italic**
 **Syntax:** `***text***`
 
 **E.g.:**
@@ -71,14 +71,14 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 | **Image**            | `![alt](url)`            | 🖼️              |
 | **Table**            | see this table           | formatted table |
 
-## Task Lists (GFM)
+## 📌Task Lists (GFM)
 - [x] Done
 - [ ] Not done
 
 > [!NOTE]
 > GFM are GitHub-specific syntax (technically part of GitHub Docs Markdown extensions). They are not standard Markdown — meaning they won’t render properly outside GitHub (e.g., in VS Code preview, Reddit, or generic Markdown parsers).
 
-## Admonitions / Callouts (GFM)
+## 📌Admonitions / Callouts (GFM)
 > [!NOTE]
 > This is a note.
 
