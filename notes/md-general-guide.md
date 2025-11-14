@@ -86,35 +86,45 @@ block
 **E.g.:**
 >quote
 
-## 📌 Title
-**Syntax:** `text`
+## 📌 List (unordered)
+**Syntax:** ``- item` or `* item``
 
 **E.g.:**
 xxx
 
-## 📌 Title
-**Syntax:** `text`
+## 📌 List (ordered)
+**Syntax:** `1. item`
 
 **E.g.:**
-xxx
+1. item
+2. item
+3. item
 
-## 📌 Title
-**Syntax:** `text`
-
-**E.g.:**
-xxx
-
-## 📌 Title
-**Syntax:** `text`
-
-**E.g.:**
-xxx
-
-## 📌 Title
-**Syntax:** `text`
+## 📌 Nested lists
+**Syntax:** 
+```
+- text
+  - text
+    -text
+```
 
 **E.g.:**
-xxx
+- text
+  - text
+    -text
+
+## 📌 Horizontal line
+**Syntax:** ``---` or `***``
+
+**E.g.:**
+---
+***
+
+## 📌 Link
+**Syntax:** `[text](url)`
+
+**E.g.:**
+[text](url)
 
 ## 📌 Image
 **Syntax:** `![alt](url)`
@@ -138,12 +148,6 @@ xxx
 | text | text | text |
 | text | text | text |
 | text | text | text |
-
-| **List (unordered)** | `- item` or `* item`     | • item          |
-| **List (ordered)**   | `1. item`                | 1. item         |
-| **Nested lists**     | indent by 2+ spaces      | sub-list        |
-| **Horizontal line**  | `---` or `***`           | ─────────       |
-| **Link**             | `[text](url)`            | [text](url)     |
 
 ## 📌Task Lists (GFM)
 - [x] Done
