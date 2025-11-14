@@ -42,13 +42,23 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 ###### H6
 
 ## **Bold**
+**Syntax:** `**bold**` or `__bold__`
 
-| Purpose              | Markdown                 | Renders As      |
-| -------------------- | ------------------------ | --------------- |
-| ****      |      | Headings        |
-| **Bold**             | `**bold**` or `__bold__` | **bold**        |
-| **Italic**           | `*italic*` or `_italic_` | *italic*        |
-| **Bold + Italic**    | `***text***`             | ***text***      |
+**E.g.:**
+**bold**
+
+## **Italic**
+**Syntax:** `*italic*` or `_italic_`
+
+**E.g.:**
+*italic*
+
+## **Bold + Italic**
+**Syntax:** `***text***`
+
+**E.g.:**
+***text*** 
+
 | **Strikethrough**    | `~~text~~`               | ~~text~~        |
 | **Inline code**      | `` `code` ``             | `code`          |
 | **Block code**       | ` `lang … ` `            | code block      |
@@ -61,26 +71,25 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 | **Image**            | `![alt](url)`            | 🖼️              |
 | **Table**            | see this table           | formatted table |
 
-## GitHub Flavoured Markdown (GFM)
-GFM are GitHub-specific syntax (technically part of GitHub Docs Markdown extensions).
-They are not standard Markdown — meaning they won’t render properly outside GitHub (e.g., in VS Code preview, Reddit, or generic Markdown parsers).
+## Task Lists (GFM)
+- [x] Done
+- [ ] Not done
 
-### 📌 Admonitions / Callouts (GitHub Docs only)
+> [!NOTE]
+> GFM are GitHub-specific syntax (technically part of GitHub Docs Markdown extensions). They are not standard Markdown — meaning they won’t render properly outside GitHub (e.g., in VS Code preview, Reddit, or generic Markdown parsers).
+
+## Admonitions / Callouts (GFM)
 > [!NOTE]
 > This is a note.
 
 > [!TIP]
-> Helpful suggestion.
+> This is a tip.
 
 > [!IMPORTANT]
-> Must-read info.
+> This is important information.
 
 > [!WARNING]
 > Be cautious.
 
 > [!CAUTION]
 > Danger ahead.
-
-### 📌 Task Lists
-- [x] Done
-- [ ] Not done
