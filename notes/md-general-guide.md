@@ -7,31 +7,37 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 ## Headings
 ### Heading 1
 **Syntax:** `# H1`
+
 **E.g.:**
 # H1
 
 ### Heading 2
 **Syntax:** `## H2`
+
 **E.g.:**
 ## H2
 
 ### Heading 3
 **Syntax:** `### H3`
+
 **E.g.:**
 ### H3
 
 ### Heading 4
 **Syntax:** `#### H4`
+
 **E.g.:**
 #### H4
 
 ### Heading 5
 **Syntax:** `##### H5`
+
 **E.g.:**
 ##### H5
 
 ### Heading 6
 **Syntax:** `###### H6`
+
 **E.g.:**
 ###### H6
 
