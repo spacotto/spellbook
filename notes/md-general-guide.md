@@ -119,11 +119,18 @@ xxx
 **E.g.:**
 xxx
 
-## 📌 Title
-**Syntax:** `text`
+## 📌 Table
+**Syntax:** 
+```
+| TEXT | TEXT | TEXT |
+| :--- | :--- | :--- |
+| text | text | text |
+```
 
 **E.g.:**
-xxx
+| TEXT | TEXT | TEXT |
+| :--- | :--- | :--- |
+| text | text | text |
 
 | ****    | ``               | ~~text~~        |
 | **Inline code**      | `` `code` ``             | `code`          |
@@ -135,7 +142,7 @@ xxx
 | **Horizontal line**  | `---` or `***`           | ─────────       |
 | **Link**             | `[text](url)`            | [text](url)     |
 | **Image**            | `![alt](url)`            | 🖼️              |
-| **Table**            | see this table           | formatted table |
+| ****            | see this table           | formatted table |
 
 ## 📌Task Lists (GFM)
 - [x] Done
