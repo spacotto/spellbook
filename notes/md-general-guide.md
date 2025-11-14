@@ -4,7 +4,7 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 > [!TIP]
 > `.md` = Markdown file extension
 
-## 📌 Headings
+## 📌Headings
 ### Heading 1
 **Syntax:** `# H1`
 
