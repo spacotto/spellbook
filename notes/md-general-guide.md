@@ -111,7 +111,7 @@ xxx
 **E.g.:**
 - text
   - text
-    -text
+    - text
 
 ## 📌 Horizontal line
 **Syntax:** ``---` or `***``
