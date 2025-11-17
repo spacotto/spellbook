@@ -1,14 +1,3 @@
-# Table of Contents
-
-- [Checks](https://github.com/spacotto/libft/blob/main/README.md#checks)
-- [Conversions](https://github.com/spacotto/libft/blob/main/README.md#conversions)
-- [String Manipulation](https://github.com/spacotto/libft/blob/main/README.md#string-manipulation)
-- [Memory Manipulation](https://github.com/spacotto/libft/blob/main/README.md#memory-manipulation)
-- [Memory Allocation](https://github.com/spacotto/libft/blob/main/README.md#memory-allocation)
-- [File Descriptor Functions](https://github.com/spacotto/libft/blob/main/README.md#file-descriptor-functions)
-- [Linked Lists](https://github.com/spacotto/libft/blob/main/README.md#linked-lists)
-- [Variadic Functions](https://github.com/spacotto/libft/blob/main/README.md#variadic-functions)
-
 > [!CAUTION]
 > This is a custom C Library! Some functions might not be norm-compliant or subject-compliant! Never trust code blindly!
 
