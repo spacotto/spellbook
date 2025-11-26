@@ -1,34 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   itoa_base_buffer.c                                 :+:      :+:    :+:   */
+/*   ft_itoa_base_buffer.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:14:07 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/13 11:47:36 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/26 18:44:52 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "printf.h"
-
-static int	ft_countdigits(ssize_t n, ssize_t blen)
-{
-	size_t	counter;
-
-	counter = 1;
-	if (n < 0)
-	{
-		counter++;
-		n = -n;
-	}
-	while (n >= blen)
-	{
-		n /= blen;
-		counter++;
-	}
-	return (counter);
-}
 
 void	ft_itoa_base_buffer(ssize_t n, char *base, t_format *sformat)
 {

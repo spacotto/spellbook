@@ -6,30 +6,11 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:33:22 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/30 14:12:20 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/26 18:44:25 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_countwords(char const *s, char c)
-{
-	size_t	i;	
-	size_t	counter;
-
-	i = 0;
-	if (s[i] != c)
-		counter = 1;
-	else
-		counter = 0;
-	while (s[i] != '\0')
-	{
-		if (s[i] == c && s[i + 1] != c && s[i + 1] != '\0')
-			counter++;
-		i++;
-	}
-	return (counter);
-}
 
 static void	*free_tab(char **tab)
 {

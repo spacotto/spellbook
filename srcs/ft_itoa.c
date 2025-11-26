@@ -6,31 +6,11 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:36:48 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/27 12:33:59 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/26 18:45:12 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static int	ft_countdigits(ssize_t n)
-{
-	size_t	counter;
-
-	counter = 0;
-	if (n < 0)
-	{
-		counter++;
-		n = -n;
-	}
-	if (n == 0)
-		counter++;
-	while (n > 0)
-	{
-		n /= 10;
-		counter++;
-	}
-	return (counter);
-}
 
 char	*ft_itoa(int n)
 {

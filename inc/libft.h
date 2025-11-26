@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/13 17:56:52 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/26 18:43:12 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,18 @@ typedef struct	s_arena
 // PROTOTYPES 
 // ============================================================================
 
-// CHECKS
+// CHARACTERS
+void	ft_putchar(char c);
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
 int		ft_isprint(int c);
+
+// COUNTERS
+int 	ft_countwords(char const *s, char c);
+int		ft_countdigits(ssize_t n, ssize_t len);
 
 // STRINGS
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -147,14 +153,14 @@ int		ft_lstsize(t_list *lst);
 // COLORS
 // ============================================================================
 
-# define RESET "\033[0m"
-# define GRAY "\033[0;90m"
-# define RED "\033[0;91m"
-# define GREEN "\033[0;92m"
-# define YELLOW "\033[0;93m"
-# define BLUE "\033[0;94m"
-# define MAGENTA "\033[0;95m"
-# define CYAN "\033[0;96m"
-# define WHITE "\033[0;97m"
+# define RESET 		"\033[0m"
+# define GRAY 		"\033[0;90m"
+# define RED 		"\033[0;91m"
+# define GREEN 		"\033[0;92m"
+# define YELLOW 	"\033[0;93m"
+# define BLUE 		"\033[0;94m"
+# define MAGENTA	"\033[0;95m"
+# define CYAN 		"\033[0;96m"
+# define WHITE 		"\033[0;97m"
 
 #endif

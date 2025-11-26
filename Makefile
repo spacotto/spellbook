@@ -6,12 +6,11 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/25 23:32:20 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/26 18:41:00 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= libft.a
-CC			:= cc
 FLAGS		:= -c -Wall -Wextra -Werror
 
 # ============================================================================
@@ -32,8 +31,9 @@ WHITE		:= \033[0;97m
 # COMMANDS
 # ============================================================================
 
+CC			:= @cc
 AR			:= @/bin/ar rcs
-ECHO		:= @echo -e
+ECHO		:= @echo
 MKDIR		:= @/bin/mkdir
 RM			:= @/bin/rm -rf
 
@@ -49,11 +49,15 @@ INC			:= -I ./inc/
 
 SRCS_DIR	:= srcs/
 
-SRC_IS		:= ft_isalnum.c \
+SRC_CHAR	:= ft_putchar.c \
+			   ft_isalnum.c \
 			   ft_isalpha.c \
 			   ft_isascii.c \
 			   ft_isdigit.c \
 			   ft_isprint.c
+
+SRC_COUNT	:= ft_countwords.c \
+			   ft_countdigits.c
 
 SRC_STR		:= ft_strlen.c \
 			   ft_strncmp.c \
@@ -115,8 +119,8 @@ SRC_PRINTF	:= ft_printf.c \
 
 SRC_GNL		:= get_next_line.c
 
-SRCS		:= $(SRC_IS) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) $(SRC_ALC) $(SRC_FD) \
-			   $(SRC_LST) $(SRC_PRINTF) $(SRC_GNL) 
+SRCS		:= $(SRC_CHAR) $(SRC_COUNT) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) \
+			   $(SRC_ALC) $(SRC_FD) $(SRC_LST) $(SRC_PRINTF) $(SRC_GNL) 
 
 # ============================================================================
 # OBJECTS
@@ -138,19 +142,18 @@ $(NAME):		$(OBJS)
 
 $(OBJS_DIR)%.o:	$(SRCS_DIR)%.c
 				$(MKDIR) -p $(dir $@)
-				$(ECHO) "$(YELLOW)Now compiling: $< $(RESET)"
+				$(ECHO) "$(YELLOW)⚡Now compiling: $< $(RESET)"
 				$(CC) $(FLAGS) $(INC) $< -o $@
-				$(ECHO) "$(GREEN)$< created $(RESET)"
 
 clean:
 				$(RM) $(OBJS_DIR)
-				$(ECHO) "$(RED)Object removed!$(RESET)"
+				$(ECHO) "$(RED)🧹Objects removed!$(RESET)"
 
 fclean:			clean
 				$(RM) $(NAME)
-				$(ECHO) "$(RED)Archive removed!$(RESET)"
+				$(ECHO) "$(RED)🧹Archive removed!$(RESET)"
 
 re: 			fclean all
-				$(ECHO) "$(BLUE)Cleaned and rebuilt everything :)$(RESET)"
+				$(ECHO) "$(BLUE)🛠️Cleaned and rebuilt everything :)$(RESET)"
 
 .PHONY: all clean fclean re
