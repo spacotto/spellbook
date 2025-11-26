@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 18:18:41 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/26 18:33:56 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/26 18:52:05 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ void	ft_putnbr_base(ssize_t n, char *base)
 {
 	size_t	base_len;
 
-	len = ft_strlen(base);
-	base_len = ft_countdigits(n, base_len);
+	base_len = ft_strlen(base);
 	if (n < 0)
 	{
 		ft_putchar('-');
@@ -25,8 +24,8 @@ void	ft_putnbr_base(ssize_t n, char *base)
 	}
 	if (n > 0)
 	{
-		ft_putnbr(n / base_len);
-		ft_putnbr(n % base_len);
+		ft_putnbr_base(n / base_len, base);
+		ft_putnbr_base(n % base_len, base);
 	}
 	else
 		ft_putchar(n + '0');

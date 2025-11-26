@@ -6,13 +6,13 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/26 18:34:19 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/26 18:38:16 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/26 18:55:02 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countdigits(ssize_t n, ssize_t len)
+int	ft_countdigits_base(ssize_t n, ssize_t base_len)
 {
 	size_t	counter;
 
