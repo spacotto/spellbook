@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/26 18:41:00 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/28 00:17:36 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ WHITE		:= \033[0;97m
 
 CC			:= @cc
 AR			:= @/bin/ar rcs
-ECHO		:= @echo
+ECHO		:= @echo -e
 MKDIR		:= @/bin/mkdir
 RM			:= @/bin/rm -rf
 
@@ -134,7 +134,19 @@ OBJS	:= $(addprefix $(OBJS_DIR), $(SRCS:.c=.o))
 # RULES
 # ============================================================================
 
-all:			$(NAME)
+all:			banner $(NAME)
+
+banner:			
+				$(ECHO) "$(CYAN)"
+				$(ECHO)	"      __...--~~~~~-._   _.-~~~~~--...__ 	  "
+				$(ECHO) "     /                V                \ 	  "
+				$(ECHO) "    /                 |                 \    "
+				$(ECHO) "   /__...--~~~~~~-._  |  _.-~~~~~~--...__\   "
+				$(ECHO) "  /__.....----~~~~._\ | /_.~~~~----.....__\  "
+				$(ECHO) " =====================v===================== "
+				$(ECHO) "$(RESET)"
+				$(ECHO) "$(YELLOW)          ✨Time to do some magic!✨"
+				$(ECHO) "$(RESET)"
 
 $(NAME):		$(OBJS)
 				$(AR) $(NAME) $(OBJS)
@@ -142,7 +154,7 @@ $(NAME):		$(OBJS)
 
 $(OBJS_DIR)%.o:	$(SRCS_DIR)%.c
 				$(MKDIR) -p $(dir $@)
-				$(ECHO) "$(YELLOW)⚡Now compiling: $< $(RESET)"
+				$(ECHO) "$(YELLOW)🪄Compiling $< $(RESET)"
 				$(CC) $(FLAGS) $(INC) $< -o $@
 
 clean:
@@ -154,6 +166,6 @@ fclean:			clean
 				$(ECHO) "$(RED)🧹Archive removed!$(RESET)"
 
 re: 			fclean all
-				$(ECHO) "$(BLUE)🛠️Cleaned and rebuilt everything :)$(RESET)"
+				$(ECHO) "$(BLUE)💫Cleaned and rebuilt everything :)$(RESET)"
 
-.PHONY: all clean fclean re
+.PHONY: all banner clean fclean re
