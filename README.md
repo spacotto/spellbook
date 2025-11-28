@@ -36,17 +36,34 @@ Given a set of data, these functions count the elements belonging to said set.
 >Given a string and a separator, it counts how many words are in the string.
 
 ## Conversions
-These functions are used to convert characters or strings.
+These functions convert characters or strings.
+
 `ft_toupper`
 >Converts a lowercase letter to its uppercase equivalent.
+
 `ft_tolower`
->Converts an uppercase letter to its lowercase equivalent.                |
+>Converts an uppercase letter to its lowercase equivalent.
+
+`ft_putnbr`
+>Converts a signed number to the corresponding written output.
+
+`ft_putnbr_base.c`
+>Converts a signed number to the corresponding written output according to its base.
+
 `ft_atoi`
->Converts a string to an integer.                                         |
+>Converts a string to an integer.
+
 `ft_itoa`
->Allocates memory and converts an int to a string.                        |
+>Allocates memory and converts a number to a string.
+
+`ft_itoa_base`
+>Allocates memory and converts a number to a string according to its base.
+
+`ft_utoa`
+>Allocates memory and converts an unsigned int to a string.
+
 `ft_utoa_base`
->Given a base, allocates memory and converts an unsigned int to a string. |
+>Allocates memory and converts an unsigned number to a string according to its base.
 
 ## String Manipulation
 This category includes functions for handling strings. They are used for copying, comparing, and searching within data.
