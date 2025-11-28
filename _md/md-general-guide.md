@@ -4,103 +4,81 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 > [!TIP]
 > `.md` = Markdown file extension
 
-## 📌 Headings
+## Headings
 ### Heading 1
 **Syntax:** `# H1`
-
-**E.g.:**
-# H1
 
 ### Heading 2
 **Syntax:** `## H2`
 
-**E.g.:**
-## H2
-
 ### Heading 3
 **Syntax:** `### H3`
-
-**E.g.:**
-### H3
 
 ### Heading 4
 **Syntax:** `#### H4`
 
-**E.g.:**
-#### H4
-
 ### Heading 5
 **Syntax:** `##### H5`
-
-**E.g.:**
-##### H5
 
 ### Heading 6
 **Syntax:** `###### H6`
 
-**E.g.:**
-###### H6
-
-## 📌 Bold
+## Text Format
+### Bold
 **Syntax:** `**bold**` or `__bold__`
+**Example:** **bold**
 
-**E.g.:**
-**bold**
-
-## 📌 Italic
+### Italic
 **Syntax:** `*italic*` or `_italic_`
+**Example:** *italic*
 
-**E.g.:**
-*italic*
-
-## 📌 Bold + Italic
+### Bold + Italic
 **Syntax:** `***text***`
 
-**E.g.:**
-***text*** 
+**Example:** ***text*** 
 
-## 📌 Strikethrough
+### Strikethrough
 **Syntax:** `~~text~~`
 
-**E.g.:**
-~~text~~
+**Example:** ~~text~~
 
-## 📌 Inline code
+## Code Blocks
+## Inline code
 **Syntax:** `` `code` ``
+**Example** `code`
 
-**E.g.:**
-`code`
-
-## 📌 Block code
+## Block code
 **Syntax:** `` ```code``` ``
-
-**E.g.:**
+**Example:**
 ```
 code
 block
 ```
-
-## 📌 Blockquote
+## Blockquotes
+## Simple Blockquote
 **Syntax:** `> quote`
 
-**E.g.:**
+**Example:**
 >quote
 
-## 📌 List (unordered)
+## Lists
+### List (unordered)
 **Syntax:** ``- item` or `* item``
 
-**E.g.:**
-xxx
+**Example:**
+- item
+- item
+- item
 
-## 📌 List (ordered)
+### List (ordered)
 **Syntax:** `1. item`
 
-**E.g.:**
+**Example:**
 1. item
 2. item
 3. item
 
-## 📌 Nested lists
+### Nested lists
 **Syntax:** 
 ```
 - text
@@ -108,32 +86,44 @@ xxx
     -text
 ```
 
-**E.g.:**
+**Example:**
 - text
   - text
     - text
 
-## 📌 Horizontal line
+### Task Lists (GFM)
+**Syntax:** 
+```
+- [x] Done
+- [ ] Not done
+```
+
+**Example:**
+- [x] Done
+- [ ] Not done
+
+## Dividers
+### Horizontal line
 **Syntax:** ``---` or `***``
 
-**E.g.:**
+**Example:**
 
 ---
 ***
 
-## 📌 Link
+## Links
+### Text link
 **Syntax:** `[text](url)`
-
-**E.g.:**
+**Example:**
 [text](url)
 
-## 📌 Image
+### Image
 **Syntax:** `![alt](url)`
-
-**E.g.:**
+**Example:**
 🖼️
 
-## 📌 Table
+## Tables
+### Table
 **Syntax:** 
 ```
 | TEXT | TEXT | TEXT |
@@ -143,16 +133,12 @@ xxx
 | text | text | text |
 ```
 
-**E.g.:**
+**Example:**
 | TEXT | TEXT | TEXT |
 | :--- | :--- | :--- |
 | text | text | text |
 | text | text | text |
 | text | text | text |
-
-## 📌Task Lists (GFM)
-- [x] Done
-- [ ] Not done
 
 > [!NOTE]
 > GFM are GitHub-specific syntax (technically part of GitHub Docs Markdown extensions). They are not standard Markdown — meaning they won’t render properly outside GitHub (e.g., in VS Code preview, Reddit, or generic Markdown parsers).
