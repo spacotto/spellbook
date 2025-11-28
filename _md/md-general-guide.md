@@ -37,20 +37,21 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 
 ### Bold + Italic
 **Syntax:** `***text***`
-
 **Example:** ***text*** 
+### (Admonition/Callout)
+> [!CAUTION]
+> Be careful!
 
 ### Strikethrough
 **Syntax:** `~~text~~`
-
 **Example:** ~~text~~
 
 ## Code Blocks
-## Inline code
+### Inline code
 **Syntax:** `` `code` ``
 **Example** `code`
 
-## Block code
+### Block code
 **Syntax:** `` ```code``` ``
 **Example:**
 ```
@@ -58,16 +59,34 @@ code
 block
 ```
 ## Blockquotes
-## Simple Blockquote
+### Simple Blockquote
 **Syntax:** `> quote`
-
 **Example:**
 >quote
+
+### Caution (GFM Admonition/Callout)
+> [!CAUTION]
+> Be careful!
+
+### Warning (GFM Admonition/Callout)
+> [!WARNING]
+> This is a warning.
+
+### Note (GFM Admonition/Callout)
+> [!NOTE]
+> This is a note.
+
+### Tip (GFM Admonition/Callout)
+> [!TIP]
+> This is a tip.
+
+### Important (GFM Admonition/Callout)
+> [!IMPORTANT]
+> This is important information.
 
 ## Lists
 ### List (unordered)
 **Syntax:** ``- item` or `* item``
-
 **Example:**
 - item
 - item
@@ -75,7 +94,6 @@ block
 
 ### List (ordered)
 **Syntax:** `1. item`
-
 **Example:**
 1. item
 2. item
@@ -88,7 +106,6 @@ block
   - text
     -text
 ```
-
 **Example:**
 - text
   - text
@@ -100,7 +117,6 @@ block
 - [x] Done
 - [ ] Not done
 ```
-
 **Example:**
 - [x] Done
 - [ ] Not done
@@ -108,7 +124,6 @@ block
 ## Dividers
 ### Horizontal line
 **Syntax:** ``---` or `***``
-
 **Example:**
 
 ---
@@ -142,19 +157,3 @@ block
 | text | text | text |
 | text | text | text |
 | text | text | text |
-
-## 📌Admonitions / Callouts (GFM)
-> [!NOTE]
-> This is a note.
-
-> [!TIP]
-> This is a tip.
-
-> [!IMPORTANT]
-> This is important information.
-
-> [!WARNING]
-> Be cautious.
-
-> [!CAUTION]
-> Danger ahead.
