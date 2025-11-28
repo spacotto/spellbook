@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 17:36:48 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/26 18:45:12 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/28 10:14:17 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ char	*ft_itoa(int n)
 	t_itoa	t;
 
 	t.nb = n;
-	t.len = ft_countdigits(n);
+	t.base_len = ft_strlen("0123456789");
+	t.len = ft_countdigits(n, t.base_len);
 	t.result = ft_calloc(t.len + 1, sizeof(char));
 	if (!t.result)
 		return (NULL);
