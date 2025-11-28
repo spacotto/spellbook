@@ -45,13 +45,6 @@ These functions convert data.
 `ft_tolower`
 >Converts an uppercase letter to its lowercase equivalent.
 
-### Numbers to Written Output
-`ft_putnbr`
->Converts a signed number to the corresponding written output.
-
-`ft_putnbr_base`
->Converts a signed number to the corresponding written output according to its base.
-
 ### Arguments to Numbers
 `ft_atoi`
 >Converts a string to an integer.
@@ -159,6 +152,9 @@ These functions write various data types to a specified file descriptor, which c
 
 `ft_putnbr_fd`
 >Outputs the integer `n` to the specified file descriptor.
+
+`ft_putnbr_base_fd`
+>Converts a signed number to the corresponding written output according to its base.
 
 ## Linked Lists
 These functions are specifically designed to teach you the basics of **linked lists**, a fundamental data structure in computer science. They teach you the creation, deletion, modification, and iteration of individual list nodes (or "links") and the list as a whole. All these functions are based on the same given structure.
