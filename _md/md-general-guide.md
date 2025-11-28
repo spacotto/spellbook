@@ -29,29 +29,35 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 ## Text Format
 ### Bold
 **Syntax:** `**bold**` or `__bold__`
+
 **Example:** **bold**> [!CAUTION]
 > Be careful!
 
 
 ### Italic
 **Syntax:** `*italic*` or `_italic_`
+
 **Example:** *italic*
 
 ### Bold + Italic
 **Syntax:** `***text***`
+
 **Example:** ***text*** 
 
 ### Strikethrough
 **Syntax:** `~~text~~`
+
 **Example:** ~~text~~
 
 ## Code Blocks
 ### Inline code
 **Syntax:** `` `code` ``
+
 **Example** `code`
 
 ### Block code
 **Syntax:** `` ```code``` ``
+
 **Example:**
 ```
 code
@@ -60,6 +66,7 @@ block
 ## Blockquotes
 ### Simple Blockquote
 **Syntax:** `> quote`
+
 **Example:**
 >quote
 
@@ -86,6 +93,7 @@ block
 ## Lists
 ### List (unordered)
 **Syntax:** ``- item` or `* item``
+
 **Example:**
 - item
 - item
@@ -93,6 +101,7 @@ block
 
 ### List (ordered)
 **Syntax:** `1. item`
+
 **Example:**
 1. item
 2. item
@@ -105,6 +114,7 @@ block
   - text
     -text
 ```
+
 **Example:**
 - text
   - text
@@ -116,6 +126,7 @@ block
 - [x] Done
 - [ ] Not done
 ```
+
 **Example:**
 - [x] Done
 - [ ] Not done
@@ -123,6 +134,7 @@ block
 ## Dividers
 ### Horizontal line
 **Syntax:** ``---` or `***``
+
 **Example:**
 
 ---
@@ -131,11 +143,13 @@ block
 ## Links
 ### Text link
 **Syntax:** `[text](url)`
+
 **Example:**
 [text](url)
 
 ### Image
 **Syntax:** `![alt](url)`
+
 **Example:**
 🖼️
 
