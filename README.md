@@ -36,23 +36,27 @@ Given a set of data, these functions count the elements belonging to said set.
 >Given a string and a separator, it counts how many words are in the string.
 
 ## Conversions
-These functions convert characters or strings.
+These functions convert data.
 
+### Characters to Characters
 `ft_toupper`
 >Converts a lowercase letter to its uppercase equivalent.
 
 `ft_tolower`
 >Converts an uppercase letter to its lowercase equivalent.
 
+### Numbers to Written Output
 `ft_putnbr`
 >Converts a signed number to the corresponding written output.
 
-`ft_putnbr_base.c`
+`ft_putnbr_base`
 >Converts a signed number to the corresponding written output according to its base.
 
+### Arguments to Numbers
 `ft_atoi`
 >Converts a string to an integer.
 
+### Numbers to Arguments
 `ft_itoa`
 >Allocates memory and converts a number to a string.
 
