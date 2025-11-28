@@ -144,8 +144,8 @@ banner:
 				$(ECHO) "   /__...--~~~~~~-._  |  _.-~~~~~~--...__\   "
 				$(ECHO) "  /__.....----~~~~._\ | /_.~~~~----.....__\  "
 				$(ECHO) " =====================v===================== "
-				$(ECHO) "$(RESET)"
-				$(ECHO) "$(YELLOW)          ✨Time to do some magic!✨"
+				$(ECHO) "$(RESET)$(YELLOW)"
+				$(ECHO) "         ✨Time to do some magic!✨          "
 				$(ECHO) "$(RESET)"
 
 $(NAME):		$(OBJS)
