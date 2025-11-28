@@ -4,6 +4,9 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 > [!TIP]
 > `.md` = Markdown file extension
 
+> [!IMPORTANT]
+> GFM are GitHub-specific syntax (technically part of GitHub Docs Markdown extensions). They are not standard Markdown — meaning they won’t render properly outside GitHub (e.g., in VS Code preview, Reddit, or generic Markdown parsers).
+
 ## Headings
 ### Heading 1
 **Syntax:** `# H1`
@@ -139,9 +142,6 @@ block
 | text | text | text |
 | text | text | text |
 | text | text | text |
-
-> [!NOTE]
-> GFM are GitHub-specific syntax (technically part of GitHub Docs Markdown extensions). They are not standard Markdown — meaning they won’t render properly outside GitHub (e.g., in VS Code preview, Reddit, or generic Markdown parsers).
 
 ## 📌Admonitions / Callouts (GFM)
 > [!NOTE]
