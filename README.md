@@ -1,15 +1,30 @@
 > [!CAUTION]
 > This is a custom C Library! Some functions might not be norm-compliant or subject-compliant! Never trust code blindly!
 
-## Checks
-These functions are used to check if a character belongs to a certain type (e.g., alphabetic, digit).
-| Function Name | Description                                              |
-| :------------ | :------------------------------------------------------- |
-| `ft_isalpha`  | Checks if a character is an alphabet (a-z, A-Z).         |
-| `ft_isdigit`  | Checks if a character is a decimal digit (0-9).          |
-| `ft_isalnum`  | Checks if a character is alphanumeric (a-z, A-Z, 0-9).   |
-| `ft_isascii`  | Checks if a character is a 7-bit ASCII character.        |
-| `ft_isprint`  | Checks if a character is printable, including space.     |
+## Characters
+### Output
+Given a character (or its corresponding `int` value), these functions write an output.
+
+`ft_putchar`
+>Given an ASCII character (or its corresponding)
+
+### Check
+Given an `int`, these functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit).
+
+`ft_isalpha`
+>Checks if a character is an alphabet (a-z, A-Z).
+
+`ft_isdigit`
+>Checks if a character is a decimal digit (0-9).
+
+`ft_isalnum`
+>Checks if a character is alphanumeric (a-z, A-Z, 0-9).
+
+`ft_isascii`
+>Checks if a character is a 7-bit ASCII character.
+
+`ft_isprint`
+>Checks if a character is printable, including space.
 
 ## Conversions
 These functions are used to convert characters or strings.
