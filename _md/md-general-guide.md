@@ -171,7 +171,7 @@ block
 
 ## Dividers
 ### Horizontal line
-**Syntax:** ``---` or `***``
+**Syntax:** `---` or `***`
 
 **Example:**
 
