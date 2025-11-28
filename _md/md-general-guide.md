@@ -29,7 +29,9 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 ## Text Format
 ### Bold
 **Syntax:** `**bold**` or `__bold__`
-**Example:** **bold**
+**Example:** **bold**> [!CAUTION]
+> Be careful!
+
 
 ### Italic
 **Syntax:** `*italic*` or `_italic_`
@@ -38,9 +40,6 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 ### Bold + Italic
 **Syntax:** `***text***`
 **Example:** ***text*** 
-### (Admonition/Callout)
-> [!CAUTION]
-> Be careful!
 
 ### Strikethrough
 **Syntax:** `~~text~~`
