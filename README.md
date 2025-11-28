@@ -116,14 +116,24 @@ This category includes functions for handling strings. They are used for copying
 
 ## Memory Manipulation
 This category includes functions for handling blocks of memory. They are used for copying, comparing, and searching within data.
-| Function Name | Description                                                                                       |
-| :------------ | :------------------------------------------------------------------------------------------------ |
-| `ft_memset`   | Fills a block of memory with a specific byte value.                                               |
-| `ft_bzero`    | Sets a block of memory to all zeros. (Note: This is similar to `memset` with a value of 0).       |
-| `ft_memcpy`   | Copies a block of memory from a source to a destination.                                          |
-| `ft_memmove`  | Copies a block of memory, handling overlapping source and destination regions safely.             |
-| `ft_memchr`   | Scans a block of memory for the first occurrence of a specific character.                         |
-| `ft_memcmp`   | Compares two blocks of memory.                                                                    |
+
+`ft_memset`
+>Fills a block of memory with a specific byte value.
+
+`ft_bzero`
+>Sets a block of memory to all zeros. (Note: This is similar to `memset` with a value of 0).
+
+`ft_memcpy`
+>Copies a block of memory from a source to a destination.
+
+`ft_memmove`
+>Copies a block of memory, handling overlapping source and destination regions safely.
+
+`ft_memchr`
+>Scans a block of memory for the first occurrence of a specific character.
+
+`ft_memcmp`
+>Compares two blocks of memory.
 
 ## Memory Allocation
 This category includes functions for memory allocation and management.
