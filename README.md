@@ -145,33 +145,53 @@ This category includes functions for memory allocation and management.
 `ft_calloc`
 >Allocates a block of memory for an array and initialises all bytes to zero.
 
-## File Descriptor Functions
+## Output to File Descriptor (FD)
 These functions write various data types to a specified file descriptor, which can be a file, standard output, or standard error. They are a common way to handle I/O in a modular and consistent manner.
-| Function Name   | Description                                                                    |
-| :-------------- | :----------------------------------------------------------------------------- |
-| `ft_putchar_fd` | Outputs the character `c` to the specified file descriptor.                    |
-| `ft_putstr_fd`  | Outputs the string `s` to the specified file descriptor.                       |
-| `ft_putendl_fd` | Outputs the string `s` to the specified file descriptor followed by a newline. |
-| `ft_putnbr_fd`  | Outputs the integer `n` to the specified file descriptor.                      |
+
+`ft_putchar_fd`
+>Outputs the character `c` to the specified file descriptor.
+
+`ft_putstr_fd`
+>Outputs the string `s` to the specified file descriptor.
+
+`ft_putendl_fd`
+>Outputs the string `s` to the specified file descriptor followed by a newline.
+
+`ft_putnbr_fd`
+>Outputs the integer `n` to the specified file descriptor.
 
 ## Linked Lists
 These functions are specifically designed to teach you the basics of **linked lists**, a fundamental data structure in computer science. They teach you the creation, deletion, modification, and iteration of individual list nodes (or "links") and the list as a whole. All these functions are based on the same given structure.
-| Function Name     | Description                                                                                                                                    |
-| :---------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-| `ft_lstnew`       | Creates a new node.                                                                                                                            |
-| `ft_lstadd_front` | Adds the node `new` at the beginning of the list.                                                                                              |
-| `ft_lstsize`      | Counts the number of nodes in the list.                                                                                                        |
-| `ft_lstlast`      | Returns the last node of the list.                                                                                                             |
-| `ft_lstadd_back`  | Adds the node `new` at the end of the list.                                                                                                    |
-| `ft_lstdelone`    | Takes a node as a parameter and frees its content using the function `del`. Free the node itself, but does NOT free the next node.             |
-| `ft_lstclear`     | Deletes and frees the given node and all its successors, using the function `del` and `free(3)`. Finally, set the pointer to the list to NULL. |
-| `ft_lstiter`      | Iterates through the list `lst` and applies the function `f` to the content of each node.                                                      |
-| `ft_lstmap`       | Iterates through the list `lst`, applies the function `f` to each node’s content, and creates a new list as a result.                          |
-> [!TIP]
-> The order of the functions follows a specific logic. Pay attention to it!
+
+`ft_lstnew`
+>Creates a new node.
+
+`ft_lstadd_front`
+>Adds the node `new` at the beginning of the list.
+
+`ft_lstsize`
+>Counts the number of nodes in the list.
+
+`ft_lstlast`
+>Returns the last node of the list.
+
+`ft_lstadd_back`
+>Adds the node `new` at the end of the list.
+
+`ft_lstdelone`
+>Takes a node as a parameter and frees its content using the function `del`. Free the node itself, but does NOT free the next node.
+
+`ft_lstclear`
+>Deletes and frees the given node and all its successors, using the function `del` and `free(3)`. Finally, set the pointer to the list to NULL.
+
+`ft_lstiter`
+>Iterates through the list `lst` and applies the function `f` to the content of each node.
+
+`ft_lstmap`
+>Iterates through the list `lst`, applies the function `f` to each node’s content, and creates a new list as a result.
 
 ## Variadic Functions
 Functions that take a variable number of arguments.
-| Function Name     | Description                                                                                                                         |
-| :---------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| `ft_printf`       | Replicates the behaviour of the real printf as far as concerns the following flags: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`. |
+
+`ft_printf`
+>Replicates the behaviour of the real printf as far as concerns the following flags: `%c`, `%s`, `%p`, `%d`, `%i`, `%u`, `%x`, `%X`.
