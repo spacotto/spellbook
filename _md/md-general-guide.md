@@ -71,13 +71,13 @@ block
 > [!WARNING]
 > This is a warning.
 
-### Note (GFM Admonition/Callout)
-> [!NOTE]
-> This is a note.
-
 ### Tip (GFM Admonition/Callout)
 > [!TIP]
 > This is a tip.
+
+### Note (GFM Admonition/Callout)
+> [!NOTE]
+> This is a note.
 
 ### Important (GFM Admonition/Callout)
 > [!IMPORTANT]
