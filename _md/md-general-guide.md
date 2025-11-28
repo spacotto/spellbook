@@ -10,27 +10,34 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 ## Headings
 ### Heading 1
 **Syntax:** `# H1`
+***
 
 ### Heading 2
 **Syntax:** `## H2`
+***
 
 ### Heading 3
 **Syntax:** `### H3`
+***
 
 ### Heading 4
 **Syntax:** `#### H4`
+***
 
 ### Heading 5
 **Syntax:** `##### H5`
+***
 
 ### Heading 6
 **Syntax:** `###### H6`
+***
 
 ## Text Format
 ### Bold
 **Syntax:** `**bold**` or `__bold__`
 
 **Example:** **bold**
+***
 
 ### Italic
 **Syntax:** `*italic*` or `_italic_`
@@ -125,7 +132,7 @@ block
 
 ## Lists
 ### List (unordered)
-**Syntax:** ``- item` or `* item``
+**Syntax:** `- item` or `* item`
 
 **Example:**
 - item
@@ -133,7 +140,12 @@ block
 - item
 
 ### List (ordered)
-**Syntax:** `1. item`
+**Syntax:** 
+```
+1. item
+2. item
+3. item
+```
 
 **Example:**
 1. item
