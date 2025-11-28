@@ -1,15 +1,8 @@
 > [!CAUTION]
 > This is a personal C Library! Some functions might not be 42norm-compliant or 42subject-compliant! Never trust code blindly!
 
-## Characters
-### Output
-Given a character (or its corresponding `int` value), these functions write an output.
-
-`ft_putchar`
->Given an ASCII character (or its corresponding)
-
-### Check
-Given an `int`, these functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit).
+## Check
+These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit).
 
 `ft_isalpha`
 >Checks if a character is an alphabet (a-z, A-Z).
