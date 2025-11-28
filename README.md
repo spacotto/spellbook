@@ -114,7 +114,8 @@ This category includes functions for handling strings. They are used for copying
 `ft_strmapi`
 >Applies the function `f` to each character of the string passed as argument, and returns a new string as a result.
 
-## Memory Manipulation
+## Memory 
+### Memory Manipulation
 This category includes functions for handling blocks of memory. They are used for copying, comparing, and searching within data.
 
 `ft_memset`
@@ -135,11 +136,14 @@ This category includes functions for handling blocks of memory. They are used fo
 `ft_memcmp`
 >Compares two blocks of memory.
 
-## Memory Allocation
+### Memory Allocation
 This category includes functions for memory allocation and management.
-| Function Name | Description                                                                 |
-| :------------ | :-------------------------------------------------------------------------- |
-| `ft_calloc`   | Allocates a block of memory for an array and initialises all bytes to zero. |
+
+`ft_arena`
+>Arena memory allocation.
+
+`ft_calloc`
+>Allocates a block of memory for an array and initialises all bytes to zero.
 
 ## File Descriptor Functions
 These functions write various data types to a specified file descriptor, which can be a file, standard output, or standard error. They are a common way to handle I/O in a modular and consistent manner.
