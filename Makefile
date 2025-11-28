@@ -49,8 +49,7 @@ INC			:= -I ./inc/
 
 SRCS_DIR	:= srcs/
 
-SRC_CHAR	:= ft_putchar.c \
-			   ft_isalnum.c \
+SRC_CHAR	:= ft_isalnum.c \
 			   ft_isalpha.c \
 			   ft_isascii.c \
 			   ft_isdigit.c \
@@ -83,13 +82,13 @@ SRC_MEM		:= ft_bzero.c \
 
 SRC_CNV		:= ft_toupper.c \
 			   ft_tolower.c \
-			   ft_putnbr.c \
-			   ft_putnbr_base.c \
 			   ft_atoi.c \
 			   ft_itoa.c \
 			   ft_itoa_base.c \
+			   ft_itoa_base_buffer.c \
 			   ft_utoa.c \
-			   ft_utoa_base.c 
+			   ft_utoa_base.c \
+			   ft_utoa_base_buffer.c
 
 SRC_ALC		:= ft_arena.c \
 			   ft_calloc.c
@@ -97,7 +96,8 @@ SRC_ALC		:= ft_arena.c \
 SRC_FD		:= ft_putchar_fd.c \
 			   ft_putstr_fd.c \
 			   ft_putendl_fd.c \
-			   ft_putnbr_fd.c
+			   ft_putnbr_fd.c \
+			   ft_putnbr_base_fd.c
 
 SRC_LST		:= ft_lstnew_bonus.c \
 			   ft_lstadd_front_bonus.c \
