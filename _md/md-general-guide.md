@@ -1,4 +1,5 @@
 # Markdown Guide
+***
 What is **Markdown**? Markdown is a lightweight markup language that turns plain text into formatted text (like HTML). It’s widely used for documentation (README.md), notes and wikis, static site content, comments on GitHub, Reddit, etc.
 
 > [!TIP]
@@ -10,11 +11,9 @@ What is **Markdown**? Markdown is a lightweight markup language that turns plain
 ## Headings
 ### Heading 1
 **Syntax:** `# H1`
-***
 
 ### Heading 2
 **Syntax:** `## H2`
-***
 
 ### Heading 3
 **Syntax:** `### H3`
