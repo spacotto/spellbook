@@ -75,7 +75,7 @@ This category includes functions for handling strings. They are used for copying
 `ft_strncmp`
 >Compares two strings up to a specified number of characters.
 
-### String Copies
+### String Copy
 `ft_strcpy`
 >Copies a string.
 
@@ -112,7 +112,7 @@ This category includes functions for handling strings. They are used for copying
 `ft_strtrim`
 >Allocates memory and returns a copy of `s1` with characters from `set` removed from the beginning and the end.
 
-### String
+### String Separation
 `ft_split`
 >Allocates memory and returns an array of strings obtained by splitting `s` using the character `c` as a delimiter.
 
