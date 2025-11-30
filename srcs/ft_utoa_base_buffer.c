@@ -6,13 +6,13 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:40:49 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/30 23:41:40 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/30 23:59:49 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_utoa_base_buffer(size_t n, char *base, int *buffer)
+void	ft_utoa_base_buffer(size_t n, char *base, char *buffer)
 {
 	t_itoa	t;
 

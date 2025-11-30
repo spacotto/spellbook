@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/30 23:40:38 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/30 23:59:11 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,8 +133,8 @@ char    *ft_utoa(size_t n);
 char	*ft_itoa_base(ssize_t n, char *base);
 char	*ft_utoa_base(size_t n, char *base);
 
-void	ft_itoa_base_buffer(ssize_t n, char *base, int *buffer);
-void	ft_utoa_base_buffer(size_t n, char *base, int *buffer);
+void	ft_itoa_base_buffer(ssize_t n, char *base, char *buffer);
+void	ft_utoa_base_buffer(size_t n, char *base, char *buffer);
 
 // MEMORY ALLOCATION
 void	*ft_calloc(size_t nmemb, size_t size);

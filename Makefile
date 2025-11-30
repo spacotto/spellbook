@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/30 22:24:23 by spacotto         ###   ########.fr        #
+#    Updated: 2025/12/01 00:04:37 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -159,7 +159,7 @@ banner:
 
 $(NAME):		$(OBJS)
 				$(AR) $(NAME) $(OBJS)
-				$(ECHO) "$(GREEN)Archive is ready :)$(RESET)"
+				$(ECHO) "$(GREEN)✨ Archive is ready ✨$(RESET)"
 
 $(OBJS_DIR)%.o:	$(SRCS_DIR)%.c
 				$(MKDIR) -p $(dir $@)
@@ -175,6 +175,6 @@ fclean:			clean
 				$(ECHO) "$(RED)🧹Archive removed!$(RESET)"
 
 re: 			fclean all
-				$(ECHO) "$(BLUE)💫Cleaned and rebuilt everything :)$(RESET)"
+				$(ECHO) "$(BLUE)💫 Cleaned and rebuilt everything 💫$(RESET)"
 
 .PHONY: all banner clean fclean re
