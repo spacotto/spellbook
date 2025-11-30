@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 18:52:10 by spacotto          #+#    #+#             */
-/*   Updated: 2025/10/30 14:11:56 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/30 22:22:43 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *nptr)
 	i = 0;
 	sign = 1;
 	result = 0;
-	while (nptr[i] == 32 || (nptr[i] > 8 && nptr[i] < 14))
+	while (ft_isspace(nptr[i]) == 1)
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{

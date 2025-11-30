@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/28 00:17:36 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/30 22:01:21 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -50,11 +50,14 @@ INC			:= -I ./inc/
 SRCS_DIR	:= srcs/
 
 SRC_IS		:= ft_isneg.c \
-			   ft_isalnum.c \
-			   ft_isalpha.c \
 			   ft_isascii.c \
+			   ft_isalnum.c \
 			   ft_isdigit.c \
-			   ft_isprint.c
+			   ft_isalpha.c \
+			   ft_isupper.c \
+			   ft_islower.c \
+			   ft_isprint.c \
+			   ft_isspace.c
 
 SRC_COUNT	:= ft_countdigits.c \
 			   ft_countwords.c 

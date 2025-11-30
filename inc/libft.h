@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/28 10:18:14 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/30 22:11:25 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,14 +76,16 @@ typedef struct	s_arena
 // PROTOTYPES 
 // ============================================================================
 
-// CHARACTERS
-void	ft_putchar(char c);
-
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
+// CHECKS
+int		ft_isneg(int n);
 int		ft_isascii(int c);
+int		ft_isalnum(int c);
+int		ft_isdigit(int c);
+int		ft_isalpha(int c);
+int		ft_isupper(int c);
+int		ft_islower(int c);
 int		ft_isprint(int c);
+int		ft_isspace(int c);
 
 // COUNTERS
 int 	ft_countwords(char const *s, char c);
