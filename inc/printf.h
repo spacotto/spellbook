@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 14:57:46 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/13 17:56:38 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/30 23:18:32 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef struct s_format
 {
 	va_list	args;
 	size_t	print_len;
-	char	buffer[64];
 }	t_format;
 
 // ============================================================================
@@ -45,8 +44,5 @@ void	ft_printnbr(t_format *sformat);
 void	ft_printunb(t_format *sformat);
 void	ft_printhex_lower(t_format *sformat);
 void	ft_printhex_upper(t_format *sformat);
-
-void	ft_itoa_base_buffer(ssize_t n, char *base, t_format *sformat);
-void	ft_utoa_base_buffer(size_t n, char *base, t_format *sformat);
 
 #endif

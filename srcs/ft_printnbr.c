@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 14:36:21 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/07 14:49:54 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/30 23:27:46 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	ft_printnbr(t_format *sformat)
 {
-	ssize_t	i;
-	size_t	len;
-	char	*s;
+	ssize_t		i;
+	size_t		len;
+	char		*s;
+	t_buffer	b;
 
 	i = (ssize_t)va_arg(sformat->args, int);
-	ft_itoa_base_buffer(i, "0123456789", sformat);
-	s = sformat->buffer;
+	ft_itoa_base_buffer(i, "0123456789", b.buffer);
+	s = b.buffer;
 	ft_putstr_fd(s, 1);
 	len = ft_strlen(s);
 	sformat->print_len += len;

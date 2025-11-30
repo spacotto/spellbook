@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/11/30 22:01:21 by spacotto         ###   ########.fr        #
+#    Updated: 2025/11/30 22:24:23 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,8 +63,8 @@ SRC_COUNT	:= ft_countdigits.c \
 			   ft_countwords.c 
 
 SRC_STR		:= ft_strlen.c \
-			   ft_strcpy \
-			   ft_strncpy \
+			   ft_strcpy.c \
+			   ft_strncpy.c \
 			   ft_strlcpy.c \
 			   ft_strcat.c \
 			   ft_strncat.c \

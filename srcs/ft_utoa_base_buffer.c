@@ -1,41 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utoa_base_buffer.c                                 :+:      :+:    :+:   */
+/*   ft_utoa_base_buffer.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:40:49 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/12 16:14:39 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/30 23:41:40 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "libft.h"
 
-static int	countdigits_base(size_t n, size_t blen)
+void	ft_utoa_base_buffer(size_t n, char *base, int *buffer)
 {
-	size_t	counter;
+	t_itoa	t;
 
-	counter = 1;
-	while (n >= blen)
+	t.base_len = ft_strlen(base);
+	t.len = ft_countdigits(n, t.base_len);
+	while (t.len > 0)
 	{
-		n /= blen;
-		counter++;
-	}
-	return (counter);
-}
-
-void	ft_utoa_base_buffer(size_t n, char *base, t_format *sformat)
-{
-	size_t		blen;
-	size_t		len;
-
-	blen = ft_strlen(base);
-	len = countdigits_base(n, blen);
-	while (len > 0)
-	{
-		len--;
-		sformat->buffer[len] = base[n % blen];
-		n /= blen;
+		t.len--;
+		buffer[t.len] = base[n % t.base_len];
+		n /= t.base_len;
 	}
 }

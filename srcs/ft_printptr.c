@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 12:06:22 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/13 11:43:27 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/11/30 23:28:49 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,14 @@
 
 void	ft_printptr(t_format *sformat)
 {
-	size_t	p;
-	size_t	len;
-	char	*s;
+	size_t		p;
+	size_t		len;
+	char		*s;
+	t_buffer	b;
 
 	p = (size_t)va_arg(sformat->args, void *);
-	ft_utoa_base_buffer(p, "0123456789abcdef", sformat);
-	s = sformat->buffer;
+	ft_utoa_base_buffer(p, "0123456789abcdef", &b);
+	s = b.buffer;
 	if (p == 0)
 	{
 		ft_putstr_fd("(nil)", 1);
