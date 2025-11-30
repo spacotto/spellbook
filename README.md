@@ -44,61 +44,84 @@ These functions convert data.
 
 ### Numbers to Arguments
 `ft_itoa`
->Allocates memory and converts a number to a string.
+>Allocates memory and converts a signed number to a string.
 
 `ft_itoa_base`
->Allocates memory and converts a number to a string according to its base.
+>Allocates memory and converts a signed number to a string according to its base.
+
+`ft_itoa_base_buffer`
+>Converts a signed number to a string according to its base without `malloc`.
 
 `ft_utoa`
->Allocates memory and converts an unsigned int to a string.
+>Allocates memory and converts an unsigned number to a string.
 
 `ft_utoa_base`
 >Allocates memory and converts an unsigned number to a string according to its base.
 
+`ft_utoa_base_buffer`
+>Converts an unsigned number to a string according to its base without `malloc`.
+
 ## String Manipulation
 This category includes functions for handling strings. They are used for copying, comparing, and searching within data.
 
+### String Measure
 `ft_strlen`
 >Calculates the length of a string, excluding the null terminator.
+
+### String Comparison
+`ft_strcmp`
+>Compares two strings.
+
+`ft_strncmp`
+>Compares two strings up to a specified number of characters.
+
+### String Copies
+`ft_strcpy`
+>Copies a string.
+
+`ft_strncpy`
+>Copies a string up to a specified number of characters.
 
 `ft_strlcpy`
 >Copies a string with a size limit, ensuring the destination is null-terminated.
 
+`ft_strdup`
+>Duplicates a string by allocating new memory and copying the contents.
+
+### String Aggregation
 `ft_strlcat`
 >Appends a string with a size limit, ensuring the destination is null-terminated.
 
+`ft_strjoin`
+>Allocates memory and returns a new string, which is the result of concatenating `s1` and `s2`.
+
+### String Extraction
 `ft_strchr`
 >Locates the first occurrence of a character in a string.
 
 `ft_strrchr`
 >Locates the last occurrence of a character in a string.
 
-`ft_strncmp`
->Compares two strings up to a specified number of characters.
-
 `ft_strnstr`
 >Locates the first occurrence of a substring within a string, searching up to a specified length.
-
-`ft_strdup`
->Duplicates a string by allocating new memory and copying the contents.
 
 `ft_substr`
 >Allocates memory and returns a substring from a source, given the substring start and size.
 
-`ft_strjoin`
->Allocates memory and returns a new string, which is the result of concatenating `s1` and `s2`.
-
+### String
 `ft_strtrim`
 >Allocates memory and returns a copy of `s1` with characters from `set` removed from the beginning and the end.
 
+### String
 `ft_split`
 >Allocates memory and returns an array of strings obtained by splitting `s` using the character `c` as a delimiter.
 
+### String
 `ft_striteri`
->Applies the function `f` to each character of the string passed as argument. It acts directly on the source.
+>Applies the function `f` to each character of the string passed as an argument. It acts directly on the source.
 
 `ft_strmapi`
->Applies the function `f` to each character of the string passed as argument, and returns a new string as a result.
+>Applies the function `f` to each character of the string passed as an argument, and returns a new string as a result.
 
 ## Memory 
 ### Memory Manipulation
