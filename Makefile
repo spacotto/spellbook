@@ -49,7 +49,7 @@ INC			:= -I ./inc/
 
 SRCS_DIR	:= srcs/
 
-SRC_IS		:= ft_is_negative.c \
+SRC_IS		:= ft_isneg.c \
 			   ft_isalnum.c \
 			   ft_isalpha.c \
 			   ft_isascii.c \
