@@ -49,19 +49,25 @@ INC			:= -I ./inc/
 
 SRCS_DIR	:= srcs/
 
-SRC_CHAR	:= ft_isalnum.c \
+SRC_IS		:= ft_is_negative.c \
+			   ft_isalnum.c \
 			   ft_isalpha.c \
 			   ft_isascii.c \
 			   ft_isdigit.c \
 			   ft_isprint.c
 
-SRC_COUNT	:= ft_countwords.c \
-			   ft_countdigits.c
+SRC_COUNT	:= ft_countdigits.c \
+			   ft_countwords.c 
 
 SRC_STR		:= ft_strlen.c \
-			   ft_strncmp.c \
+			   ft_strcpy \
+			   ft_strncpy \
 			   ft_strlcpy.c \
+			   ft_strcat.c \
+			   ft_strncat.c \
 			   ft_strlcat.c \
+			   ft_strcmp.c \
+			   ft_strncmp.c \
 			   ft_strdup.c \
 			   ft_strchr.c \
 			   ft_strrchr.c \
@@ -119,7 +125,7 @@ SRC_PRINTF	:= ft_printf.c \
 
 SRC_GNL		:= get_next_line.c
 
-SRCS		:= $(SRC_CHAR) $(SRC_COUNT) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) \
+SRCS		:= $(SRC_IS) $(SRC_COUNT) $(SRC_STR) $(SRC_MEM) $(SRC_CNV) \
 			   $(SRC_ALC) $(SRC_FD) $(SRC_LST) $(SRC_PRINTF) $(SRC_GNL) 
 
 # ============================================================================
