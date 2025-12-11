@@ -54,36 +54,51 @@ _________________________________________________________________________
 ft_countwords          Counts words in a string using a delimiter
 ```
 
-Type Conversions
-Character Conversions
+### Type Conversions
+#### Character Conversions
 FunctionDescriptionft_toupperConverts lowercase letter to uppercaseft_tolowerConverts uppercase letter to lowercase
-String to Number
+
+#### String to Number
 FunctionDescriptionft_atoiConverts string to integer
-Number to String
+
+#### Number to String
 FunctionDescriptionft_itoaConverts signed integer to string (with allocation)ft_itoa_baseConverts signed integer to string in specified baseft_itoa_base_bufferBase conversion without mallocft_utoaConverts unsigned integer to stringft_utoa_baseConverts unsigned integer to string in specified baseft_utoa_base_bufferUnsigned base conversion without malloc
-String Operations
-Measurement
+
+### String Operations
+#### Measurement
 FunctionDescriptionft_strlenReturns string length (excluding null terminator)
-Comparison
+
+#### Comparison
 FunctionDescriptionft_strcmpCompares two stringsft_strncmpCompares up to n characters of two strings
-Copying
+
+#### Copying
 FunctionDescriptionft_strcpyCopies a stringft_strncpyCopies up to n charactersft_strlcpySize-bounded string copy with null-terminationft_strdupDuplicates string with memory allocation
-Concatenation
+
+#### Concatenation
 FunctionDescriptionft_strlcatSize-bounded string concatenationft_strjoinJoins two strings into newly allocated memory
-Searching
+
+#### Searching
 FunctionDescriptionft_strchrFinds first occurrence of characterft_strrchrFinds last occurrence of characterft_strnstrFinds substring within length limitft_substrExtracts substring with allocation
-Modification
+
+#### Modification
 FunctionDescriptionft_strtrimRemoves specified characters from both endsft_splitSplits string by delimiter into arrayft_striteriApplies function to each character (in-place)ft_strmapiApplies function to create new modified string
-Memory Management
-Memory Manipulation
+
+### Memory Management
+#### Memory Manipulation
 FunctionDescriptionft_memsetFills memory block with specific byte valueft_bzeroSets memory block to zeroft_memcpyCopies memory blockft_memmoveSafely copies overlapping memory regionsft_memchrSearches for character in memory blockft_memcmpCompares two memory blocks
-Memory Allocation
+
+#### Memory Allocation
 FunctionDescriptionft_arenaArena-based memory allocationft_callocAllocates zero-initialized memory
-File Descriptor Output
+
+### File Descriptor Output
 Functions for writing to file descriptors (stdout, stderr, files).
+
 FunctionDescriptionft_putchar_fdOutputs single character to fdft_putstr_fdOutputs string to fdft_putendl_fdOutputs string with newline to fdft_putnbr_fdOutputs integer to fdft_putnbr_base_fdOutputs number in specified base to fd
-Linked Lists
+
+### Linked Lists
 Complete linked list implementation with node management.
+
 FunctionDescriptionft_lstnewCreates new list nodeft_lstadd_frontAdds node to list beginningft_lstsizeReturns number of nodes in listft_lstlastReturns last node of listft_lstadd_backAdds node to list endft_lstdeloneDeletes single node with content cleanupft_lstclearDeletes and frees entire listft_lstiterApplies function to each node's contentft_lstmapCreates new list by applying function to each node
-Variadic Functions
+
+### Variadic Functions
 FunctionDescriptionft_printfPrintf implementation supporting: %c, %s, %p, %d, %i, %u, %x, %X
