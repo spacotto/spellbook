@@ -91,60 +91,140 @@ ft_utoa_base_buffer    Unsigned base conversion without malloc
 ### String Operations
 #### Measurement
 ```
-FunctionDescriptionft_strlenReturns string length (excluding null terminator)
+FunctionDescription
+_________________________________________________________________________
+ft_strlenReturns string length (excluding null terminator)
 ```
 
 #### Comparison
 ```
-FunctionDescriptionft_strcmpCompares two stringsft_strncmpCompares up to n characters of two strings
+FunctionDescription
+_________________________________________________________________________
+ft_strcmpCompares two strings
+_________________________________________________________________________
+ft_strncmpCompares up to n characters of two strings
 ```
 
 #### Copying
 ```
-FunctionDescriptionft_strcpyCopies a stringft_strncpyCopies up to n charactersft_strlcpySize-bounded string copy with null-terminationft_strdupDuplicates string with memory allocation
+FunctionDescription
+_________________________________________________________________________
+ft_strcpyCopies a string
+_________________________________________________________________________
+ft_strncpyCopies up to n characters
+_________________________________________________________________________
+ft_strlcpySize-bounded string copy with null-termination
+_________________________________________________________________________
+ft_strdupDuplicates string with memory allocation
 ```
 
 #### Concatenation
 ```
-FunctionDescriptionft_strlcatSize-bounded string concatenationft_strjoinJoins two strings into newly allocated memory
+FunctionDescription
+_________________________________________________________________________
+ft_strlcatSize-bounded string concatenation
+_________________________________________________________________________
+ft_strjoinJoins two strings into newly allocated memory
 ```
 
 #### Searching
 ```
-FunctionDescriptionft_strchrFinds first occurrence of characterft_strrchrFinds last occurrence of characterft_strnstrFinds substring within length limitft_substrExtracts substring with allocation
+FunctionDescription
+_________________________________________________________________________
+ft_strchrFinds first occurrence of character
+_________________________________________________________________________
+ft_strrchrFinds last occurrence of character
+_________________________________________________________________________
+ft_strnstrFinds substring within length limit
+_________________________________________________________________________
+ft_substrExtracts substring with allocation
 ```
 
 #### Modification
 ```
-FunctionDescriptionft_strtrimRemoves specified characters from both endsft_splitSplits string by delimiter into arrayft_striteriApplies function to each character (in-place)ft_strmapiApplies function to create new modified string
+FunctionDescription
+_________________________________________________________________________
+ft_strtrimRemoves specified characters from both ends
+_________________________________________________________________________
+ft_splitSplits string by delimiter into array
+_________________________________________________________________________
+ft_striteriApplies function to each character (in-place)
+_________________________________________________________________________
+ft_strmapiApplies function to create new modified string
 ```
 
 ### Memory Management
 #### Memory Manipulation
 ```
-FunctionDescriptionft_memsetFills memory block with specific byte valueft_bzeroSets memory block to zeroft_memcpyCopies memory blockft_memmoveSafely copies overlapping memory regionsft_memchrSearches for character in memory blockft_memcmpCompares two memory blocks
+FunctionDescription
+_________________________________________________________________________
+ft_memsetFills memory block with specific byte value
+_________________________________________________________________________
+ft_bzeroSets memory block to zero
+_________________________________________________________________________
+ft_memcpyCopies memory block
+_________________________________________________________________________
+ft_memmoveSafely copies overlapping memory regions
+_________________________________________________________________________
+ft_memchrSearches for character in memory blockn
+_________________________________________________________________________
+ft_memcmpCompares two memory blocks
 ```
 
 #### Memory Allocation
 ```
-FunctionDescriptionft_arenaArena-based memory allocationft_callocAllocates zero-initialized memory
+FunctionDescription
+_________________________________________________________________________
+ft_arenaArena-based memory allocation
+_________________________________________________________________________
+ft_callocAllocates zero-initialized memory
 ```
 
 ### File Descriptor Output
 Functions for writing to file descriptors (stdout, stderr, files).
 
 ```
-FunctionDescriptionft_putchar_fdOutputs single character to fdft_putstr_fdOutputs string to fdft_putendl_fdOutputs string with newline to fdft_putnbr_fdOutputs integer to fdft_putnbr_base_fdOutputs number in specified base to fd
+FunctionDescription
+_________________________________________________________________________
+ft_putchar_fdOutputs single character to fd
+_________________________________________________________________________
+ft_putstr_fdOutputs string to fd
+_________________________________________________________________________
+ft_putendl_fdOutputs string with newline to fd
+_________________________________________________________________________
+ft_putnbr_fdOutputs integer to fd
+_________________________________________________________________________
+ft_putnbr_base_fdOutputs number in specified base to fd
 ```
 
 ### Linked Lists
 Complete linked list implementation with node management.
 
 ```
-FunctionDescriptionft_lstnewCreates new list nodeft_lstadd_frontAdds node to list beginningft_lstsizeReturns number of nodes in listft_lstlastReturns last node of listft_lstadd_backAdds node to list endft_lstdeloneDeletes single node with content cleanupft_lstclearDeletes and frees entire listft_lstiterApplies function to each node's contentft_lstmapCreates new list by applying function to each node
+FunctionDescription
+_________________________________________________________________________
+ft_lstnewCreates new list node
+_________________________________________________________________________
+ft_lstadd_frontAdds node to list beginning
+_________________________________________________________________________
+ft_lstsizeReturns number of nodes in list
+_________________________________________________________________________
+ft_lstlastReturns last node of list
+_________________________________________________________________________
+ft_lstadd_backAdds node to list end
+_________________________________________________________________________
+ft_lstdeloneDeletes single node with content cleanup
+_________________________________________________________________________
+ft_lstclearDeletes and frees entire list
+_________________________________________________________________________
+ft_lstiterApplies function to each node's content
+_________________________________________________________________________
+ft_lstmapCreates new list by applying function to each node
 ```
 
 ### Variadic Functions
 ```
-FunctionDescriptionft_printfPrintf implementation supporting: %c, %s, %p, %d, %i, %u, %x, %X
+FunctionDescription
+_________________________________________________________________________
+ft_printfPrintf implementation supporting: %c, %s, %p, %d, %i, %u, %x, %X
 ```
