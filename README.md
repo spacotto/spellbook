@@ -1,5 +1,5 @@
 # ✨ Spellbook
-> [!CAUTION]
+> [!WARNING]
 > This is a personal C Library by a fellow 42 student! Some functions might not be 42norm-compliant or 42subject-compliant! Never trust code blindly!
 
 ## Features
