@@ -1,5 +1,33 @@
+# ✨ Spellbook
 > [!CAUTION]
-> This is a personal C Library! Some functions might not be 42norm-compliant or 42subject-compliant! Never trust code blindly!
+> This is a personal C Library by a fellow 42 student! Some functions might not be 42norm-compliant or 42subject-compliant! Never trust code blindly!
+
+## Features
+- Zero dependencies: Pure C implementation
+- Comprehensive: Over 50+ utility functions
+- Well-organised: Categorised by functionality
+- Memory-safe: Careful attention to allocation and deallocation
+- Portable: Standard C library compatible
+
+## Installation
+Clone the repository:
+```
+git clone https://github.com/spacotto/spellbook.git
+```
+
+Navigate to the directory
+```
+cd spellbook
+```
+
+Build the library
+```
+make
+```
+
+# Include in your project
+# Add the following to your compiler flags:
+# -I/path/to/spellbook/inc -L/path/to/spellbook -lspellbook
 
 ## Check
 These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit).
