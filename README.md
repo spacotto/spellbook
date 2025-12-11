@@ -29,23 +29,21 @@ make
 ### Character Validation
 These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit). 
 
+```
 Function          Description
-___
-ft_isalpha        Checks if a character is an alphabet (a-z, A-Z).
-___
-ft_isdigit        Checks if a character is a decimal digit (0-9).
+--------------------------------------------------------------------
+ft_isalpha        Checks if character is alphabetic (a-z, A-Z)
+--------------------------------------------------------------------
+ft_isdigit        Checks if character is a digit (0-9)
+--------------------------------------------------------------------
+ft_isalnum        Checks if character is alphanumeric
+--------------------------------------------------------------------
+ft_isascii        Checks if character is valid 7-bit ASCII
+--------------------------------------------------------------------
+ft_isprint        Checks if character is printable (including space)
+```
 
-
-`ft_isalnum`
->Checks if a character is alphanumeric (a-z, A-Z, 0-9).
-
-`ft_isascii`
->Checks if a character is a 7-bit ASCII character.
-
-`ft_isprint`
->Checks if a character is printable, including space.
-
-## Counters
+### Counters
 Utility functions for counting elements within data structures.
 
 `ft_countdigits`
@@ -53,9 +51,6 @@ Utility functions for counting elements within data structures.
 
 `ft_countwords`
 >Given a string and a separator, it counts how many words are in the string.
-
-## Conversions
-These functions convert data.
 
 ### Type Conversions
 #### Character Conversions
