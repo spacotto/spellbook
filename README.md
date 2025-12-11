@@ -57,12 +57,18 @@ ft_countwords          Counts words in a string using a delimiter
 ### Type Conversions
 #### Character Conversions
 ```
-FunctionDescriptionft_toupperConverts lowercase letter to uppercaseft_tolowerConverts uppercase letter to lowercase
+Function               Description
+_________________________________________________________________________
+ft_toupper             Converts lowercase letter to uppercase
+_________________________________________________________________________
+ft_tolower             Converts uppercase letter to lowercase
 ```
 
 #### String to Number
 ```
-FunctionDescriptionft_atoiConverts string to integer
+Function               Description
+_________________________________________________________________________
+ft_atoi                Converts string to integer
 ```
 
 #### Number to String
