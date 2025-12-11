@@ -46,7 +46,7 @@ Function          Description
 >Checks if a character is printable, including space.
 
 ## Counters
-Given a set of data, these functions count the elements belonging to said set.
+Utility functions for counting elements within data structures.
 
 `ft_countdigits`
 >Given a signed number and its base, it counts the digits composing it.
@@ -57,18 +57,19 @@ Given a set of data, these functions count the elements belonging to said set.
 ## Conversions
 These functions convert data.
 
-### Characters to Characters
+### Type Conversions
+#### Character Conversions
 `ft_toupper`
 >Converts a lowercase letter to its uppercase equivalent.
 
 `ft_tolower`
 >Converts an uppercase letter to its lowercase equivalent.
 
-### Arguments to Numbers
+#### String to Number
 `ft_atoi`
 >Converts a string to an integer.
 
-### Numbers to Arguments
+#### Number to String 
 `ft_itoa`
 >Allocates memory and converts a signed number to a string.
 
