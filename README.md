@@ -31,9 +31,9 @@ These functions check if the corresponding character belongs to a certain ASCII 
 
 Function          Description
 ___
-`ft_isalpha`      Checks if a character is an alphabet (a-z, A-Z).
+ft_isalpha        Checks if a character is an alphabet (a-z, A-Z).
 ___
-`ft_isdigit`      Checks if a character is a decimal digit (0-9).
+ft_isdigit        Checks if a character is a decimal digit (0-9).
 
 
 `ft_isalnum`
