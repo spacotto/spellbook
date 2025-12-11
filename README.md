@@ -30,7 +30,7 @@ make
 These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit). 
 
 Function          Description
-
+_________________________________________________________________
 `ft_isalpha`      Checks if a character is an alphabet (a-z, A-Z).
 
 `ft_isdigit`      Checks if a character is a decimal digit (0-9).
