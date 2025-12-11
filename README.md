@@ -91,66 +91,66 @@ ft_utoa_base_buffer    Unsigned base conversion without malloc
 ### String Operations
 #### Measurement
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_strlenReturns string length (excluding null terminator)
+ft_strlen              Returns string length (excluding null terminator)
 ```
 
 #### Comparison
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_strcmpCompares two strings
+ft_strcmp              Compares two strings
 _________________________________________________________________________
-ft_strncmpCompares up to n characters of two strings
+ft_strncmp             Compares up to n characters of two strings
 ```
 
 #### Copying
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_strcpyCopies a string
+ft_strcpy              Copies a string
 _________________________________________________________________________
-ft_strncpyCopies up to n characters
+ft_strncpy             Copies up to n characters
 _________________________________________________________________________
-ft_strlcpySize-bounded string copy with null-termination
+ft_strlcpy             Size-bounded string copy with null-termination
 _________________________________________________________________________
-ft_strdupDuplicates string with memory allocation
+ft_strdu p             Duplicates string with memory allocation
 ```
 
 #### Concatenation
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_strlcatSize-bounded string concatenation
+ft_strlcat             Size-bounded string concatenation
 _________________________________________________________________________
-ft_strjoinJoins two strings into newly allocated memory
+ft_strjoin             Joins two strings into newly allocated memory
 ```
 
 #### Searching
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_strchrFinds first occurrence of character
+ft_strchr              Finds first occurrence of character
 _________________________________________________________________________
-ft_strrchrFinds last occurrence of character
+ft_strrchr             Finds last occurrence of character
 _________________________________________________________________________
-ft_strnstrFinds substring within length limit
+ft_strnstr             Finds substring within length limit
 _________________________________________________________________________
-ft_substrExtracts substring with allocation
+ft_substr              Extracts substring with allocation
 ```
 
 #### Modification
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_strtrimRemoves specified characters from both ends
+ft_strtrim             Removes specified characters from both ends
 _________________________________________________________________________
-ft_splitSplits string by delimiter into array
+ft_split               Splits string by delimiter into array
 _________________________________________________________________________
-ft_striteriApplies function to each character (in-place)
+ft_striteri            Applies function to each character (in-place)
 _________________________________________________________________________
-ft_strmapiApplies function to create new modified string
+ft_strmapi             Applies function to create new modified string
 ```
 
 ### Memory Management
