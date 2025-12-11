@@ -25,10 +25,6 @@ Build the library
 make
 ```
 
-# Include in your project
-# Add the following to your compiler flags:
-# -I/path/to/spellbook/inc -L/path/to/spellbook -lspellbook
-
 ## Check
 These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit).
 
