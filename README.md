@@ -30,27 +30,29 @@ make
 These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit). 
 
 ```
-+ Function          Description
---------------------------------------------------------------------
-ft_isalpha        Checks if character is alphabetic (a-z, A-Z)
---------------------------------------------------------------------
-ft_isdigit        Checks if character is a digit (0-9)
---------------------------------------------------------------------
-ft_isalnum        Checks if character is alphanumeric
---------------------------------------------------------------------
-ft_isascii        Checks if character is valid 7-bit ASCII
---------------------------------------------------------------------
-ft_isprint        Checks if character is printable (including space)
+Function               Description
+------------------------------------------------------------------------
+ft_isalpha             Checks if character is alphabetic (a-z, A-Z)
+------------------------------------------------------------------------
+ft_isdigit             Checks if character is a digit (0-9)
+------------------------------------------------------------------------
+ft_isalnum             Checks if character is alphanumeric
+------------------------------------------------------------------------
+ft_isascii             Checks if character is valid 7-bit ASCII
+------------------------------------------------------------------------
+ft_isprint             Checks if character is printable (including space)
 ```
 
 ### Counters
 Utility functions for counting elements within data structures.
 
-`ft_countdigits`
->Given a signed number and its base, it counts the digits composing it.
-
-`ft_countwords`
->Given a string and a separator, it counts how many words are in the string.
+```
+Function               Description
+------------------------------------------------------------------------
+ft_countdigits         Counts digits in a signed number for a given base
+------------------------------------------------------------------------
+ft_countwords          Counts words in a string using a delimiter
+```
 
 ### Type Conversions
 #### Character Conversions
