@@ -31,7 +31,7 @@ These functions check if the corresponding character belongs to a certain ASCII 
 
 ```
 Function               Description
-------------------------------------------------------------------------
+________________________________________________________________________
 ft_isalpha             Checks if character is alphabetic (a-z, A-Z)
 ------------------------------------------------------------------------
 ft_isdigit             Checks if character is a digit (0-9)
