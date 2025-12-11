@@ -156,75 +156,75 @@ ft_strmapi             Applies function to create new modified string
 ### Memory Management
 #### Memory Manipulation
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_memsetFills memory block with specific byte value
+ft_memset              Fills memory block with specific byte value
 _________________________________________________________________________
-ft_bzeroSets memory block to zero
+ft_bzero               Sets memory block to zero
 _________________________________________________________________________
-ft_memcpyCopies memory block
+ft_memcpy              Copies memory block
 _________________________________________________________________________
-ft_memmoveSafely copies overlapping memory regions
+ft_memmove             Safely copies overlapping memory regions
 _________________________________________________________________________
-ft_memchrSearches for character in memory blockn
+ft_memchr              Searches for character in memory blockn
 _________________________________________________________________________
-ft_memcmpCompares two memory blocks
+ft_memcmp              Compares two memory blocks
 ```
 
 #### Memory Allocation
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_arenaArena-based memory allocation
+ft_arena               Arena-based memory allocation
 _________________________________________________________________________
-ft_callocAllocates zero-initialized memory
+ft_calloc              Allocates zero-initialized memory
 ```
 
 ### File Descriptor Output
 Functions for writing to file descriptors (stdout, stderr, files).
 
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_putchar_fdOutputs single character to fd
+ft_putchar_fd          Outputs single character to fd
 _________________________________________________________________________
-ft_putstr_fdOutputs string to fd
+ft_putstr_fd           Outputs string to fd
 _________________________________________________________________________
-ft_putendl_fdOutputs string with newline to fd
+ft_putendl_fd          Outputs string with newline to fd
 _________________________________________________________________________
-ft_putnbr_fdOutputs integer to fd
+ft_putnbr_fd           Outputs integer to fd
 _________________________________________________________________________
-ft_putnbr_base_fdOutputs number in specified base to fd
+ft_putnbr_base_fd      Outputs number in specified base to fd
 ```
 
 ### Linked Lists
 Complete linked list implementation with node management.
 
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_lstnewCreates new list node
+ft_lstnew              Creates new list node
 _________________________________________________________________________
-ft_lstadd_frontAdds node to list beginning
+ft_lstadd_front        Adds node to list beginning
 _________________________________________________________________________
-ft_lstsizeReturns number of nodes in list
+ft_lstsize             Returns number of nodes in list
 _________________________________________________________________________
-ft_lstlastReturns last node of list
+ft_lstlast             Returns last node of list
 _________________________________________________________________________
-ft_lstadd_backAdds node to list end
+ft_lstadd_back         Adds node to list end
 _________________________________________________________________________
-ft_lstdeloneDeletes single node with content cleanup
+ft_lstdelone           Deletes single node with content cleanup
 _________________________________________________________________________
-ft_lstclearDeletes and frees entire list
+ft_lstclear            Deletes and frees entire list
 _________________________________________________________________________
-ft_lstiterApplies function to each node's content
+ft_lstiter             Applies function to each node's content
 _________________________________________________________________________
-ft_lstmapCreates new list by applying function to each node
+ft_lstmap              Creates new list by applying function to each node
 ```
 
 ### Variadic Functions
 ```
-FunctionDescription
+Function               Description
 _________________________________________________________________________
-ft_printfPrintf implementation supporting: %c, %s, %p, %d, %i, %u, %x, %X
+ft_printf              Printf implementation supporting: %c, %s, %p, %d, %i, %u, %x, %X
 ```
