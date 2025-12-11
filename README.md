@@ -31,15 +31,15 @@ These functions check if the corresponding character belongs to a certain ASCII 
 
 ```
 Function               Description
-________________________________________________________________________
+_________________________________________________________________________
 ft_isalpha             Checks if character is alphabetic (a-z, A-Z)
-________________________________________________________________________
+_________________________________________________________________________
 ft_isdigit             Checks if character is a digit (0-9)
-________________________________________________________________________
+_________________________________________________________________________
 ft_isalnum             Checks if character is alphanumeric
-________________________________________________________________________
+_________________________________________________________________________
 ft_isascii             Checks if character is valid 7-bit ASCII
-________________________________________________________________________
+_________________________________________________________________________
 ft_isprint             Checks if character is printable (including space)
 ```
 
@@ -48,9 +48,9 @@ Utility functions for counting elements within data structures.
 
 ```
 Function               Description
-------------------------------------------------------------------------
+_________________________________________________________________________
 ft_countdigits         Counts digits in a signed number for a given base
-------------------------------------------------------------------------
+_________________________________________________________________________
 ft_countwords          Counts words in a string using a delimiter
 ```
 
