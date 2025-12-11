@@ -25,8 +25,15 @@ Build the library
 make
 ```
 
-## Check
-These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit).
+## Functions List
+### Character Validation
+| Column 1 | Column 2 |
+| -------- | -------- |
+| Check    | These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit). |
+| Row 2    | Data     |
+
+## 
+
 
 `ft_isalpha`
 >Checks if a character is an alphabet (a-z, A-Z).
