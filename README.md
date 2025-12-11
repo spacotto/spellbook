@@ -73,7 +73,19 @@ ft_atoi                Converts string to integer
 
 #### Number to String
 ```
-FunctionDescriptionft_itoaConverts signed integer to string (with allocation)ft_itoa_baseConverts signed integer to string in specified baseft_itoa_base_bufferBase conversion without mallocft_utoaConverts unsigned integer to stringft_utoa_baseConverts unsigned integer to string in specified baseft_utoa_base_bufferUnsigned base conversion without malloc
+Function               Description
+_________________________________________________________________________
+ft_itoa                Converts signed integer to string (with allocation)
+_________________________________________________________________________
+ft_itoa_base           Converts signed integer to string in specified base
+_________________________________________________________________________
+ft_itoa_base_buffer    Base conversion without malloc
+_________________________________________________________________________
+ft_utoa                Converts unsigned integer to string
+_________________________________________________________________________
+ft_utoa_base           Converts unsigned integer to string in specified base
+_________________________________________________________________________
+ft_utoa_base_buffer    Unsigned base conversion without malloc
 ```
 
 ### String Operations
