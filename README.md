@@ -30,7 +30,7 @@ make
 These functions check if the corresponding character belongs to a certain ASCII category (e.g., alphabetic, digit). 
 
 ```
-@@Function          Description@@
+@@ Function          Description @@
 --------------------------------------------------------------------
 ft_isalpha        Checks if character is alphabetic (a-z, A-Z)
 --------------------------------------------------------------------
