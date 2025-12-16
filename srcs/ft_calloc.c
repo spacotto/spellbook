@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	alloc = malloc(nmemb * size);
 	if (alloc)
 	{
-		ft_memset(t, '\0', nmemb * size);
+		ft_memset(alloc, '\0', nmemb * size);
 		return (alloc);
 	}
 	return (NULL);
