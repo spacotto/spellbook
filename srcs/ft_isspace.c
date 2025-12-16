@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 22:08:35 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/30 22:19:49 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/12/16 18:29:14 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,4 @@ int	ft_isspace(int c)
 		return (1);
 	else
 		return (0);
-
 }

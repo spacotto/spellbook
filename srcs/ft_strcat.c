@@ -6,13 +6,13 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/30 22:35:34 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/30 22:37:32 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/12/16 18:31:09 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strcat(char *dst, const char *src)
+char	*ft_strcat(char *dst, const char *src)
 {
 	int	i;
 	int	j;

@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2025/11/30 23:59:11 by spacotto         ###   ########.fr       */
+/*   Updated: 2025/12/16 18:26:23 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,11 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-typedef struct	s_arena
+typedef struct s_arena
 {
-	t_list	*pages;			// Linked list of allocated pages
-	size_t	used_mem;		// Where the next free space starts in current mem page
-	void	*current_page;	// Pointer to current page's memory
+	t_list	*pages;
+	size_t	used_mem;
+	void	*current_page;
 }	t_arena;
 
 // ============================================================================
@@ -88,7 +88,7 @@ int		ft_isspace(int c);
 
 // COUNTERS
 int		ft_countdigits(ssize_t n, ssize_t len);
-int 	ft_countwords(char const *s, char c);
+int		ft_countwords(char const *s, char c);
 
 // STRINGS
 int		ft_strcmp(const char *s1, const char *s2);
@@ -98,10 +98,10 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 
-char 	*ft_strcpy(char *dst, const char *src);
+char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strncpy(char *dst, const char *src, size_t size);
-char 	*ft_strcat(char *dst, const char *src);
-char    *ft_strncat(char *dst, const char *src, size_t ssize);
+char	*ft_strcat(char *dst, const char *src);
+char	*ft_strncat(char *dst, const char *src, size_t ssize);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
@@ -129,7 +129,7 @@ int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
 
 char	*ft_itoa(ssize_t n);
-char    *ft_utoa(size_t n);
+char	*ft_utoa(size_t n);
 char	*ft_itoa_base(ssize_t n, char *base);
 char	*ft_utoa_base(size_t n, char *base);
 
@@ -140,8 +140,8 @@ void	ft_utoa_base_buffer(size_t n, char *base, char *buffer);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 t_arena	*arena_init(void);
-void    *arena_alloc(t_arena *arena, size_t size);
-void    arena_free(t_arena *arena);
+void	*arena_alloc(t_arena *arena, size_t size);
+void	arena_free(t_arena *arena);
 
 // FD
 void	ft_putchar_fd(char c, int fd);
@@ -149,6 +149,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putnbr_base_fd(int n, char *base, int fd);
+void	ft_search_and_replace_fd(int fd, char *s, char search, char replace);
 
 // LISTS
 t_list	*ft_lstnew(void *content);
