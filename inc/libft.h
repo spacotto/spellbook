@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/01 14:54:54 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/01 17:21:13 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -118,6 +118,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 // MEMORY
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
+void	ft_swap(int *a, int *b);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);

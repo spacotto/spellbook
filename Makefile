@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2026/01/01 14:52:12 by spacotto         ###   ########.fr        #
+#    Updated: 2026/01/01 17:11:51 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,12 +83,13 @@ SRC_STR		:= ft_strlen.c \
 			   ft_striteri.c \
 			   ft_search_and_replace.c
 
-SRC_MEM		:= ft_bzero.c \
-			   ft_memchr.c \
-			   ft_memcmp.c\
-			   ft_memcpy.c \
-			   ft_memmove.c \
-			   ft_memset.c \
+SRC_MEM		:= ft_swap.c \
+			ft_bzero.c \
+			ft_memchr.c \
+			ft_memcmp.c\
+			ft_memcpy.c \
+			ft_memmove.c \
+			ft_memset.c 
 
 SRC_CNV		:= ft_toupper.c \
 			   ft_tolower.c \
