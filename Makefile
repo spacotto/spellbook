@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2025/12/16 18:16:04 by spacotto         ###   ########.fr        #
+#    Updated: 2026/01/01 14:52:12 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ WHITE		:= \033[0;97m
 
 CC			:= @cc
 AR			:= @/bin/ar rcs
-ECHO		:= @echo
+ECHO		:= @echo -e
 MKDIR		:= @/bin/mkdir
 RM			:= @/bin/rm -rf
 
@@ -80,7 +80,8 @@ SRC_STR		:= ft_strlen.c \
 			   ft_strtrim.c \
 			   ft_split.c \
 			   ft_strmapi.c \
-			   ft_striteri.c
+			   ft_striteri.c \
+			   ft_search_and_replace.c
 
 SRC_MEM		:= ft_bzero.c \
 			   ft_memchr.c \
@@ -106,8 +107,7 @@ SRC_FD		:= ft_putchar_fd.c \
 			   ft_putstr_fd.c \
 			   ft_putendl_fd.c \
 			   ft_putnbr_fd.c \
-			   ft_putnbr_base_fd.c \
-			   ft_search_and_replace_fd.c
+			   ft_putnbr_base_fd.c 
 
 SRC_LST		:= ft_lstnew_bonus.c \
 			   ft_lstadd_front_bonus.c \
