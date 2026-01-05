@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/05 16:36:02 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/05 17:49:59 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,11 @@ int		ft_countwords(char const *s, char c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strcspn(const char *s, const char *reject);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlen(const char *s);
+size_t	ft_strspn(const char *s, const char *accept);
 
 char	*ft_search_and_replace(char *s, char search, char replace);
 char	**ft_split(char const *s, char c);
