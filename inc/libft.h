@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/01 17:21:13 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/05 16:36:02 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,24 +94,25 @@ int		ft_countwords(char const *s, char c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 
-size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+size_t	ft_strlen(const char *s);
 
-char	*ft_strcpy(char *dst, const char *src);
-char	*ft_strncpy(char *dst, const char *src, size_t size);
-char	*ft_strcat(char *dst, const char *src);
-char	*ft_strncat(char *dst, const char *src, size_t ssize);
-char	*ft_strchr(const char *s, int c);
-char	*ft_strrchr(const char *s, int c);
-char	*ft_strnstr(const char *big, const char *little, size_t len);
-char	*ft_strdup(const char *s);
-char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
-char	*ft_strtrim(char const *s1, char const *set);
-char	**ft_split(char const *s, char c);
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_search_and_replace(char *s, char search, char replace);
+char	**ft_split(char const *s, char c);
+char	*ft_strcat(char *dst, const char *src);
+char	*ft_strchr(const char *s, int c);
+char	*ft_strcpy(char *dst, const char *src);
+char	*ft_strdup(const char *s);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strncat(char *dst, const char *src, size_t ssize);
+char	*ft_strncpy(char *dst, const char *src, size_t size);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_strrchr(const char *s, int c);
+char	*ft_strtrim(char const *s1, char const *set);
+char    *ft_strtok(char *str, const char *delim);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 

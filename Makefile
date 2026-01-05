@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2026/01/01 17:11:51 by spacotto         ###   ########.fr        #
+#    Updated: 2026/01/05 17:17:59 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ WHITE		:= \033[0;97m
 
 CC			:= @cc
 AR			:= @/bin/ar rcs
-ECHO		:= @echo -e
+ECHO		:= @echo #-e
 MKDIR		:= @/bin/mkdir
 RM			:= @/bin/rm -rf
 
@@ -59,29 +59,30 @@ SRC_IS		:= ft_isneg.c \
 			   ft_isprint.c \
 			   ft_isspace.c
 
-SRC_COUNT	:= ft_countdigits.c \
-			   ft_countwords.c 
+SRC_COUNT	:=  ft_countdigits.c \
+			    ft_countwords.c 
 
-SRC_STR		:= ft_strlen.c \
-			   ft_strcpy.c \
-			   ft_strncpy.c \
-			   ft_strlcpy.c \
-			   ft_strcat.c \
-			   ft_strncat.c \
-			   ft_strlcat.c \
-			   ft_strcmp.c \
-			   ft_strncmp.c \
-			   ft_strdup.c \
-			   ft_strchr.c \
-			   ft_strrchr.c \
-			   ft_strnstr.c \
-			   ft_substr.c \
-			   ft_strjoin.c \
-			   ft_strtrim.c \
-			   ft_split.c \
-			   ft_strmapi.c \
-			   ft_striteri.c \
-			   ft_search_and_replace.c
+SRC_STR		:=  ft_search_and_replace.c \
+				ft_split.c \
+				ft_strcat.c \
+				ft_strchr.c \
+				ft_strcmp.c \
+				ft_strcpy.c \
+				ft_strdup.c \
+				ft_striteri.c \
+				ft_strjoin.c \
+				ft_strlcat.c \
+				ft_strlcpy.c \
+				ft_strlen.c \
+				ft_strmapi.c \
+				ft_strncat.c \
+				ft_strncmp.c \
+				ft_strncpy.c \
+				ft_strnstr.c \
+				ft_strrchr.c \
+				ft_strtok.c \
+				ft_strtrim.c \
+				ft_substr.c
 
 SRC_MEM		:= ft_swap.c \
 			   ft_bzero.c \
