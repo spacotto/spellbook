@@ -16,6 +16,7 @@ int	main(int ac, char **av)
 {
 	char	*s;
 
+	ft_putendl_fd("\n================================= ft_search_and_replace.c\n", 1);
 	if (ac == 4 && ft_strlen(av[2]) == 1 && ft_strlen(av[3]) == 1)
 	{
 		s = ft_search_and_replace(av[1], av[2][0], av[3][0]);
