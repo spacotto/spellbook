@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:35:14 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/05 17:49:59 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/06 14:56:39 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -113,7 +113,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t size);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
-char    *ft_strtok(char *str, const char *delim);
+char	*ft_strtok(char *str, const char *delim);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
@@ -132,6 +132,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *nptr);
+int		ft_atoi_base(const char *nptr, int base);
 
 char	*ft_itoa(ssize_t n);
 char	*ft_utoa(size_t n);
