@@ -6,17 +6,17 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:51:04 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/05 18:01:35 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/06 15:26:14 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strcspn(const char *s, const char *reject)
+size_t	ft_strcspn(const char *s, const char *reject)
 {
-	size_t i;
-	size_t j;
-	
+	size_t	i;
+	size_t	j;
+
 	i = 0;
 	while (s[i])
 	{
