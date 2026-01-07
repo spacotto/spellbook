@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 13:36:28 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/05 17:32:53 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/07 18:29:51 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@
 
 char	*ft_strtok(char *str, const char *delim)
 {
-	if (str == NULL)
-		return (NULL);
-	while (*str && *delim)
-		str++;
-	return (str);
+	static	char	*token = NULL;
+
+	if (!token && str)
+		token = str + ft_strcspn(str, delim);
+	else
+		token += ft_strcspn(token, delim);
+	return (token);
 }
