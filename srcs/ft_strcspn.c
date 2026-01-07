@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 17:51:04 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/06 15:26:14 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/07 16:37:43 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,11 @@ size_t	ft_strcspn(const char *s, const char *reject)
 		j = 0;
 		while (reject[j])
 		{
-			if (s[i] == reject[j++])
+			if (s[i] == reject[j])
 				return (i);
+			j++;
 		}
-		return (i);
+		i++;
 	}
+		return (i);
 }

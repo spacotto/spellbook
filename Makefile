@@ -6,7 +6,7 @@
 #    By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/01 13:30:48 by spacotto          #+#    #+#              #
-#    Updated: 2026/01/07 15:08:00 by spacotto         ###   ########.fr        #
+#    Updated: 2026/01/07 16:22:25 by spacotto         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,6 +68,7 @@ SRC_STR		:=  ft_search_and_replace.c \
 				ft_strchr.c \
 				ft_strcmp.c \
 				ft_strcpy.c \
+				ft_strcspn.c \
 				ft_strdup.c \
 				ft_striteri.c \
 				ft_strjoin.c \
