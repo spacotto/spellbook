@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:08:29 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/07 15:12:30 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/07 15:28:24 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@ static int passed = 0;
 void	check(const char *s, const char *accept)
 {
 	total++;
-	if ((strspn(s, accept) == NULL && ft_strspn(s, accept) == NULL) ||
-		(strcmp(strspn(s, accept), ft_strpbrk(s, accept)) == 0))
+	if(strspn(s, accept) == ft_strspn(s, accept))
 	{
 		passed++;
 		ft_printf(CYAN "OK! %d / %d\n\n" RESET, passed, total);
@@ -34,13 +33,26 @@ int	main()
 
 	{
 		const char s[1024] = "Homo quisque faber ipse fortunae sua";
-		const char *accept = "exj";
+		const char *accept = "Ho";
 	
-		ft_printf("=== Character found in the middle\n");
+		ft_printf("=== Standard Case n.1\n");
 		ft_printf("String   | %s\n", s);
 		ft_printf("Accept   | %s\n", accept);
-		ft_printf("Found    | %s\n", ft_strspn(s, accept));
-		ft_printf("Expected | %s\n", strspn(s, accept));
+		ft_printf("Result   | %d\n", ft_strspn(s, accept));
+		ft_printf("Expected | %d\n", strspn(s, accept));
+		
+		check (s, accept);
+	}
+
+	{
+		const char s[1024] = "Homo quisque faber ipse fortunae sua";
+		const char *accept = "omoH";
+	
+		ft_printf("=== Standard Case n.2\n");
+		ft_printf("String   | %s\n", s);
+		ft_printf("Accept   | %s\n", accept);
+		ft_printf("Result   | %d\n", ft_strspn(s, accept));
+		ft_printf("Expected | %d\n", strspn(s, accept));
 		
 		check (s, accept);
 	}

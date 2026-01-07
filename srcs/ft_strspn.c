@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 14:59:18 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/07 15:10:50 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/07 15:49:12 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 size_t	ft_strspn(const char *s, const char *accept)
 {
-	int	i;
-	int	j;
-	int	check;
+	size_t	i;
+	size_t	j;
+	size_t	flag;
 
 	i = 0;
 	while (s[i])
 	{
 		j = 0;
-		check = 0;
+		flag = 0;
 		while (accept[j])
 		{
 			if (s[i] == accept[j])
-				check = 1;
+				flag = 1;
 			j++;
 		}
-		if (check == 0)
+		if (flag == 0)
 			return (i);
 		i++;
 	}
