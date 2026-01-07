@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/07 15:08:29 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/07 16:16:58 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/07 16:19:50 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,32 @@ int	main()
 	{
 		const char s[1024] = "Nulli tacuisse nocet, nocet esse locutum.";
 		const char *accept = "";
+	
+		ft_printf("=== Empty accept\n");
+		ft_printf("String   | %s\n", s);
+		ft_printf("Accept   | %s\n", accept);
+		ft_printf("Result   | %d\n", ft_strspn(s, accept));
+		ft_printf("Expected | %d\n", strspn(s, accept));
+		
+		check (s, accept);
+	}
+
+	{
+		const char s[1024] = "Nulli tacuisse nocet, nocet esse locutum.";
+		const char *accept = "Nul\0l";
+	
+		ft_printf("=== NULL Case n.1\n");
+		ft_printf("String   | %s\n", s);
+		ft_printf("Accept   | %s\n", accept);
+		ft_printf("Result   | %d\n", ft_strspn(s, accept));
+		ft_printf("Expected | %d\n", strspn(s, accept));
+		
+		check (s, accept);
+	}
+
+	{
+		const char s[1024] = "N\0ulli tacuisse nocet, nocet esse locutum.";
+		const char *accept = "Nu";
 	
 		ft_printf("=== Empty accept\n");
 		ft_printf("String   | %s\n", s);
