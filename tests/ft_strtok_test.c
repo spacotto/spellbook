@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:43:14 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/08 12:22:59 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/08 12:46:55 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,17 +25,17 @@ int	main()
 	ft_printf("================================= ft_strtok.c\n\n");
 
 	{
-		char s1[] = "Homo_quisque_faber_ipse_fortunae_sua";
-		char s2[] = "Homo_quisque_faber_ipse_fortunae_sua";
-		const char *delim = "_";
-		char *token1 = strtok(s1, delim);
-		char *token2 = ft_strtok(s2, delim);
+		char s1[] = "Homo quisque_faber//ipse*fortunae _/*sua";
+		char s2[] = "Homo quisque_faber//ipse*fortunae _/*sua";
+		const char *delim = " _/*";
 		 	
 		ft_printf("====== Standard Case n.1\n");
 		ft_printf("Str: %s\n", s1);
 		ft_printf("Div: %s\n\n", delim);
 		
 		int i = 1;
+		char *token1 = strtok(s1, delim);
+		char *token2 = ft_strtok(s2, delim);
 		ft_printf("Fn call %i\n", i);
 		ft_printf("Expected | %s\n", token1);
 		ft_printf("Result   | %s\n", token2);
