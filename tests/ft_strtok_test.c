@@ -6,26 +6,18 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 16:43:14 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/07 18:26:33 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/08 12:22:59 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/printf.h"
 
-static int total = 0;
-static int passed = 0;
-
-void	check(char *str, const char *delim)
+void	check(char *token1, const char *token2)
 {
-	total++;
-	if ((strtok(str, delim) == NULL && ft_strtok(str, delim) == NULL) ||
-		(strcmp(strtok(str, delim), ft_strtok(str, delim)) == 0))
-	{
-		passed++;
-		ft_printf(CYAN "OK! %d / %d\n\n" RESET, passed, total);
-	}
+	if ((token1 == NULL && token2 == NULL) || (strcmp(token1, token2) == 0))
+		ft_printf(CYAN "OK!\n\n" RESET);
 	else
-		ft_printf(YELLOW "KO! %d / %d\n\n" RESET, passed, total);
+		ft_printf(YELLOW "KO!\n\n" RESET);
 }
 
 int	main()
@@ -33,24 +25,31 @@ int	main()
 	ft_printf("================================= ft_strtok.c\n\n");
 
 	{
-		char s[1024] = "Homo_quisque_faber_ipse_fortunae_sua";
+		char s1[] = "Homo_quisque_faber_ipse_fortunae_sua";
+		char s2[] = "Homo_quisque_faber_ipse_fortunae_sua";
 		const char *delim = "_";
-		int i = 1;
-	
-		ft_printf("=== Standard Case n.1\n");
-		ft_printf("Str: %s\n", s);
+		char *token1 = strtok(s1, delim);
+		char *token2 = ft_strtok(s2, delim);
+		 	
+		ft_printf("====== Standard Case n.1\n");
+		ft_printf("Str: %s\n", s1);
 		ft_printf("Div: %s\n\n", delim);
 		
-		ft_printf("%i. Expected	| %s\n", i, strtok(s, delim));
-		ft_printf("%i. Result	| %s\n", i, strtok(s, delim));
-		check(s, delim);
-		
-		while (i < 7)
+		int i = 1;
+		ft_printf("Fn call %i\n", i);
+		ft_printf("Expected | %s\n", token1);
+		ft_printf("Result   | %s\n", token2);
+		check(token1, token2); 
+
+		while (token1 != NULL)
 		{
 			i++;
-			ft_printf("%i. Expected	| %s\n", i, strtok(NULL, delim));
-			ft_printf("%i. Result	| %s\n", i, ft_strtok(NULL, delim));
-			check(NULL, delim);
+			ft_printf("Fn call %i\n", i);
+			token1 = strtok(NULL, delim);
+			ft_printf("Expected | %s\n", token1);
+			token2 = ft_strtok(NULL, delim);
+			ft_printf("Result   | %s\n", token2);
+			check(token1, token2); 
 		}
 	}
 
