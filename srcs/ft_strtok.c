@@ -6,7 +6,7 @@
 /*   By: spacotto <spacotto@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/05 13:36:28 by spacotto          #+#    #+#             */
-/*   Updated: 2026/01/08 12:51:47 by spacotto         ###   ########.fr       */
+/*   Updated: 2026/01/08 13:34:11 by spacotto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strtok(char *str, const char *delim)
 	static char	*str_cpy;
 
 	if (str)
-    	str_cpy = str;
-  	if (!str_cpy)
-    	return (NULL);
+		str_cpy = str;
+	if (!str_cpy)
+		return (NULL);
 	while (*str_cpy && ft_strchr(delim, *str_cpy))
-    	str_cpy++;
+		str_cpy++;
 	if (!*str_cpy)
 	{
 		str_cpy = NULL;
